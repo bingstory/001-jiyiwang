@@ -1,0 +1,105 @@
+<extend name="Base/common" />
+<block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<link href="__PUBLIC__/Home/css/lanrenzhijia3.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="body">
+<div id="middle">
+<include file="Public/belowbanner" />
+<div id="width_988">
+  
+  <div id="gao"></div>
+<div id="star_box2">
+    <div class="fl_l st_b2_left">
+        <div class="st_b2_title"><span class="fl_l st2_l"><span class="fl_l"><img src="__PUBLIC__/Home/images/cp1_19.jpg" width="27" height="27" /></span> &nbsp;&nbsp;<span class="fl_r"><strong>学习中心</strong></span></span><span class="fl_r c2_r">位置：<a href="#">美育启蒙</a> > 学习中心</span></div>
+        <div id="gao"></div>
+        <div class="my_bottom">
+        <div class="my_pic">
+        <ul>
+
+        <volist name="list" id="v">
+        <li <if condition="($key+1)%3 eq 0">class="last"<else/></if>><p><a href="#"><img src="__ROOT__/{$v.picurl}" width="199" height="128" /></a></p>
+        <h4>作品名称：<span>{$v.title|msubstr=0,10,0}</span></h4>
+         <h4>详细介绍：<span>{$v.summary|msubstr=0,25}</span></h4> 
+        </li>
+        </volist>
+        </ul>
+        </div>
+        <div class="page_list" style=" clear:both">{$page}</div>
+        
+        </div>
+ 
+
+    
+    
+    </div>
+    <div class="fl_r st_b2_right">
+    <div style="width:224px;margin:0px auto 0 auto;">
+
+  <div class="vtitle">美育启蒙</div>
+    <div class="vcon">
+    <ul class="vconlist clearfix">
+    <volist name="cate" id="v">
+      <li class="my"><a href="{:U('/'.MODULE_NAME.'/enlighten_'.$v['id'])}">{$v.name}</a></li> 
+    </volist>
+    </ul>
+  </div>
+  
+</div>
+    
+    
+    </div>
+</div>
+
+
+    
+    
+      
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>

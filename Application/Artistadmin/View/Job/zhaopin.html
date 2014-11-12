@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+<script type="text/javascript" src="__PUBLIC__/Static/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Static/index.js"></script>
+<script type="text/javascript" src="__ROOT__/Data/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__ROOT__/Data/ueditor/ueditor.all.min.js"></script>
+<script>
+      window.UEDITOR_HOME_URL = '__ROOT__/Data/ueditor/';
+      window.onload = function(){
+            window.UEDITOR_CONFIG.initialFrameHeight = 450;
+            window.UEDITOR_CONFIG.initialFrameWidth = 1200;
+            window.UEDITOR_CONFIG.savePath = ['Uploads'];
+            window.UEDITOR_CONFIG.imageUrl = "{:U(MODULE_NAME.'/News/upload')}";       //图片上传提交地址
+        window.UEDITOR_CONFIG.imagePath = "__ROOT__/Uploads/";
+            UE.getEditor('content');
+      }
+</script>
+ 
+<head>
+</head>
+<body>
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 最新招聘</div>
+</div>
+
+<div class="right-title">
+      最新招聘<a href="{:U(MODULE_NAME.'/Job/zhaopinAdd')}">[添加岗位]</a>
+</div>
+
+
+       <table class="table"> 
+             <thead>
+                   <tr class="firstrow">
+                         <td>职位名称</td>
+                         <td>职位描述</td>
+                         <td>操作</td>
+                   </tr>
+             </thead>
+             <tbody>
+                <foreach name="zhaopin" item="v">
+                   <tr align="center">
+                         <td>{$v.title}</td>
+                         <td>{$v.content}</td>
+                         <td> [<a href="{:U(MODULE_NAME.'/Job/zhaopinEdit',array('id'=>$v['id']))}">编辑</a>][<a href="{:U(MODULE_NAME.'/Job/delete',array('id'=>$v['id']))}">删除</a>]</td>
+                   </tr>
+             </foreach>
+             </tbody>
+       </table>
+
+</body>
+</html>

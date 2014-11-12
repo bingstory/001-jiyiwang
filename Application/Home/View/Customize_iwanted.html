@@ -1,0 +1,103 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    <link href="__PUBLIC__/Home/css/lanrenzhijia3.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="body">
+<div id="middle">
+<include file="Public/belowbanner" />
+<div id="width_988">
+  
+  <div id="gao"></div>
+<div id="c_box2">
+    <div class="fl_l c_b2_left">
+        <div class="c_b2_title"><span class="fl_l c2_l"><span class="fl_l"><img src="__PUBLIC__/Home/images/cp1_19.jpg" width="27" height="27" /></span> &nbsp;&nbsp;<span class="fl_r"><strong>我要定制</strong></span></span><span class="fl_r c2_r">位置：<a href="{:U('/Home/news')}">个性化定制</a> > 我要定制</span></div>
+        <div id="gao"></div>
+        <div class="w_b2_text">
+    <h2>个性化定制表单</h2>
+  
+    <div class="w_b2_t1"><span class="fl_l w_b2_l"><h5>需求类型</h5><p>(勾选，可单选可多选)</p></span><span class="fl_r w_b2_r"><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 书法 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 绘画 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 音乐 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 手工艺 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 文学 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 文创产品 <input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> 其他</span></div>
+    <div class="w_b2_t2"><span class="fl_l w_b2_l"><h5>数量</h5></span><span class="fl_r w_b2_r">&nbsp;</span></div>
+    
+    <div class="w_b2_t2"><span class="fl_l w_b2_l"><h5>希望收货时间</h5></span><span class="fl_r w_b2_r">&nbsp;</span></div>
+    <div class="w_b2_t1"><span class="fl_l w_b2_l"><h5>作者</h5><p>(从驻站艺术家库中挑选，会更方便快捷)</p></span><span class="fl_r w_b2_r">&nbsp;</span></div>
+     <div class="w_b2_t1"><span class="fl_l w_b2_l"><h5>题材</h5><p>(例如绘画可写明是国画还是油画，人物还是风景等等)</p></span><span class="fl_r w_b2_r">&nbsp;</span></div>
+     
+     <div class="w_b2_t3"><h5>需求描述<span> (详列表单未尽需求，作为以后拟定创作方案和定制协议的依据，包括尺寸、形式、内容说明等等)</span></h5></div>
+    
+    
+    </div>
+    
+    <div class="tijiao3"><h1><a href="#"><img src="__PUBLIC__/Home/images/tj3.jpg" width="280" height="40" /></a></h1>
+    </div>
+    </div>
+    <div class="fl_r st_b2_right">
+    <div style="width:224px;margin:0px auto 0 auto;">
+
+    <div class="vtitle">个性化定制</div>
+    <div class="vcon">
+    <ul class="vconlist clearfix">
+    <foreach name="nav" item="v">
+    <li <if condition="$key eq 0">class="one"<else/>class="three"</if>><a href="{:U('/'.MODULE_NAME.'/c_'.$v['id'])}">{$v.name}</a></li> 
+    </foreach>
+      <li class="three"><a href="{:U('/Home/iwanted')}">我要定制</a></li>
+    </ul>
+  </div>
+    
+</div>
+    
+    
+    </div>
+</div>
+
+
+    
+    
+      
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>

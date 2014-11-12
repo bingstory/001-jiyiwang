@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>网站基本信息设置</title> 
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/baseinfo.css">
+</head>
+<body>
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 网站基本信息设置</div>
+</div>
+
+<div class="right-title">
+      网站基本信息设置
+</div>
+  <form action="{:U(MODULE_NAME.'/System/updateBaseinfo')}" method='post'>
+		<table class="table">
+			 <tr  style="background: #E3E9EE; font: bold 12px 'sans-serif';">
+				<td  align='right' width="200px;">设置项</td>
+				<td>
+					设置内容
+				</td>
+			</tr>
+			<tr>
+				<td  align='right'>站点名称</td>
+				<td>
+					<input type="text" name='SITENAME' value='{$Think.config.SITENAME}' />
+				</td>
+			</tr>
+			<tr>
+				<td  align='right'>电话号码</td>
+				<td>
+					<input type="text" name='DIANHUA' value='{$Think.config.DIANHUA}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>全国统一咨询热线</td>
+				<td>
+					<input type="text" name='REXIAN' value='{$Think.config.REXIAN}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>传真</td>
+				<td>
+					<input type="text" name='FAX' value='{$Think.config.FAX}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>加盟客服QQ1</td>
+				<td>
+					<input type="text" name='QQ1' value='{$Think.config.QQ1}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>加盟客服QQ2</td>
+				<td>
+					<input type="text" name='QQ2' value='{$Think.config.QQ2}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>网站版权信息</td>
+				<td>
+					<input type="text" name='COPYRIGHT' value='{$Think.config.COPYRIGHT}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>邮编</td>
+				<td>
+					<input type="text" name='ZIPCODE' value='{$Think.config.ZIPCODE}'/>
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>地址</td>
+				<td>
+					<!-- <input type="text" name='ADDR' value=''/> -->
+					<textarea style="margin:5px 0;" cols="50" rows="3" name="ADDR">{$Think.config.ADDR}</textarea>
+				</td>
+			</tr>
+			 <tr>
+				<td align='right'>首页关于我们</td>
+				<td>
+					<!-- <input type="text" name='ADDR' value=''/> -->
+					<textarea style="margin:5px 0;" cols="50" rows="3" name="Aboutus">{$Think.config.Aboutus}</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>统计代码</td>
+				<td>
+					<!-- <input type="text" name='ADDR' value=''/> -->
+					<textarea style="margin:5px 0;" cols="50" rows="3" name="Statistics">{$Think.config.Statistics}</textarea>
+				</td>
+			</tr>
+			 <tr>
+			 	<td colspan='2'>
+			 		<input style="margin-left:100px;" type="submit" value='保存修改' />
+			 	</td>
+			 </tr>
+		</table>
+	</form>
+</body>
+</html>

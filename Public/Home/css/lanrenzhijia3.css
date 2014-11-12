@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* 代码整理：懒人之家www.lanrenzhijia.com */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+a,a:hover{text-decoration: none;}
+
+/*收缩菜单*/
+.v{float:right;width:14px;height:14px;overflow:hidden;background:url(../images/vicon.png) no-repeat;display:inline-block;margin-top:-5px;margin-bottom:-5px;}
+.v01{background-position:0 0;}
+.v02{background-position:0 -16px;;}
+.vtitle{
+	height:29px;
+	line-height:29px;
+	margin-bottom:12px;
+	margin-top:-1px;
+
+	font-size:15px;
+	color:#fff;
+	font-family:"\5FAE\8F6F\96C5\9ED1";
+	cursor:pointer;
+	background-color: #b0afad;
+	background-image: url(../images/zjt1.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.vconlist .three{ height:58px;
+	background-image: url(../images/cp1_27.jpg);
+	background-repeat: no-repeat;
+}
+.vconlist .four{
+	height:58px;
+	background-image: url(../images/four.jpg);
+	background-repeat: no-repeat;
+}
+.vconlist .one{ width:224px; height:43px;
+	background-image: url(../images/cp1_23.jpg);
+	background-repeat: no-repeat;
+}
+.vconlist .my{ height:57px;
+	background-image: url(../images/mm.jpg);
+	background-repeat: no-repeat;
+}
+.vconlist li{ height:40px; text-align:left;
+	background-image: url(../images/cp1_26.jpg);
+	background-repeat: no-repeat;
+}
+.vconlist .one a{height: 53px;
+line-height: 53px;
+padding-left: 90px;display:block;font-size:14px;color:#866f67;font-family:"\5FAE\8F6F\96C5\9ED1";}
+.vconlist li a{height: 50px;
+line-height: 50px;
+padding-left: 90px;display:block;font-size:14px;color:#866f67;font-family:"\5FAE\8F6F\96C5\9ED1";}
+.vconlist li.select a,.vconlist li a:hover{color:#ed4948;text-decoration:none;}
+.vconlist .four a{height: 58px;
+line-height: 58px;
+padding-left: 90px;display:block;font-size:14px;color:#866f67;font-family:"\5FAE\8F6F\96C5\9ED1";}

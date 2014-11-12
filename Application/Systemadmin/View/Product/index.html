@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+      <title>博文列表</title>
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/news.css">
+      <script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js" ></script>
+      <script>
+        $(document).ready(function(){
+            $('tr').hover(function(){
+                  $(this).addClass('bing-bgcolor2');
+            },function(){
+                  $(this).removeClass('bing-bgcolor2');
+            }); 
+        });
+      </script>
+      <style>
+            .bing-bgcolor2{background: #ebeded;}
+      </style>
+</head>
+<body> 
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 产品列表</div>
+</div>
+
+<div class="right-title">
+      产品列表<a href="{:U(MODULE_NAME.'/Product/product')}" title="">[添加产品]</a>
+</div>
+
+      <table class="table">
+            <tr class="firstrow">
+                  <td width="20px">选择</td>
+                  <td width="20px">ID</td>
+                  <td>标题</td> 
+                  <td width="240px">发布时间</td>
+                  <td width="200px">所属分类</td>
+                  <td width="130px">操作</td>
+            </tr>
+            <foreach name="product" item="v">
+            <tr>
+                  <td align="right"><input type="checkbox" name="" value="{$v.id}"></td>
+                  <td align="right">{$v.id}</td>
+                  <td align="right" width="150px">{$v.title} 
+                  </td> 
+                  <td align="right">{$v.time|date='Y-m-d H:i:s',###}</td>
+                  <td align="right">
+                  {$v.cate}
+                   <!--  -->
+                  </td>
+                  <td align="right">
+                     
+                    [<a href="{:U(MODULE_NAME.'/Product/productEdit',array('id'=>$v['id']))}">修改</a>]
+                    [<a href="{:U(MODULE_NAME.'/Product/delete',array('id'=>$v['id']))}">删除</a>]
+                  
+                  </td>
+            </tr>
+            </foreach>
+      </table>
+</body>
+</html>

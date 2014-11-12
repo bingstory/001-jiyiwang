@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+</head>
+<body> 
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 留言回复</div>
+</div>
+
+<div class="right-title">
+      留言回复 
+</div>
+
+<form action="{:U(MODULE_NAME.'/Contact/doReply')}">
+<table class="table">
+	  
+		<tr>
+			<td width="90px">原文留言内容：</td>
+			<td style="word-break: break-all;">{$liuyan.content}</td>
+		</tr>
+		<tr>
+		    <td>回复内容：</td>
+			<td><textarea name="content" cols="50" rows="5"></textarea></td>
+		</tr>
+		<tr>
+		    <td>回复人昵称：</td>
+			<td><input type="text" name="name" value="" placeholder=""></td>
+		</tr>
+		<tr>
+		     <input type="hidden" name="pid" value="{$pid}">
+			<td colspan="2"><input type="submit" name="" value="提交"></td>
+		</tr>
+	 
+</table>
+</form>
+</body>
+</html>

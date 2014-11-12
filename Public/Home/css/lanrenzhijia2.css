@@ -1,0 +1,52 @@
+
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+*{ margin:0; padding:0; list-style:none;}
+body{ font-size:12px; text-align:left;}
+a{ text-decoration:none; color:#333;}
+a:hover{ text-decoration:none;}
+
+
+/* 本案例代码begin */
+.left_nav{ width:208px; height:auto; background:#fff; border:1px solid #CDCDCD; float:right; margin-right:20px}
+.left_nav dl dt{ width:195px; height:52px; line-height:52px; font-weight:bold;  padding-left:13px; color:#3c4650;border-bottom:1px dashed #d7d7d7; text-align:left; font-size:14px}
+.left_nav dl dt span{ color:#adadad; font-weight:normal}
+.left_nav dl dd{ width:208px; height:35px; position:relative; border-bottom:1px dashed #d7d7d7; font-weight:bold; text-align:left;}
+.left_nav dl .last{ border-bottom:none}
+.left_nav dl dd .nav_right{ width:300px; height:auto; overflow:hidden; position:absolute; left:240px; top:0px; padding:0px 5px 10px 5px;background:#fff; display:none;}
+.left_nav dl dd .nav_right a{ width:110px;height:20px; line-height:20px; text-align:left; color:#666;padding-left:40px; display:block; float:left; margin-top:10px; white-space:nowrap;
+ text-overflow:ellipsis;
+ -o-text-overflow:ellipsis;
+ overflow: hidden;}
+.left_nav dl dd .nav_right a:hover{ width:110px;height:20px; line-height:20px; text-align:left; color:#fff;padding-left:40px;  text-decoration:none;}
+.left_nav dl dd a.nav_left{width:133px; height:34px; line-height:34px; background:#fff; display:block; border-bottom:1px solid #fff;color:#3C4347; white-space:nowrap;
+ text-overflow:ellipsis;
+ -o-text-overflow:ellipsis;
+ overflow: hidden; padding-left:75px}
+.left_nav dl dd a.nav_left:hover{background:#e8413b; color:#fff; text-decoration:none;width:133px; padding-left:75px}
+
+.left_nav dl dd a.nav_left1{width:133px; height:34px;color:#fff; line-height:34px; background:#e8413b; display:block; border-bottom:1px solid #fff; white-space:nowrap;
+ text-overflow:ellipsis;
+ -o-text-overflow:ellipsis;
+ padding-left:75px}
+ 
+ .left_nav dl dd .nav_right1{ width:330px; height:auto; position:absolute; left:240px; top:0px; padding:0px 5px 10px 5px;background:#fff; display:block; margin-top:-60px}
+ .nav_right1 ul{ padding:0; margin:0}
+  .nav_right1 li{ clear:both; margin-bottom:20px;.margin-bottom:0px}
+  .nav_right1 .fuwu{ width:320px;}
+  .nav_right1 .fuwu h3{ margin-bottom:10px}
+ .nav_right1 .fuwu .fuwu1{margin-bottom:20px}
+ .nav_right1 .fuwu .fuwu2{ width:230px; margin-top:5px}
+ .nav_right1 .fuwu .fuwu2 p{ font-size:12px; color:#999; font-weight:normal; line-height:20px}
+ 
+  .nav_right ul{ padding:0; margin:0}
+  .nav_right .fuwu{ width:340px}
+ .nav_right .fuwu .fuwu1{}
+ .nav_right .fuwu .fuwu2{ width:250px}
+ .nav_right .fuwu .fuwu2 p{ font-size:12px; color:#999; font-weight:normal}
+ 
+ .left_nav dl dd .nav_right1 a{ width:110px;height:20px; line-height:20px; text-align:left; color:#666;padding-left:40px; display:block; float:left; margin-top:10px; white-space:nowrap;
+ text-overflow:ellipsis;
+ -o-text-overflow:ellipsis;
+ overflow: hidden;}
+.left_nav dl dd .nav_right1 a:hover{ width:110px;height:20px; line-height:20px; text-align:left; color:#fff;padding-left:40px; text-decoration:none;}

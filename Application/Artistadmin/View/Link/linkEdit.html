@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+</head>
+<body>
+<form action={:U(MODULE_NAME.'/Link/doLinkEdit')} method="post" >
+<table class="table">
+	<caption>友情链接修改</caption>
+	<thead>
+		<tr class="firstrow">
+			<td>ID</td>
+			<td>名称</td>
+			<td>链接地址</td>
+			<td>排序</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{$link.id}</td>
+			<td><input type="text" name="title" value="{$link.title}"></td>
+			<td><input type="text" name="siteurl" value="{$link.siteurl}"></td>
+			<td><input type="text" name="sort" value="{$link.sort}"></td>
+		</tr>
+		<tr>
+		<input type="hidden" name="id" value="{$link.id}" />
+		<td align="center" colspan="4"><input type="submit" value="保存修改" /></td>
+		</tr>
+	</tbody>
+</table>
+</form>
+</body>
+</html>

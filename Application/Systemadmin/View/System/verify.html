@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>验证码配置</title> 
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+</head>
+<body> 
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 验证码设置</div>
+</div>
+
+<div class="right-title">
+      验证码设置
+</div>
+
+  <form action="{:U(MODULE_NAME.'/System/updateVerify')}" method='post'>
+		<table class="table">
+			 <tr  style="background: #E3E9EE; font: bold 12px 'sans-serif';">
+				<td width="200" align='right'>设置项</td>
+				<td>
+					设置内容
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码长度</td>
+				<td>
+					<input type="text" name='VERIFY_LENGTH' value='{$Think.config.VERIFY_LENGTH}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码图片宽度</td>
+				<td>
+					<input type="text" name='VERIFY_WIDTH' value='{$Think.config.VERIFY_WIDTH}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码图片高度</td>
+				<td>
+					<input type="text" name='VERIFY_HEIGHT' value='{$Think.config.VERIFY_HEIGHT}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码背景颜色</td>
+				<td>
+					<input type="text" name='VERIFY_BGCOLOR' value='{$Think.config.VERIFY_BGCOLOR}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码种子</td>
+				<td>
+					<input type="text" name='VERIFY_SEED' value='{$Think.config.VERIFY_SEED}' style='width:350px;' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码字体文件</td>
+				<td>
+					<input type="text" name='VERIFY_FONTFILE' value='{$Think.config.VERIFY_FONTFILE}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码字体大小</td>
+				<td>
+					<input type="text" name='VERIFY_SIZE' value='{$Think.config.VERIFY_SIZE}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>验证码字体颜色（16进制色值）</td>
+				<td>
+					<input type="text" name='VERIFY_COLOR' value='{$Think.config.VERIFY_COLOR}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>SESSION识别名称</td>
+				<td>
+					<input type="text" name='VERIFY_NAME' value='{$Think.config.VERIFY_NAME}' />
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>存储验证码到SESSION时使用函数</td>
+				<td>
+					<input type="text" name='VERIFY_FUNC' value='{$Think.config.VERIFY_FUNC}' />
+				</td>
+			</tr>
+			 <tr>
+			 	<td colspan='2'>
+			 		<input style="margin-left:100px;" type="submit" value='保存修改' />
+			 	</td>
+			 </tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>艺术家信息</title>
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+      <style>tr,td{text-align: center;}</style>  
+      <script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js"></script>
+      <script type="text/javascript" src="__ROOT__/Data/ueditor/ueditor.config.js"></script>
+      <script type="text/javascript" src="__ROOT__/Data/ueditor/ueditor.all.min.js"></script>
+		<script> 
+		      window.UEDITOR_HOME_URL = '__ROOT__/Data/ueditor/';
+		      window.onload = function(){
+		            window.UEDITOR_CONFIG.initialFrameHeight = 450;
+		            window.UEDITOR_CONFIG.initialFrameWidth = 800;
+		            window.UEDITOR_CONFIG.savePath = ['Uploads'];
+		            window.UEDITOR_CONFIG.imageUrl = "{:U(MODULE_NAME.'/Common/c_upload',array('folder'=>'Artist'))}";       //图片上传提交地址
+		            window.UEDITOR_CONFIG.imagePath = "__ROOT__/Uploads/";
+		            UE.getEditor('introduction');
+		      }
+		</script>
+</head>
+
+<body> 
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 个人信息</div>
+</div>
+
+<div class="right-title">
+      个人信息
+</div>
+<form method="post" action="{:U(MODULE_NAME.'/Artist/doEdit')}" enctype="multipart/form-data">
+<table class="table">
+<tr><td class="td-left">账号：</td><td class="td-right">{$artist.username}</td></tr>
+<tr><td class="td-left">中文名：</td><td class="td-right"><input type="text" name="chinesename" value="{$artist.chinesename}"></td></tr>
+<tr><td class="td-left">头像：</td><td class="td-right"><div style='width:199px; height:128px;'>
+                              <img id="img1" <if condition="!empty($artist['portrait'])">src="__ROOT__/{$artist['portrait']}"<else/>src="__PUBLIC__/Admin/images/empty_thumb.gif"</if> width="193" height="177" />
+                                  </div><br><br><br>
+                                  (图片大小：193px*177px)
+                                  <input type="file" name='portrait' id="picurl1" />
+                                  <script type="text/javascript" src="__PUBLIC__/Static/thumb2.js"></script></td></tr>
+<tr><td class="td-left">头像：<br>(*需要申请推荐到<a href="{:U('/Home/a')}" style="color:red; text-decoration:underline;" target="_blank">“艺术家”</a>页面时上传)</td><td class="td-right"><div style='width:199px; height:128px;'>
+                              <img id="img2" <if condition="!empty($artist['homeportrait'])">src="__ROOT__/{$artist['homeportrait']}"<else/>src="__PUBLIC__/Admin/images/empty_thumb.gif"</if> width="200" height="129" />
+                                  </div><br>
+                                  (图片大小：493px*318px)
+                                  <input type="file" name='homeportrait' id="picurl2" />
+                                  <script type="text/javascript" src="__PUBLIC__/Static/thumb2.js"></script></td></tr>
+<tr><td class="td-left">毕业院校：</td><td class="td-right"><input type="text" name="graduate" value="{$artist.graduate}"></td></tr>
+<tr><td class="td-left">出生日期：</td><td class="td-right"><input type="text" name="birthday" value="{$artist.birthday}"></td></tr>
+<tr><td class="td-left">主要成就：</td><td class="td-right"><input type="text" name="achievement" value="{$artist.achievement}"></td></tr>
+<tr><td class="td-left">代表作品：</td><td class="td-right"><input type="text" name="represent" value="{$artist.represent}"></td></tr>
+<tr><td class="td-left">个人简介：</td><td class="td-right">
+<textarea name="summary" id="" cols="60" rows="3">{$artist.summary}</textarea>
+</td></tr>
+<tr><td class="td-left">个人详细介绍：</td><td class="td-right">
+<textarea name="introduction" id="introduction" cols="60" rows="3">{$artist.introduction}</textarea>
+</td></tr>
+<tr>
+	<td colspan="2">
+	<input type="hidden" name="id" value="{$artist.id}">
+	<input type="submit" value="提交"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 幻灯片列表</div>
+</div>
+
+<div class="right-title">
+      幻灯片列表<a href="{:U(MODULE_NAME.'/Banner/banner')}" title="">[添加]</a>
+</div>
+
+<table class="table"> 
+		
+		<tr class="firstrow">
+			<td>编号</td>
+			<td>标题</td>
+			<td>图片</td>
+			<td>位置</td>
+			<td>操作</td>
+		</tr> 
+		<foreach name="banner" item="v">
+		<tr align="center">
+			<td>{$v.id}</td>
+			<td>{$v.title}</td>
+			<td><img style="margin:2px 0;" src="__ROOT__.{$v.picurl}" alt="" width="251" height="60"></td>
+			<td>{$v.type}</td>
+			<td>
+                <a href="{:U(MODULE_NAME.'/Banner/bannerEdit',array('id'=>$v['id']))}" title="">[修改]</a>&nbsp;&nbsp;
+                <a href="{:U(MODULE_NAME.'/Banner/delete',array('id'=>$v['id']))}" title="">[删除]</a>
+			</td>
+		</tr> 
+	</foreach>
+</table>

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 幻灯片列表</div>
+</div>
+
+<div class="right-title">
+      添加幻灯片
+</div>
+<form action="{:U(MODULE_NAME.'/Banner/addBanner')}" method="post" enctype="multipart/form-data">
+
+<table class="table"> 
+		 <tr>
+           <td>标题：</td>
+           <td><input type="text" name="title" value=""/></td>
+		 </tr>
+		 <tr>
+           <td>图片：</td>
+           <td><input type="file" name="photo"/></td>
+		 </tr>
+		 <tr>
+           <td>投放位置：</td>
+           <td>
+               <select name="type">
+               	<option value="">==请选择投放位置==</option>
+               	<option value="home">首页</option>
+               	<option value="newslist">新闻列表</option>
+               	<option value="news">新闻详细页</option>
+               	<option value="productlist">产品列表</option>
+               	<option value="product">产品详细页</option>
+               	<option value="about">公司简介</option>
+               	<option value="culture">企业文化</option>
+               	<option value="speech">董事长致辞</option>
+               	<option value="concept">人才理念</option>
+               	<option value="recruit">最新招聘</option>
+               	<option value="contact">联系我们</option>
+               </select>
+           </td>
+		 </tr>
+		 <tr>
+           s
+           <td colspan="2"><input type="submit" value="提交"/></td>
+		 </tr>	 
+</form>
+</table>

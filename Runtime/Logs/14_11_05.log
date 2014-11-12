@@ -1,0 +1,207 @@
+[ 2014-11-05T23:34:44+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2014-11-05T23:35:59+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000426s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001217s ]
+
+[ 2014-11-05T23:36:03+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001008s ]
+
+[ 2014-11-05T23:43:04+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000563s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002062s ]
+
+[ 2014-11-05T23:43:43+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000991s ]
+
+[ 2014-11-05T23:43:45+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2014-11-05T23:44:11+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001532s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000386s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000728s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001433s ]
+
+[ 2014-11-05T23:44:42+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2014-11-05T23:46:57+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000660s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001112s ]
+NOTIC: [8] Undefined variable: seo_title E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo_keywords E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo_description E:\wamp\www\001-jiyiwang\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002151s ]
+

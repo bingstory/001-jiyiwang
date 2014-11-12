@@ -1,0 +1,94 @@
+<extend name="Base/common" />
+<block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<link href="__PUBLIC__/Home/css/lanrenzhijia3.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="body">
+<div id="middle"> 
+<include file="Public/belowbanner" />
+<div id="width_988">
+  
+  <div id="gao"></div>
+<div id="star_box2">
+    <div class="fl_l st_b2_left">
+        <div class="st_b2_title"><span class="fl_l st2_l"><span class="fl_l"><img src="__PUBLIC__/Home/images/cp1_19.jpg" width="27" height="27" /></span> &nbsp;&nbsp;<span class="fl_r"><strong>{$article.title}</strong></span></span><span class="fl_r c2_r">位置：<a href="about us.html">关于我们</a> > {$article.title}</span></div>
+        <div id="gao"></div>
+        <div class="ab_pic">
+         {$article.content}
+        </div>
+ 
+
+    
+    
+    </div>
+    <div class="fl_r st_b2_right">
+    <div style="width:224px;margin:0px auto 0 auto;">
+
+  <div class="vtitle">关于我们</div>
+    <div class="vcon">
+    <ul class="vconlist clearfix">
+    <volist name="nav_article" id="v">
+    <li <if condition="$key eq 0">class="one"<else/>class="three"</if>><a href="{:U('/'.MODULE_NAME.'/about_'.$v['id'])}">{$v.title}</a></li>
+    </volist>
+      <!-- <li class="three"><a href="javascript:;">友情链接</a></li> -->
+    </ul>
+  </div>
+  
+</div>
+    
+    
+    </div>
+</div>
+
+
+    
+    
+      
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>

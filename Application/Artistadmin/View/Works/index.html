@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+      <title>个性化定制</title>
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+      <link rel="stylesheet" href="__PUBLIC__/Admin/css/news.css">
+      <script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js" ></script>
+      <script>
+        $(document).ready(function(){
+          $('.enlighten').hover(function(){
+            $(this).addClass('bing-bgcolor2');
+          },function(){
+            $(this).removeClass('bing-bgcolor2');
+          });
+        });
+        function del() { 
+        var msg = "您真的要删除吗？\n删除后数据无法恢复\n请确认！"; 
+        if (confirm(msg)==true){ 
+        return true; 
+        }else{ 
+        return false; 
+          }
+        }
+      </script>
+      <style>
+            .bing-bgcolor2{background: #ebeded;}
+            
+      </style>
+</head>
+<body> 
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 美育启蒙管理</div>
+</div>
+
+<div class="right-title">
+      美育启蒙管理<a href="{:U(MODULE_NAME.'/Enlighten/add')}" title="">[添加]</a>
+</div>
+
+      <table class="table">
+       
+            <tr> 
+                  <td>
+                  <foreach name="list" item="v">
+                  <div class="enlighten">
+                    <img src="__ROOT__/{$v.picurl}">
+
+                    <div class="con">【标题】：{$v.title|msubstr=0,10,1}</div>
+                    <div class="con">【简介】：{$v.summary|msubstr=0,40,1}</div>
+                    <div class="action"><span class="modify"><a href="{:U(MODULE_NAME.'/Enlighten/edit',array('id'=>$v['id']))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Enlighten/delete',array('id'=>$v['id']))}">[删除]</a></span></div>
+                  </div>
+                </foreach> 
+                  </td>
+                  
+            </tr>
+            <tr class="firstrow"> 
+                  <td><div class="fenye">{$page}<div></td>  
+            </tr>
+           
+             
+            
+      </table>
+</body>
+</html>

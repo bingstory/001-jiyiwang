@@ -1,0 +1,511 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+</block>
+<block name="banner">
+<div id="banner">
+<div id="lanrenzhijia">
+  <ul id="slides">
+      <li style="background:url('__PUBLIC__/Home/images/lanrenzhijia01.jpg') no-repeat center top">
+        <a href="javascript:"></a>
+      </li>
+      <li style="background:url('__PUBLIC__/Home/images/lanrenzhijia04.jpg') no-repeat center top">
+        <a href="javascript:"></a>
+      </li>
+      <li style="background:url('__PUBLIC__/Home/images/lanrenzhijia03.jpg') no-repeat center top">
+        <a href="javascript:"></a>
+      </li>
+  </ul>
+</div>
+</div>
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+<div id="p_gao"></div>
+<div id="a_box1">
+    <div class="a_b1_title">
+        <div class="fl_l l_t1"><span><strong>艺术家索引</strong></span>  / SEARCH</div>
+        </div>
+        <div class="selectNumberScreen">
+  <div id="selectList" class="screenBox screenBackground">
+    <dl class="listIndex" attr="艺术分类">
+      <dt><span class="fl_l sign"><img src="__PUBLIC__/Home/images/pic1.jpg" width="7" height="12" /></span> &nbsp;<span class="fl_r biaoti">艺术分类</span></dt>
+      <dd><a href="#" values2="" values1="" attrval="全部" class="one" style="color:#ea413a">全部</a> 
+      <a href="#" values2="" values1="" attrval="国画">国画</a>
+      <a href="#" values2="" values1="" attrval="油画">油画</a> 
+      <a href="#" values2="" values1="" attrval="书法">书法</a> 
+      <a href="#" values2="" values1="" attrval="版画">版画</a> 
+      <a href="#" values2="" values1="" attrval="雕塑">雕塑</a> 
+      <a href="#" values2="" values1="" attrval="摄影">摄影</a> 
+      <a href="#" values2="" values1="" attrval="漆画">漆画</a> 
+      <a href="#" values2="" values1="" attrval="戏剧">戏剧</a> 
+      <a href="#" values2="" values1="" attrval="水粉水彩">水粉水彩</a>
+      <a href="#" values2="" values1="" attrval="当代艺术">当代艺术</a>
+      <a href="#" values2="" values1="" attrval="音乐">音乐</a> 
+      <a href="#" values2="" values1="" attrval="舞蹈">舞蹈</a> 
+      <a href="#" values2="" values1="" attrval="手工艺">手工艺</a> 
+      <a href="#" values2="" values1="" attrval="影视">影视</a> 
+      <a href="#" values2="" values1="" attrval="戏曲">戏曲</a> 
+      <a href="#" values2="" values1="" attrval="其它">其它</a> 
+      
+    </dd>
+    </dl>
+    <dl class="listIndex" attr="姓氏字母">
+      <dt><span class="fl_l sign"><img src="__PUBLIC__/Home/images/pic1.jpg" width="7" height="12" /></span> &nbsp;<span class="fl_r biaoti">姓氏字母</span></dt>
+      <dd><a href="#" values2="" values1="" attrval="全部" class="one" style="color:#ea413a">全部</a>           
+      <a href="#" values2="" values1="" attrval="A">A</a>
+      <a href="#" values2="" values1="" attrval="B">B</a>
+      <a href="#" values2="" values1="" attrval="C">C</a>
+      <a href="#" values2="" values1="" attrval="D">D</a>
+      <a href="#" values2="" values1="" attrval="E">E</a>
+          
+          <a href="#" values2="" values1="" attrval="F">F</a>
+           <a href="#" values2="" values1="" attrval="G">G</a>
+            <a href="#" values2="" values1="" attrval="H">H</a>
+             <a href="#" values2="" values1="" attrval="I">I</a>
+              <a href="#" values2="" values1="" attrval="J">J</a>
+               <a href="#" values2="" values1="" attrval="K">K</a>
+                <a href="#" values2="" values1="" attrval="L">L</a>
+                 <a href="#" values2="" values1="" attrval="M">M</a>
+                  <a href="#" values2="" values1="" attrval="N">N</a>
+                   <a href="#" values2="" values1="" attrval="O">O</a>
+                    <a href="#" values2="" values1="" attrval="P">P</a>
+                     <a href="#" values2="" values1="" attrval="Q">Q</a>
+                      <a href="#" values2="" values1="" attrval="R">R</a>
+                       <a href="#" values2="" values1="" attrval="S">S</a>
+                        <a href="#" values2="" values1="" attrval="T">T</a>
+                         <a href="#" values2="" values1="" attrval="U">U</a>
+                          <a href="#" values2="" values1="" attrval="V">V</a>
+                           <a href="#" values2="" values1="" attrval="W">W</a>
+                            <a href="#" values2="" values1="" attrval="X">X</a>
+                             <a href="#" values2="" values1="" attrval="Y">Y</a>
+                              <a href="#" values2="" values1="" attrval="Z">Z</a>
+          </dd>
+                   
+    </dl>
+    <dl class=" listIndex" attr="所在地区" style=" border-bottom:none;">
+      <dt><span class="fl_l sign"><img src="__PUBLIC__/Home/images/pic1.jpg" width="7" height="12" /></span> &nbsp;<span class="fl_r biaoti">所在地区</span></dt>
+      <dd>
+          <a href="#" values2="" values1="" attrval="全部" class="one" style="color:#ea413a">全部</a>
+          <a href="#" values2="" values1="" attrval="北京">北京</a>      
+      <a href="#" values2="" values1="" attrval="上海">上海</a> 
+      <a href="#" values2="" values1="" attrval="广东">广东</a>
+           <a href="#" values2="" values1="" attrval="浙江">浙江</a>      
+      <a href="#" values2="" values1="" attrval="香港">香港</a> 
+      <a href="#" values2="" values1="" attrval="江苏">江苏</a>
+           <a href="#" values2="" values1="" attrval="山东">山东</a>      
+      <a href="#" values2="" values1="" attrval="河南">河南</a> 
+      <a href="#" values2="" values1="" attrval="陕西">陕西</a>
+           <a href="#" values2="" values1="" attrval="四川">四川</a>      
+      <a href="#" values2="" values1="" attrval="天津">天津</a> 
+      <a href="#" values2="" values1="" attrval="安徽">安徽</a>
+           <a href="#" values2="" values1="" attrval="福建">福建</a>      
+      <a href="#" values2="" values1="" attrval="台湾">台湾</a> 
+      <a href="#" values2="" values1="" attrval="辽宁">辽宁</a>
+           <a href="#" values2="" values1="" attrval="澳门">澳门</a>      
+      <a href="#" values2="" values1="" attrval="湖南">湖南</a> 
+      <a href="#" values2="" values1="" attrval="山西">山西</a>
+           <a href="#" values2="" values1="" attrval="云南">云南</a>      
+      <a href="#" values2="" values1="" attrval="重庆">重庆</a> 
+    
+    </dd>
+    </dl>
+    
+  </div>
+
+</div>
+        
+
+<div class="a_b1_bottom">
+        <div class="fl_l search">
+            <div class="fl_top">
+            <form action="" method="get">
+            <input name="" type="text" value=" &nbsp;搜索 |"  onfocus="if (value ==' &nbsp;搜索 |'){value =''}" onblur="if (value ==''){value=' &nbsp;搜索 |'}"/>
+            
+            </form>
+            <div class="fenlei">
+            
+            <ul>
+            <span>按照</span>
+            <li><a href="#">艺术家姓名</a></li>
+             <li class="last"><a href="#">艺术品名称</a></li>
+            </ul>
+            
+            </div>
+            
+          </div>
+             <div class="fl_bottom">
+             <div style="text-align:center; width:295px; height:325px;margin:0 auto;">
+    <!-- 选项卡开始 -->
+    <div class="nTab">
+      <!-- 标题开始 -->
+      <div class="TabTitle">
+        <ul id="myTab0">
+          <li class="active" onmouseover="nTabs(this,0);">艺术家个人自助入驻</li>
+          <li class="normal" onmouseover="nTabs(this,1);">经纪人入驻</li>
+          
+          
+        </ul>
+      </div>
+      <!-- 内容开始 -->
+      <div class="TabContent">
+        <div id="myTab0_Content0">
+        <h1><a href="#"><img src="__PUBLIC__/Home/images/art1_03.jpg" width="120" height="24" /></a><a href="#"><img src="__PUBLIC__/Home/images/art1_05.jpg" width="126" height="24" /></a></h1>
+        <div class="s_input">
+        <form action="" method="get">
+       <p> 账号 &nbsp;<input name="" type="text" /></p>
+        <p> 密码&nbsp; <input name="" type="text" />
+        <span><a href="#">忘记密码</a></span></p>
+        <p class="last"> 验证码&nbsp; <input name="" type="text"  style=" width:70px"/>
+          <span><img src="__PUBLIC__/Home/images/art1_10.jpg" width="65" height="23" /></span><span>看不清 换一张</span></p>
+          
+          <div class="anliu"><span class="fl_l denglu"><a href="#"><img src="__PUBLIC__/Home/images/art1_14.jpg" width="88" height="32" /></a></span><span class="fl_r zhuce"><a href="#"><img src="__PUBLIC__/Home/images/art1_16.jpg" width="88" height="32" /></a></span></div>
+        </form>
+        
+        </div>
+        
+        
+        </div>
+        <div id="myTab0_Content1" class="none">
+        <div id="myTab0_Content0">
+        <h1><a href="#"><img src="__PUBLIC__/Home/images/art1_03.jpg" width="120" height="24" /></a><a href="#"><img src="__PUBLIC__/Home/images/art1_05.jpg" width="126" height="24" /></a></h1>
+        <div class="s_input">
+        <form action="" method="get">
+       <p> 账号 &nbsp;<input name="" type="text" /></p>
+        <p> 密码&nbsp; <input name="" type="text" />
+        <span><a href="#">忘记密码</a></span></p>
+        <p class="last"> 验证码&nbsp; <input name="" type="text"  style=" width:70px"/>
+          <span><img src="__PUBLIC__/Home/images/art1_10.jpg" width="65" height="23" /></span><span>看不清 换一张</span></p>
+          
+          <div class="anliu"><span class="fl_l denglu"><a href="#"><img src="__PUBLIC__/Home/images/art1_14.jpg" width="88" height="32" /></a></span><span class="fl_r zhuce"><a href="#"><img src="__PUBLIC__/Home/images/art1_16.jpg" width="88" height="32" /></a></span></div>
+        </form>
+        
+        </div>
+        
+        
+        </div>
+        </div>
+        
+      </div>
+ 
+    <!-- 选项卡结束 -->
+  </div>
+             
+             
+      </div>        
+             
+             </div>
+        </div>
+        <div class="fl_r news">
+         <div class="n_b2_title">
+        <div class="fl_l l_t1"><span><strong>明日之星</strong></span>  / STAR</div>
+        <div class="fl_r r_t2">MORE>></div>
+    </div>
+    <div class="news1">
+        <ul>
+<li><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_29.jpg" width="295" height="145" /></a>
+<div class="zuopin">
+<span class="fl_l zp1">代表作品：赤壁夜游</span>
+<span class="fl_r zp2">姓名：魏传义</span>
+</div>
+
+</li>
+<li class="last"><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_31.jpg" width="295" height="145" /></a>
+<div class="zuopin">
+<span class="fl_l zp1">代表作品：卡纳克神庙</span>
+<span class="fl_r zp2">姓名：翁铭泉</span>
+</div>
+
+</li>
+<li><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_35.jpg" width="295" height="145" /></a>
+<div class="zuopin">
+<span class="fl_l zp1">代表作品：五湾缘印象之三</span>
+<span class="fl_r zp2">姓名：王雪峰</span>
+</div>
+
+</li>
+<li class="last"><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_37.jpg" width="295" height="145" /></a>
+<div class="zuopin">
+<span class="fl_l zp1">代表作品：九江烟水亭</span>
+<span class="fl_r zp2">姓名：孙煌</span>
+</div>
+
+</li>
+
+</ul>
+        
+        </div>
+        </div>
+
+  </div>
+  
+  
+  
+  </div>
+  
+  <div id="gao"></div>
+<div id="a_box2">
+    <div class="a_b2_title">
+        <div class="fl_l l_t1"><span><strong>艺术家推荐</strong></span>  / RECOMMEND</div>
+        <div class="fl_r r_t2">MORE>></div>
+    </div>
+<div class="a_b2_bottom">
+    <div class="a_b2_t2">
+            <div class="fl_l b2_p1"><a href="person.html"><img src="__PUBLIC__/Home/images/img1_58.jpg" width="493" height="351" /></a>
+            <div id="hot">
+魏传义
+</div>
+            </div>
+            <div class="fl_r b2_p2">
+            <ul>
+          <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_60.jpg" width="246" height="175" /></a>
+          
+          <div id="hot">
+蔡水况
+</div>
+          </li>
+            <li class="last"> <a href="person.html"><img src="__PUBLIC__/Home/images/img1_62.jpg" width="246" height="175" /></a>
+            <div id="hot">
+洪永宏
+</div>
+            </li>
+            <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_66.jpg" width="246" height="175" /></a>
+            <div id="hot">
+李维汜
+</div>
+            </li>
+            <li class="last"><a href="person.html"><img src="__PUBLIC__/Home/images/img1_67.jpg" width="246" height="175" /></a>
+            <div id="hot">
+杨炳维
+</div>
+            </li>
+           
+            </ul>
+            
+            </div>
+    </div>
+    <div class="a_b2_b2">
+    <ul>
+    <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_71.jpg" width="246" height="175" /></a>
+    <div id="hot">
+史海青
+</div>
+    </li>
+     <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_73.jpg" width="246" height="175" /></a>
+     <div id="hot">
+林生
+</div>
+     </li>
+      <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_74.jpg" width="246" height="175" /></a>
+      <div id="hot">
+吕艺生
+</div>
+      </li>
+     <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_75.jpg" width="246" height="175" /></a>
+     <div id="hot">
+范寿春
+</div>
+     </li>
+       <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_83.jpg" width="246" height="175" /></a>
+       <div id="hot">
+郑小瑛
+</div>
+       </li>
+       <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_84.jpg" width="246" height="175" /></a>
+       <div id="hot">
+洪瑞生
+</div>
+       </li>
+        <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_85.jpg" width="246" height="175" /></a>
+        <div id="hot">
+李开聪
+</div>
+        </li>
+         <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_86.jpg" width="246" height="175" /></a>
+         <div id="hot">
+翁铭泉
+</div>
+         </li>
+    
+    
+    </ul>
+    
+    
+    
+    </div>
+</div>
+
+</div>
+
+   <div id="gao"></div>
+<div id="a_box3">
+    <div class="a_b3_title">
+        <div class="fl_l l_t1"><span><strong>艺术家列表</strong></span>  / LIST</div>
+        <div class="fl_r r_t2">MORE>></div>
+    </div>
+<div class="a_b3_bottom">
+  <ul>
+  <li class="line">
+  <div class="contain">
+      <div class="fl_l artor">
+          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_21.jpg" width="141" height="141" /></div>
+          <div class="fl_r a_text">
+          <h3>魏传义</h3>
+          <p>籍贯 四川省达州市达县</p>
+          <p>职业 画家</p>
+          <p>毕业院校 中央美术学院油画训练班</p>
+          
+          </div>
+      </div>
+      <div class="fl_r a_product">
+      <h4><a href="person.html">进入艺术家个人官网</a></h4>
+      <div class="c_a_pic">
+      <div class="a_pic1">
+      <ul>
+      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_24.jpg" width="115" height="78" /></a></li>
+       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_26.jpg" width="115" height="78" /></a></li>
+        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_28.jpg" width="115" height="78" /></a></li>
+      
+      </ul>
+       </div>
+      </div>
+      
+      </div>
+  </div>
+  
+  </li>
+  
+  <li class="line">
+  <div class="contain">
+      <div class="fl_l artor">
+          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_34.jpg" width="141" height="141" /></div>
+          <div class="fl_r a_text">
+          <h3>林岑</h3>
+
+
+
+          <p>籍贯 福建厦门</p>
+          <p>职业 高级美术师</p>
+          <p>毕业院校 福建工艺美术学校</p>
+          
+          </div>
+      </div>
+      <div class="fl_r a_product">
+      <h4><a href="person.html">进入艺术家个人官网</a></h4>
+      <div class="c_a_pic">
+      <div class="a_pic1">
+      <ul>
+      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_35.jpg" width="115" height="78" /></a></li>
+       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_36.jpg" width="115" height="78" /></a></li>
+        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_37.jpg" width="115" height="78" /></a></li>
+      
+      </ul>
+       </div>
+      </div>
+      
+      </div>
+  </div>
+  
+  </li>
+  
+  <li class="line">
+  <div class="contain">
+      <div class="fl_l artor">
+          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_42.jpg" width="141" height="141" /></div>
+          <div class="fl_r a_text">
+          <h3>吕艺生</h3>
+          <p>籍贯 黑龙江汤原</p>
+          <p>职业 著名舞蹈家、美学家等</p>
+          <p>毕业院校 北京舞蹈学校</p>
+          
+          </div>
+      </div>
+      <div class="fl_r a_product">
+      <h4><a href="person.html">进入艺术家个人官网</a></h4>
+      <div class="c_a_pic">
+      <div class="a_pic1">
+      <ul>
+      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_43.jpg" width="115" height="78" /></a></li>
+       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_44.jpg" width="115" height="78" /></a></li>
+        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_45.jpg" width="115" height="78" /></a></li>
+      
+      </ul>
+       </div>
+      </div>
+      
+      </div>
+  </div>
+  
+  </li>
+  
+  <li class="line">
+  <div class="contain">
+      <div class="fl_l artor">
+          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_50.jpg" width="141" height="141" /></div>
+          <div class="fl_r a_text">
+          <h3>朱鸣冈</h3>
+          <p>籍贯 安徽</p>
+          <p>职业 画家</p>
+          <p>毕业院校 苏州美术专科学校</p>
+          
+          </div>
+      </div>
+      <div class="fl_r a_product">
+      <h4><a href="person.html">进入艺术家个人官网</a></h4>
+      <div class="c_a_pic">
+      <div class="a_pic1">
+      <ul>
+      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_51.jpg" width="115" height="78" /></a></li>
+       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_52.jpg" width="115" height="78" /></a></li>
+        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_53.jpg" width="115" height="78" /></a></li>
+      
+      </ul>
+       </div>
+      </div>
+      
+      </div>
+  </div>
+  
+  </li>
+  </ul>
+  
+  
+  
+  </div>
+  
+  <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8" /></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8" /></a></div>
+  
+  
+    </div>
+    
+    
+      
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>
