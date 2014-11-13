@@ -4,29 +4,26 @@ use Think\Controller;
 class CategoryController extends CommonController{
 	//分类列表
     public function index(){
-        import('Class.Category');
-    	$cate = M('category')->order('sort asc')->select();
-    	$cate = \Category::unlimitedForLevel($cate,'&nbsp;&nbsp;∟');
-    	//$cate = \Category::unlimitedForLayer($cate);
-    	//$cate = \Category::getChildId($cate,3);
-        //p($cate);die;
-    	
-    	$this->cate = $cate;
+        $uid   = session('uid');
+        $where = array('artist_id'=>$uid);
+        $this->cate = M('artistcate')->order('sort desc')->where($where)->select();
     	$this->display();
     }
 
 	//添加分类
-	public function cate(){
-		$this-> pid = I('id','0','intval');
-		//p($pid);die;
+	public function addCate(){
 		$this->display();
 	}
 
 	//添加分类表单处理
-	public function addCate(){
-		//p($_POST);
-		 
-		if(M('category')->add($_POST)){
+	public function doAddCate(){
+        $uid   = session('uid');
+        $data = array(
+            'artist_id' => $uid,
+            'name'      => I('name'),
+            'sort'      => I('sort')
+            );
+		if(M('artistcate')->add($data)){
 			$this->success('添加成功',U(MODULE_NAME.'/Category/index'));
 		}else{
 			$this->error('添加失败');
@@ -34,8 +31,8 @@ class CategoryController extends CommonController{
 	}
 
 	//分类排序
-	public function sortCate(){
-		$db = M('category');
+	public function sort(){
+		$db = M('artistcate');
 		foreach ($_POST as $id => $sort) {
 			$db ->where(array('id'=>$id))->setField('sort',$sort);
 		}
@@ -46,7 +43,7 @@ class CategoryController extends CommonController{
     public function cateEdit(){
          // p($_GET);die;
         $id = I('id');
-        $this->cate = M('category')->where(array('id'=>$id))->find();
+        $this->cate = M('artistcate')->where(array('id'=>$id))->find();
     	$this->display();
     }
 
@@ -58,7 +55,7 @@ class CategoryController extends CommonController{
         	'name' => I('name'),
         	);
         // p($data);die;
-        if(M('category')->save($data)){
+        if(M('artistcate')->save($data)){
         	$this->success('修改成功',U(MODULE_NAME.'/Category/index'));
         }else{
         	$this->error('修改失败');
@@ -68,7 +65,7 @@ class CategoryController extends CommonController{
    //删除分类
     public function delete(){
     	$id = I('id');
-    	if(M('category')->delete($id)){
+    	if(M('artistcate')->delete($id)){
         	$this->success('删除成功',U(MODULE_NAME.'/Category/index'));
         }else{
         	$this->error('删除失败');

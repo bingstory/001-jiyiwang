@@ -111,7 +111,7 @@ class ArtistController extends CommonController{
 				
 		    }
         }
-		// p($data);die;
+		p($data);die;
 		if(M('user')->save($data) !== false){
     		$this->success('修改成功',U(MODULE_NAME.'/Artist/index'));
     	}else{

@@ -1,0 +1,14 @@
+<?php
+namespace Artistadmin\Model;
+use Think\Model\RelationModel;
+class WorksRelationModel extends RelationModel{
+	protected $tableName = 'works';
+	protected $_link = array(
+		'artistcate' => array(
+			'mapping_type'   => self::BELONGS_TO,
+			'foreign_key'    => 'cate_id',
+			'mapping_fields' => 'name',
+			'as_fields'      => 'name:cate'
+			),
+		);
+}

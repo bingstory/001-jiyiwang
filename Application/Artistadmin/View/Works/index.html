@@ -2,18 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-      <title>个性化定制</title>
+      <title>作品管理</title>
       <link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
       <link rel="stylesheet" href="__PUBLIC__/Admin/css/news.css">
       <script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js" ></script>
       <script>
-        $(document).ready(function(){
-          $('.enlighten').hover(function(){
-            $(this).addClass('bing-bgcolor2');
-          },function(){
-            $(this).removeClass('bing-bgcolor2');
-          });
-        });
         function del() { 
         var msg = "您真的要删除吗？\n删除后数据无法恢复\n请确认！"; 
         if (confirm(msg)==true){ 
@@ -25,36 +18,64 @@
       </script>
       <style>
             .bing-bgcolor2{background: #ebeded;}
-            
+            tr:hover{ background: #ebeded;}
       </style>
 </head>
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 美育启蒙管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 作品管理</div>
 </div>
 
 <div class="right-title">
-      美育启蒙管理<a href="{:U(MODULE_NAME.'/Enlighten/add')}" title="">[添加]</a>
+      作品列表<a href="{:U(MODULE_NAME.'/Works/add')}" title="">[添加]</a>
 </div>
 
       <table class="table">
-       
-            <tr> 
-                  <td>
-                  <foreach name="list" item="v">
-                  <div class="enlighten">
-                    <img src="__ROOT__/{$v.picurl}">
-
-                    <div class="con">【标题】：{$v.title|msubstr=0,10,1}</div>
-                    <div class="con">【简介】：{$v.summary|msubstr=0,40,1}</div>
-                    <div class="action"><span class="modify"><a href="{:U(MODULE_NAME.'/Enlighten/edit',array('id'=>$v['id']))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Enlighten/delete',array('id'=>$v['id']))}">[删除]</a></span></div>
-                  </div>
-                </foreach> 
+        <tr>
+                  <form action="{:U(MODULE_NAME.'/Works/index')}" method="post">
+                  <td colspan="9"> 
+                  分类：<select name="cate_id">
+                  <option value="">--请选择--</option>
+                  <foreach name="category" item="v">
+                     <option value="{$v.id}">{$v.name}</option>
+                  </foreach> 
+                  </select>
+                  <input type="submit" name="" value="搜索"> 
                   </td>
-                  
+            </form>
             </tr>
+            <tr> 
+                    <td width="100">作品编号</td>
+                    <td>标题</td>
+                    <td width="100">封面</td>
+                    <td>所属分类</td>
+                    <td width="100">艺术家姓名</td>
+                    <td>评论管理</td>
+                    <td>附件管理</td>
+                    <td>推送到商铺</td>
+                    <td>操作</td>
+              </tr>
+            <foreach name="list" item="v">
+              <tr>
+               <td>{$v.works_id}</td>
+               <td>{$v.title}</td>
+               <td><img src="__ROOT__/{$v.thumb}" alt="" width="100" height="90" style="border:3px solid #DCE2F3;"/></td>
+               <td>{$v.cate}</td>
+               <td>{$v.artistname}</td>
+               <td><a href="">[评论管理]</a></td>
+               <td><a href="">[附件管理]</a></td>
+               <td>
+               <if condition="$v.rec2shop eq 1"><a style="color:green;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>0,'cate_id'=>$cate_id))}">是</a><else/>
+               <a style="color:red;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>1,'cate_id'=>$cate_id))}">否</a>
+               </if>
+               </td>
+               <td>
+                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id))}">[删除]</a></span>
+               </td>
+             </tr>
+          </foreach>
             <tr class="firstrow"> 
-                  <td><div class="fenye">{$page}<div></td>  
+            <td colspan="9"><div class="fenye">{$page}</div></td>  
             </tr>
            
              

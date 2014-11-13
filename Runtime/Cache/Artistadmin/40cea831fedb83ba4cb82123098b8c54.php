@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+	<link rel="stylesheet" href="/001-jiyiwang/Public/Admin/css/common.css">
 </head>
 <body> 
 <div class="right-nav">
@@ -13,13 +13,13 @@
       修改栏目名称
 </div>
 
-<form action="{:U(MODULE_NAME.'/Category/doCateEdit')}" method="post">
+<form action="<?php echo U(MODULE_NAME.'/Category/doCateEdit');?>" method="post">
 <table class="table">
 	 
 	<tbody>
 		<tr>
 			<td align="right" class="width45">原栏目名称：</td>
-			<td>{$cate.name}</td>
+			<td><?php echo ($cate["name"]); ?></td>
 		</tr> 
 		<tr>
 			<td align="right">新栏目名称：</td>
@@ -27,7 +27,7 @@
 		</tr>
  
 	<tr> 
-	        <input type="hidden" name="id" value="{$cate.id}">
+	        <input type="hidden" name="id" value="<?php echo ($cate["id"]); ?>">
 			<td colspan="2" align="center"><input type="submit" value="提交"></td>
 		</tr>
 	</tbody>

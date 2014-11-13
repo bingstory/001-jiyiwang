@@ -55,14 +55,14 @@ class CommonController extends Controller{
 	          $limit = $page->firstRow.','.$page->listRows;
 	          $this->pagecount = $count/$page->listRows;
 	          $this->$name = D($dtable)->relation(true)->where($where2)->order($order)->limit($limit)->select();
-	        
+	          
 	          $this->page = $page->show(); 
 	          $this->display(); 
         }
 
         // 排序
         public function c_sort(){
-
+            
         }
 }
 
