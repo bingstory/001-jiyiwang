@@ -21,7 +21,9 @@ class UserController extends CommonController{
 	    		break;
     	}
     	$where = array('usertype'=>$usertype);
-        $this->user = M('user')->where($where)->select();
+        // $this->user = M('user')->where($where)->select();
+        $this->user = D('UserattrRelation')->relation(true)->where($where)->order('sort desc,id desc')->select();
+        // p($this->user);die;
     	$this->display();
     }
    // 添加用户界面
@@ -117,6 +119,16 @@ class UserController extends CommonController{
 			$this->error('修改失败');
 		};
 
+	}
+
+	public function sort(){
+		// p($_POST);die;
+		$usertype = I('usertype');
+		foreach ($_POST as $k => $v) {
+			M('user')->where(array('id'=>$k))->setField('sort',$v);
+		}
+		$prevurl = $_SERVER['HTTP_REFERER'];
+		redirect($prevurl.'/usertype/'.$usertype);
 	}
 
 }

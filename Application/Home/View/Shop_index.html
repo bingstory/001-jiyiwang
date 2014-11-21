@@ -24,19 +24,32 @@
 <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 <script>
 $(function (){ 
-  $(".left_nav dd").hover(function(){
-  $(".nav_right",this).show();
-  });
-  $(".left_nav dd").mouseleave(function(){
-  $(".nav_right",this).hide();
+  $('ul.m_h1').addClass('current');
+  $('ul.m_h1 h3').addClass('h3');
+  $('ul.bn').hover(function(){
+    $(this).find('h3').addClass('h3');
+    $(this).siblings().find('h3').removeClass('h3');
+    $(this).addClass("current");
+    $(this).siblings().removeClass("current");
   });
 });
 </script>
+<style>
+  #menu .current{
+    height: 108px;
+    background: #e8413b;
+    color: #fff;
+    padding-top: 10px;
+  }
+  #menu .bn .h3{
+    color: #fff;
+  }
+</style>
 </block>
 <block name="menu">
 </div>
 <div id="menu"> 
-  <ul class="m_h1"> 
+  <ul class="m_h1 bn"> 
     <h3>美术</h3> 
     <li>国画</li>    
     <li>油画</li>
@@ -47,17 +60,17 @@ $(function (){
     <li>当代艺术</li>
     <li>其他</li>
   </ul>
-  <ul class="m_h2"> 
+  <ul class="m_h2 bn"> 
     <h3>舞蹈</h3>
     <li>原创作品</li> 
     <li>版权</li> 
   </ul>
-  <ul class="m_h3"> 
+  <ul class="m_h3 bn"> 
     <h3>文字</h3>
     <li>原创作品</li>   
     <li>版权</li>
   </ul> 
-  <ul class="m_h4">
+  <ul class="m_h4 bn">
 
     <h3>手工艺</h3>
     <li>原创作品</li>                   
@@ -65,7 +78,7 @@ $(function (){
    <li>版权</li>
   </ul>
 
-<ul class="m_h5">
+<ul class="m_h5 bn">
 
     <h3>影视</h3>
     <li>原创作品</li>                   
@@ -73,7 +86,7 @@ $(function (){
    <li>版权</li>
   </ul>
 
-<ul class="m_h6">
+<ul class="m_h6 bn">
 
     <h3>戏曲</h3>
    <li>原创作品</li>                   

@@ -73,7 +73,7 @@ function MM_swapImage() { //v3.0
 			});
 		</script>
 		<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.min.js"></script>
-<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
+        <script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
 		
 <link href="/001-jiyiwang/Public/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
@@ -122,18 +122,24 @@ $(function(){
 
 <body>
  <!-- 头部 -->
- <div id="header">
+ 
+<div id="header">
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-    <div class="fl_l top1"><h1>您好！欢迎来到集艺网</h1></div>
-    <div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
     <ul>
-    <li><a href="dlzc.html">登录</a></li>
-    <li><a href="dlzc.htmll">注册</a></li>
-    
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
     </ul>
     </div>
+    <?php else: ?>
+    <div class="fl_r top2">
+    <ul>
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/logout');?>">[退出]</a></li>
+    </ul>
+    </div><?php endif; ?>
 </div>
 
 <div class="fl_r top_t2">
@@ -174,6 +180,7 @@ $(function(){
 
 <!-- Banner END-->
 </div>
+
  <!-- 头部 END -->
 
  <!-- 主体 -->
@@ -262,6 +269,7 @@ to the official Micro message</p></div>
  <!-- 主体END -->
  
  <!-- 底部 -->
+ 
  <div id="footer">
 <div id="width_988">
 <div id="f_box">
@@ -293,6 +301,7 @@ to the official Micro message</p></div>
 
 
 </div> 
+
  <!-- 底部 END -->
 </body>
 </html>

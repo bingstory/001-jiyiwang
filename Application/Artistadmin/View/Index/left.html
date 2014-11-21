@@ -22,7 +22,6 @@
         <ul class="MM">
           <li><a href="{:U(MODULE_NAME.'/Artist/index')}" target="main">个人信息</a></li>
           <li><a href="{:U(MODULE_NAME.'/User/setPassword')}" target="main">密码管理</a></li>
-          <li><a href="{:U(MODULE_NAME.'/Artist/dynamic')}" target="main">个人动态</a></li>
         </ul>
       </div>
 
@@ -30,13 +29,12 @@
       <div class="content">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td><img src="__PUBLIC__/Admin/images/menu_topline.gif" width="182" height="5" /></td>
+            <td><img src="__PUBLIC__/Admin/images/menu_topline.gif" width="182" height="5"/></td>
           </tr>
         </table>
         <ul class="MM">
           <li><a href="{:U(MODULE_NAME.'/Works/index')}" target="main">作品管理</a></li>
           <li><a href="{:U(MODULE_NAME.'/Category/index')}" target="main">分类管理</a></li>
-          <li><a href="{:U(MODULE_NAME.'/Artist/dynamic')}" target="main">个人动态</a></li>
         </ul>
       </div>
 
@@ -48,7 +46,7 @@
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="{:U(MODULE_NAME.'/Shops/index')}" target="main">商品管理</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Works/index',array('isshop'=>1))}" target="main">商品管理</a></li>
         </ul>
       </div>
       
@@ -61,17 +59,16 @@
           </table>
         <ul class="MM">
           <li><a href="http://www.mycodes.net" target="main">主页大图设置</a></li>
-          <li><a href="http://www.mycodes.net" target="main">主机状态</a></li>
-          <li><a href="http://www.mycodes.net" target="main">攻击状态</a></li>
-          <li><a href="http://www.mycodes.net" target="main">登陆记录</a></li>
-          <li><a href="http://www.mycodes.net" target="main">运行状态</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Homepage/comment')}" target="main">名家评价</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Homepage/video')}" target="main">视频</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Homepage/yearslist')}" target="main">年谱简表</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Homepage/dynamic')}" target="main">个人动态</a></li>
         </ul>
       </div>
       </div>
         <script type="text/javascript">
 		var contents = document.getElementsByClassName('content');
 		var toggles = document.getElementsByClassName('type');
-	
 		var myAccordion = new fx.Accordion(
 			toggles, contents, {opacity: true, duration: 400}
 		);

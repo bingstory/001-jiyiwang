@@ -57,12 +57,21 @@
                         </td>
                   </tr>
                   <tr>
-                        <td width="100px;" align="right">所属分类：</td>
+                        <td width="100px;" align="right">个人分类（艺术家自己创建的分类）：</td>
                         <td>
                               <select name="cate_id" id="">
                                     <option value="">请选择分类</option>
                                     <?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); echo ($v["name"]); ?></option><?php endforeach; endif; ?>
                               </select><label id="selecterror" for=""></label>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td width="100px;" align="right">商城分类：</td>
+                        <td>
+                              <select name="shopcate_id" id="">
+                                    <option value="">请选择分类</option>
+                                    <?php if(is_array($shopcategory)): foreach($shopcategory as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); echo ($v["name"]); ?></option><?php endforeach; endif; ?>
+                              </select>
                         </td>
                   </tr>
                   <tr>

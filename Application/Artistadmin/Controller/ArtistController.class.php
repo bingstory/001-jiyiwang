@@ -4,14 +4,16 @@ class ArtistController extends CommonController{
 	// 艺术家信息
 	public function index(){
 		$id = session('uid');
-		$this->artist = M('user')->find($id);
+		$this->artist = D('ArtistareaRelation')->relation(true)->find($id);
 		$this->display();
 	}
 
 	// 艺术家信息 编辑
 	public function editInfo(){
 		$id = session('uid');
-		$this->artist = M('user')->find($id);
+		$this->area = M('area')->order('sort desc')->select();
+		$this->artist = D('ArtistareaRelation')->relation(true)->find($id);
+		// p($this->artist);die;
 		$this->display();
 	}
 
@@ -30,7 +32,10 @@ class ArtistController extends CommonController{
             $data = array(
 			'id'           => I('id'),
 			'chinesename'  => I('chinesename'),
+			'nativeplace'  => I('nativeplace'),
+			'career'       => I('career'),
 			'graduate'     => I('graduate'),
+			'area_id'      => I('area'),
 			'birthday'     => I('birthday'),
 			'achievement'  => I('achievement'),
 			'represent'    => I('represent'),
@@ -50,8 +55,11 @@ class ArtistController extends CommonController{
 		        $data = array(
 				'id'           => I('id'),
 				'chinesename'  => I('chinesename'),
+				'nativeplace'  => I('nativeplace'),
+			    'career'       => I('career'),
 				'portrait'     => $info['savepath'].$info['savename'],
 				'graduate'     => I('graduate'),
+				'area_id'      => I('area'),
 				'birthday'     => I('birthday'),
 				'achievement'  => I('achievement'),
 				'represent'    => I('represent'),
@@ -73,8 +81,11 @@ class ArtistController extends CommonController{
 		        $data = array(
 				'id'           => I('id'),
 				'chinesename'  => I('chinesename'),
+				'nativeplace'  => I('nativeplace'),
+			    'career'       => I('career'),
 				'homeportrait'     => $info2['savepath'].$info2['savename'],
 				'graduate'     => I('graduate'),
+				'area_id'      => I('area'),
 				'birthday'     => I('birthday'),
 				'achievement'  => I('achievement'),
 				'represent'    => I('represent'),
@@ -99,9 +110,12 @@ class ArtistController extends CommonController{
 		        $data = array(
 				'id'           => I('id'),
 				'chinesename'  => I('chinesename'),
+				'nativeplace'  => I('nativeplace'),
+			    'career'       => I('career'),
 				'portrait'     => $info['savepath'].$info['savename'],
 				'homeportrait' => $info2['savepath'].$info2['savename'],
 				'graduate'     => I('graduate'),
+				'area_id'      => I('area'),
 				'birthday'     => I('birthday'),
 				'achievement'  => I('achievement'),
 				'represent'    => I('represent'),
@@ -111,7 +125,7 @@ class ArtistController extends CommonController{
 				
 		    }
         }
-		p($data);die;
+		// p($data);die;
 		if(M('user')->save($data) !== false){
     		$this->success('修改成功',U(MODULE_NAME.'/Artist/index'));
     	}else{

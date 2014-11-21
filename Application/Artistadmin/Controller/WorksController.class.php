@@ -3,14 +3,26 @@ namespace Artistadmin\Controller;
 class WorksController extends CommonController{
 	//作品列表
 	public function index(){
+	   $isshop = I('isshop','','intval');
+	   $this->assign('isshop',$isshop);
+	   $this->pos = empty($isshop) ? '作品' : '商品';
 	   $uid = session('uid');
 	   $where = array('artist_id'=>$uid);
        $this->category = M('artistcate')->where($where)->select();
        
        $cate_id = I('cate_id','','intval'); 
        $this->assign('cate_id',$cate_id);
-       $where2 = empty($cate_id) ? '' : array('cate_id'=>$cate_id);
-       $this->c_page('works','WorksRelation','list','pubtime desc',$where2); 
+       if(empty($isshop)){
+       	$where2 = empty($cate_id) ? '' : array('cate_id'=>$cate_id);
+       }else{
+       	$where2 = empty($cate_id) ? array('rec2shop'=>1) : array('cate_id'=>$cate_id,'rec2shop'=>1);
+       }
+       if(!empty($isshop)){
+       	$this->c_page('works','WorksRelation','list','shopsort desc,pubtime desc',$where2);
+       }else{
+       	$this->c_page('works','WorksRelation','list','workssort desc,pubtime desc',$where2);
+       }
+        
 	}
 
 	//回收站
@@ -38,7 +50,7 @@ class WorksController extends CommonController{
         $id = (int)$_GET['id'];
         $result = M('works')->delete($id); 
         if($result){
-            $this->success('删除成功','Works/index/cate_id/'.$cate_id);
+            redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/1');
         }else{
             $this->error('删除失败');
         }
@@ -60,28 +72,35 @@ class WorksController extends CommonController{
 	   $uid = session('uid');
 	   $where = array('artist_id'=>$uid);
        $this->category = M('artistcate')->where($where)->select();
+       $cate = M('category')->select();
+       import('Class/Category');
+       $this->shopcategory = \Category::unlimitedForLevel($cate,'└',31);
+       // p($this->shopcategory);die;
        $this->display();
 	}
 
 	//添加新闻表单处理
 	public function doAdd(){ 
+		$artist_id = session('uid');
 		$upload = new \Think\Upload();                             // 实例化上传类    
-        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->maxSize   =  3145728;                             // 设置附件上传大小
         $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg');  // 设置附件上传类型   
         $upload->rootPath  =  './';
-        $upload->savePath  =  'Uploads/Works/';                   // 设置附件上传目录    // 上传单个文件    
-        $info   = $upload->uploadOne($_FILES['thumb']); 
+        $upload->savePath  =  'Uploads/Works/';                    // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['thumb']);
         $info2   = $upload->uploadOne($_FILES['thumb2']); 
         $haspic = $info['savename']; 
         $haspic2 = $info2['savename']; 
         if(empty($haspic)&&empty($haspic2)){
             $data = array(
+            	'artist_id'   => $artist_id,
 				'works_id'    => I('works_id'),
 				'title'       => I('title'),
 				'artistname'  => I('artistname'),
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -101,16 +120,18 @@ class WorksController extends CommonController{
             $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
             $image->thumb(421, 387,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
 
-        	if(!$info) {               // 上传错误提示错误信息        
-            $this->error($upload->getError());   
+        	if(!$info) {                // 上传错误 提示错误信息        
+                $this->error($upload->getError());   
 	        }else{                      // 上传成功 获取上传文件信息        
 		        $data = array(
+		        	'artist_id'   => $artist_id,
 				'works_id'    => I('works_id'),
 				'title'       => I('title'),
 				'artistname'  => I('artistname'),
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -137,12 +158,14 @@ class WorksController extends CommonController{
             $this->error($upload->getError());   
 	        }else{                      // 上传成功 获取上传文件信息        
 		        $data = array(
+		        	'artist_id'   => $artist_id,
 				'works_id'    => I('works_id'),
 				'title'       => I('title'),
 				'artistname'  => I('artistname'),
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -172,12 +195,14 @@ class WorksController extends CommonController{
             $this->error($upload->getError());   
 	        }else{                      // 上传成功 获取上传文件信息        
 		        $data = array(
+		        'artist_id'   => $artist_id,
 				'works_id'    => I('works_id'),
 				'title'       => I('title'),
 				'artistname'  => I('artistname'),
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -192,7 +217,6 @@ class WorksController extends CommonController{
 				'thumb'       => $info['savepath'].$info['savename'],
 				'thumb2'      => $info2['savepath'].$info2['savename']
 			);
-				
 		    }
         }
         // p($data);die;
@@ -201,12 +225,13 @@ class WorksController extends CommonController{
 		}else{
 	        $this->error('添加失败');
 		}
-		 
+		
 	}
  
     //新闻编辑操作
     public function edit(){ 
        $this->cate_id = I('cate_id','','intval');
+       $this->isshop = I('isshop');
        //所属分类
 	   $uid = session('uid');
 	   $where = array('artist_id'=>$uid);
@@ -222,6 +247,7 @@ class WorksController extends CommonController{
     //新闻编辑操作
     public function doEdit(){
     	$cate_id = I('search_cate_id','','intval');
+    	$this->isshop = I('isshop');
     	$upload = new \Think\Upload();                             // 实例化上传类    
         $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
         $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg');  // 设置附件上传类型   
@@ -240,6 +266,7 @@ class WorksController extends CommonController{
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -270,6 +297,7 @@ class WorksController extends CommonController{
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -303,6 +331,7 @@ class WorksController extends CommonController{
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -339,6 +368,7 @@ class WorksController extends CommonController{
 				'createyear'  => I('createyear'),
 				'pubtime'     => time(),
 				'cate_id'     => I('cate_id'),
+				'shopcate_id' => I('shopcate_id'),
 				'material'    => I('material'),
 				'credit'      => I('credit'),
 				'price'       => I('price'),
@@ -358,7 +388,7 @@ class WorksController extends CommonController{
         }
     	 
     	if(M('works')->save($data) !== false){
-    		$this->success('修改成功',U(MODULE_NAME.'/Works/index',array('cate_id'=>$cate_id)));
+    		$this->success('修改成功',U(MODULE_NAME.'/Works/index',array('cate_id'=>$cate_id,'isshop'=>1)));
     	}else{
     		$this->error('修改失败');
     	} 
@@ -375,6 +405,212 @@ class WorksController extends CommonController{
     	}else{
     		$this->error('发生意外情况！');
     	}
+    }
+
+    // 附件管理
+    public function attachment(){
+    	$works_id = I('works_id','','intval');
+    	$cate_id = I('cate_id','0','intval');
+    	$this->assign('works_id',$works_id);
+    	$this->assign('cate_id',$cate_id);
+    	$this->attachment = M('attachment')->where(array('works_id'=>$works_id))->select();
+    	$this->display();
+    }
+
+    // 添加附件
+    public function addAttachment(){
+    	$works_id = I('works_id','','intval');
+    	$this->works = M('works')->find($works_id);
+    	$this->display();
+    }
+
+    // 添加附件 表单处理
+    public function doAddAttachment(){
+    	$upload = new \Think\Upload();                             // 实例化上传类    
+        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg','txt','zip','rar');  // 设置附件上传类型   
+        $upload->rootPath  =  './';
+        $upload->savePath  =  'Uploads/Works/';                   // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['picurl']); 
+        $info2   = $upload->uploadOne($_FILES['attachment']); 
+        $haspic = $info['savename']; 
+        $haspic2 = $info2['savename']; 
+        if(empty($haspic)&&empty($haspic2)){
+            $data = array(
+    		'works_id' => I('works_id'),
+    		'name' => I('name'),
+    		'credits' => I('credits')
+    		);
+        }elseif(!empty($haspic)&&empty($haspic2)){
+        	// 生成缩略图
+        	$getpic = $info['savepath'].$info['savename'];//获取上传的图片 
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+        	if(!$info) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息        
+		        $data = array(
+    		'works_id' => I('works_id'),
+    		'name' => I('name'),
+    		'picurl' => $info['savepath'].$info['savename'],
+    		'credits' => I('credits')
+    		);
+				
+		    }
+        }elseif(empty($haspic)&&!empty($haspic2)){
+        	if(!$info2) {               // 上传错误提示错误信息        
+                $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息        
+		        $data = array(
+		    		'works_id' => I('works_id'),
+		    		'name' => I('name'),
+		    		'attachment' => $info2['savepath'].$info2['savename'],
+		    		'credits' => I('credits')
+		    		);
+		    }
+        }elseif(!empty($haspic)&&!empty($haspic2)){
+        	// 生成缩略图
+        	$getpic = $info['savepath'].$info['savename'];//获取上传的图片
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+        	if(!$info||!$info2) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息        
+		        $data = array(
+    		      'works_id' => I('works_id'),
+    		      'name' => I('name'),
+    		      'picurl' => $info['savepath'].$info['savename'],
+    		      'attachment' => $info2['savepath'].$info2['savename'],
+    		      'credits' => I('credits')
+    		    );
+		    }
+        }
+        // p($data);die;
+    	if(M('attachment')->add($data) !== false){
+    		$this->success('添加成功',U(MODULE_NAME.'/Works/attachment',array('works_id'=>I('works_id'))));
+    	}else{
+    		$this->error('添加失败');
+    	} 
+    }
+
+    // 附件修改
+    public function editAttachment(){
+    	$id = I('id');
+    	$works_id = I('works_id');
+    	$this->works = M('works')->find($works_id);
+    	$this->attachment = M('attachment')->find($id);
+    	$this->display();
+    }
+
+    // 附件修改 表单处理
+    public function doEditAttachment(){
+    	$upload = new \Think\Upload();                             // 实例化上传类    
+        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg','txt','zip','rar');  // 设置附件上传类型
+        $upload->rootPath  =  './';
+        $upload->savePath  =  'Uploads/Works/';                   // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['picurl']); 
+        $info2   = $upload->uploadOne($_FILES['attachment']); 
+        $haspic = $info['savename']; 
+        $haspic2 = $info2['savename'];  
+        if(empty($haspic)&&empty($haspic2)){
+            $data = array(
+    		'id' => I('id'),
+    		'name' => I('name'),
+    		'credits' => I('credits')
+    		);
+        }elseif(!empty($haspic)&&empty($haspic2)){
+        	// 生成缩略图
+        	$getpic = $info['savepath'].$info['savename'];//获取上传的图片 
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+        	if(!$info) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息   
+		        $data = array(
+    		'id' => I('id'),
+    		'name' => I('name'),
+    		'picurl' => $info['savepath'].$info['savename'],
+    		'credits' => I('credits')
+    		);
+		    }
+        }elseif(empty($haspic)&&!empty($haspic2)){
+        	if(!$info2) {               // 上传错误提示错误信息        
+                $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息        
+		        $data = array(
+		    		'id' => I('id'),
+		    		'name' => I('name'),
+		    		'attachment' => $info2['savepath'].$info2['savename'],
+		    		'credits' => I('credits')
+		    		);
+		    }
+        }elseif(!empty($haspic)&&!empty($haspic2)){
+        	// 生成缩略图
+        	$getpic = $info['savepath'].$info['savename'];//获取上传的图片
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+        	if(!$info||!$info2) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+	        }else{                      // 上传成功 获取上传文件信息        
+		        $data = array(
+    		      'id' => I('id'),
+    		      'name' => I('name'),
+    		      'picurl' => $info['savepath'].$info['savename'],
+    		      'attachment' => $info2['savepath'].$info2['savename'],
+    		      'credits' => I('credits')
+    		    );
+		    }
+        }
+        // p($data);die;
+    	if(M('attachment')->save($data) !== false){
+    		$this->success('修改成功',U(MODULE_NAME.'/Works/attachment',array('works_id'=>I('works_id'))));
+    	}else{
+    		$this->error('修改失败');
+    	} 
+    }
+
+    public function workssort(){
+        $cate_id = I('cate_id');
+    	$isshop  = I('isshop');
+    	foreach ($_POST as $k => $v) {
+			M('works')->where(array('id'=>$k))->setField('workssort',$v);
+		}
+		$prevurl = $_SERVER['HTTP_REFERER'];
+		redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/'.$isshop);
+    }
+
+    public function shopsort(){
+    	$cate_id = I('cate_id');
+    	$isshop  = I('isshop');
+    	foreach ($_POST as $k => $v) {
+			M('works')->where(array('id'=>$k))->setField('shopsort',$v);
+		}
+		$prevurl = $_SERVER['HTTP_REFERER'];
+		redirect($prevurl);
+    }
+
+    public function sort(){
+    	$cate_id = I('cate_id');
+    	$isshop  = I('isshop');
+    	foreach ($_POST as $k => $v) {
+    		if(!empty($isshop)){
+    			M('works')->where(array('id'=>$k))->setField('shopsort',$v);
+    		}else{
+    			M('works')->where(array('id'=>$k))->setField('workssort',$v);
+    		}
+			
+		}
+		$prevurl = $_SERVER['HTTP_REFERER'];
+		redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/'.$isshop);
     }
 }
 

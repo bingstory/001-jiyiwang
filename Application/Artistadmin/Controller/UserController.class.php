@@ -53,6 +53,33 @@ class UserController extends CommonController{
 		redirect($_SERVER['HTTP_REFERER']);
 	}
 
+    // 修改密码
+    public function setPassword(){
+    	$uid = session('uid');
+    	$this->user = M('user')->find($uid);
+    	$this->display();
+    }
+
+    // 修改密码 表单处理
+    public function doSetPassword(){
+    	$uid = session('uid');
+    	$data = array(
+    		'id' => $uid,
+    		'password' => I('password','','md5')
+    		);
+    	$oldpwd = I('oldpwd','','md5');
+    	$user = M('user')->find($uid);
+    	if($oldpwd == $user['password']){
+			if(M('user')->save($data)){
+				$this->success('修改成功');
+			}else{
+				$this->error('修改失败！');
+			}
+    	}else{
+    		$this->error('原密码不对！');
+    	}
+    	
+    }
 	
 }
 

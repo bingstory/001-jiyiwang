@@ -1,15 +1,23 @@
+<block name="header">
 <div id="header">
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-    <div class="fl_l top1"><h1>您好！欢迎来到集艺网</h1></div>
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="{:U('/'.MODULE_NAME.'/User1/homepage')}"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
+    <if condition="empty($_SESSION['normalusername'])">
     <div class="fl_r top2">
     <ul>
-    <li><a href="dlzc.html">登录</a></li>
-    <li><a href="dlzc.htmll">注册</a></li>
-    
+    <li><a href="{:U('/'.MODULE_NAME.'/login')}">登录</a></li>
+    <li><a href="{:U('/'.MODULE_NAME.'/reg')}">注册</a></li>
     </ul>
     </div>
+    <else/>
+    <div class="fl_r top2">
+    <ul>
+    <li><a href="{:U('/'.MODULE_NAME.'/logout')}">[退出]</a></li>
+    </ul>
+    </div>
+    </if>
 </div>
 
 <div class="fl_r top_t2">
@@ -50,3 +58,4 @@
 </block>
 <!-- Banner END-->
 </div>
+</block>

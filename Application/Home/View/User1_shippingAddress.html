@@ -1,0 +1,118 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        
+        
+        <div class="vip_bottom"> 
+        <p class="input">固定电话： <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><select name=""  style="height:30px;">
+                       <option>中国</option>
+                     </select> <select name="" style=" width:240px;height:30px;">
+                       <option>请选择城市</option>
+                     </select></span></p>
+        
+          <p class="input" style=" margin-left:-10px">收货人姓名：  <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><input name="" type="text" /></span></p>
+            
+            
+                 <p class="input">手机号码： &nbsp;<span style="margin-left:2px"><input name="" type="text" /></span></p>
+        
+                     <p class="input">固定电话： &nbsp;<span style="margin-left:2px"><input name="" type="text"  style="width:86px"/> . <input name="" type="text"  style="width:86px"/> . <input name="" type="text"  style="width:88px"/> </span></p>
+                     <p style=" margin-top:20px; margin-left:68px"><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476" style=" height:10px; width:14px"/>设置为默认收货地址</p>
+                     <p><a href="#"><img src="__PUBLIC__/Home/images/sh1.jpg" /></a></p>
+
+        </div>
+        
+        <div class="sh_text">
+        <h5>已保存了4条地址，还能保存1条地址</h5>
+        <div class="sh_text1">
+        <h3><span class="fl_l sh_t1">收货人</span>
+        <span class="fl_l sh_t2">所在地区</span><span class="fl_l sh_t3">详细地址</span><span class="fl_l sh_t4">邮编</span><span class="fl_l sh_t5">电话/手机</span><span class="fl_r sh_t6">操作</span>
+        
+        </h3>
+        <ul>
+        <li> <span class="fl_l sh_t1">杨晶</span><span class="fl_l sh_t2">湖北省 武汉市 洪山区 关山大道</span><span class="fl_l sh_t3">东湖开发区大学园路华师园三路存储产业园4号二楼（从外面可以看见博莱电子大的标识牌）</span><span class="fl_l sh_t4">430200</span><span class="fl_l sh_t5">13163314914</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
+        
+        <li> <span class="fl_l sh_t1">孙小洁</span><span class="fl_l sh_t2">辽宁省 沈阳市 和平区</span><span class="fl_l sh_t3">和平区南京南街和鸿国际花园A座206</span><span class="fl_l sh_t4">110002</span><span class="fl_l sh_t5">15542253200</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
+        
+        <li> <span class="fl_l sh_t1">刘诗琪</span><span class="fl_l sh_t2">湖北省 武汉市 江汉区</span><span class="fl_l sh_t3">建设大道青年路招商大厦11楼1110</span><span class="fl_l sh_t4">430115</span><span class="fl_l sh_t5">18502748647</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
+        
+        <li> <span class="fl_l sh_t1">郑春华</span><span class="fl_l sh_t2">湖北省 孝感市 云梦县</span><span class="fl_l sh_t3">城关镇陈赵村二组</span><span class="fl_l sh_t4">432500</span><span class="fl_l sh_t5">0712-4222289 13733510651</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
+        </ul>
+        
+        
+        
+        
+        
+        </div>
+        
+        
+        </div>
+        
+        
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

@@ -15,7 +15,7 @@ a:hover{color:#fff; text-decoration:none}
 /*header*/
 #header{ width:100%}
 #header #header_top{ width:100%; text-align:center; margin:0 auto; height:35px; line-height:35px; background-color:#e8413b}
-#width_988 .top_t1{ color:#fff; width:210px; text-align:left}
+#width_988 .top_t1{ color:#fff; width:257px; text-align:left}
 .top_t1 .top1 h1{ font-size:12px; font-weight:normal; margin:0}
 .top_t1 .top2 ul{ margin:0; padding:0}
 .top_t1 .top2 li{ float:left; padding-right:10px; font-size:12px;}
@@ -373,7 +373,7 @@ clear: both;}
 #width_988 #menu{ position:absolute;top:130px; text-align:left;.left:24%;
 	height:466px;
 	width:265px;
-	background-image: url(../images/m_bg.jpg);
+	/*background-image: url(../images/m_bg.jpg);*/
 	background-repeat: no-repeat;
 	background-position: right;
 }
@@ -384,10 +384,18 @@ clear: both;}
 
 padding-top: 8px;}
 #width_988 #banner2{}
-#menu .m_h1{height: 108px;
+#menu .m_h1{
+	/*height: 108px;
 background: #e8413b;
 color: #fff;
-padding-top: 10px;}
+padding-top: 10px;*/
+ height: 45px;
+    overflow: hidden;
+    background: #efefef;
+    color: #6d6d6d;
+    padding-top: 10px;
+}
+#menu .m_h1 h3{ color:#e8413b}
 #menu .m_h2{ height: 47px;
 background: #fff;
 color: #6d6d6d;
@@ -418,7 +426,7 @@ background: #efefef;
 color: #6d6d6d;
 padding-top: 10px;}
 #menu .m_h7 h3{ color:#e8413b}
-#menu .m_h8{ height:14px; background:#fff; width:245px}
+#menu .m_h8{ height:14px; background:#fff; width:216px}
 
 
 #width_988 #s_box1{ clear:both;font-family:"微软雅黑"; }

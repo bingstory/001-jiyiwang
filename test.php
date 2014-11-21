@@ -1,5 +1,7 @@
 <?php
 header('Content-Type:text/html; charset=utf-8');
+echo date('Y-m-d H:i:s',1415926970);
+
 $test=0;
 
 if($test==''){

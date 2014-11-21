@@ -186,5 +186,3 @@ class EnlightenController extends CommonController{
     	} 
     }
 }
-
- 

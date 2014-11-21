@@ -1,0 +1,77 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="zp_text">
+        <h3><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"> &nbsp;<span>需要发票</span></h3>
+        <p><input name="radiobutton" type="radio" value="radiobutton">个人 &nbsp;普通发票 &nbsp;<a href="#">编辑</a> &nbsp;<a href="#">删除</a></p>
+         <p><input name="radiobutton" type="radio" value="radiobutton">使用新的发票消息</p>
+        <p>发票开具方式：<input name="" type="radio" value="">普通发票（纸质）</p>
+         <p class="last">发票抬头：<input name="radiobutton" type="radio" value="radiobutton">个人 &nbsp;<input name="radiobutton" type="radio" value="radiobutton">单位</p>
+         <p class="last1"><a href="#"><img src="__PUBLIC__/Home/images/zz1_03.jpg" width="70" height="28" /></a><a href="#"><img src="__PUBLIC__/Home/images/zz1_05.jpg" width="70" height="28" /></a></p>
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+</head>
+<body>
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 地区管理</div>
+</div> 
+<div class="right-title">
+      修改地区
+</div>
+<form action={:U(MODULE_NAME.'/System/doEditArea')} method="post" >
+<table class="table">
+	 
+	<thead>
+		<tr class="firstrow">
+			<td>ID</td>
+			<td>名称</td>
+			 
+			<td>排序</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{$area.id}</td>
+			<td><input type="text" name="name" value="{$area.name}"></td>
+			 
+			<td><input type="text" name="sort" value="{$area.sort}"></td>
+		</tr>
+		<tr>
+		<input type="hidden" name="id" value="{$area.id}" />
+		<td align="center" colspan="4"><input type="submit" value="保存修改" /></td>
+		</tr>
+	</tbody>
+</table>
+</form>
+</body>
+</html>

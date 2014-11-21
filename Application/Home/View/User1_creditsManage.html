@@ -1,0 +1,138 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        <div class="vip_nav">
+        <ul>
+        <li><a href="hy_zppl.html">作品评论</a></li>
+         <li><a href="#">网站评论</a></li>
+         <li><a href="hy_plhf.html">收到的回复</a></li>
+         
+        </ul>
+        </div>
+        
+        <div class="vip_right">
+        <div class="vip_text">
+        
+        <div class="vip_nav" style=" margin-bottom:10px">
+        <ul>
+        <li><a href="#">积分记录</a></li>
+         <li><a href="#">下载明细</a></li>
+        </ul>
+        </div>
+        <div class="vip_r_m">
+        <span class="fl_r qq">
+       <h5><a href="#">充值</a></h5>
+        </span>
+          <span class="fl_l jf">
+          <h4>可用积分</h4>
+          <h1>353</h1>
+          </span>
+        </div>
+        
+        <div class="sh_text01">
+     
+        <div class="sh_text2">
+        <h3>
+        <span class="fl_l sh_t1">来源/用途</span><span class="fl_l sh_t2">获积分</span><span class="fl_l sh_t3">消耗积分</span><span class="fl_r sh_t4">日期</span>
+        
+        </h3>
+        <ul>
+        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">-</span><span class="fl_l sh_t3">20</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+      <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">-</span><span class="fl_l sh_t3">20</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+       <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">-</span><span class="fl_l sh_t3">20</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">-</span><span class="fl_l sh_t3">20</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+          <li> <span class="fl_l sh_t1">购买 王宝强作品大图</span><span class="fl_l sh_t2">80</span><span class="fl_l sh_t3">-</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        </ul>
+        </div>
+        </div>
+        <div class="fl_r page">
+        <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8"></a></div>
+        <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_34.jpg"></a></span>
+        </div>
+        
+        <div class="jf_b_t">
+        <h5>积分获取及使用常见问题</h5>
+        <div class="jf_b_t1">
+        <h5>积分来源：（系统自动核算）</h5>
+        <p>1.会员注册完善个人资料获得指定的积分，如注册完善资料获得10个积分；</p>
+        <p>2.会员每天登录获得指定的积分，如登录获得1个积分；</p>
+        <h5>积分去向：（系统根据商品设置的所需积分额核算）</h5>
+        <p>1.积累的积分可在[艺术名家大全]中下载艺术家作品大图；</p>
+        <p>2.积分可在[教育活动]中兑换浏览教育视频和文化讲座类视频；</p>
+        
+        </div>
+        
+        </div>
+        
+        
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

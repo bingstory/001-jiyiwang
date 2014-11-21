@@ -1,0 +1,132 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+
+<link href="__PUBLIC__/Home/css/lanrenzhijia2.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+});
+</script>
+</block>
+<block name="banner">
+<div id="banner3">
+<div id="width_988">
+<div id="b3_bg">
+<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
+</div>
+</div>
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+{:W('Home/artistheader')}
+
+<div id="p_gao"></div>
+<div id="sx_box">
+    <div class="fl_l sx_l">
+    <p><strong>年份</strong></p>
+      <div class="years">
+      <div class="fl_l all">全部</div>
+      <div class="fl_r yf">
+      <ul>
+      <volist name="years" id="v" offset='0' length="15">
+      <li><a href="{:U('/'.MODULE_NAME.'/yworks_'.$artist['id'].'_'.$v)}">{$v}</a></li>
+    </volist>
+      </ul>
+      </div>
+      </div>
+    
+    <p><strong>全部分类</strong></p>
+    <div class="fenlei">
+    <ul>
+    <volist name="artistcate" id="v" offset='0' length="7">
+      <li><a href="{:U('/'.MODULE_NAME.'/cworks_'.$artist['id'].'_'.$v['id'])}">{$v.name|msubstr=0,10,0}（{$workscount[$v['id']]}个作品）</a></li>
+    </volist>
+    </ul>
+    
+    
+    </div>
+    
+    
+    </div>
+    <div class="fl_r sx_r">
+    <div id="sx_pic">
+
+
+<ul>
+<volist name="works" id="v" mod="3">
+<li <eq name="mod" value="2">class="last"</eq>>
+<h1><a href="{:U('/'.MODULE_NAME.'/aworksshow_'.$v['id'].'_'.$artist['id'])}"><img src="__ROOT__/{$v.thumb}" width="206" height="185"></a></h1>
+<div class="xushu">
+<h2>{$v.title|msubstr=0,11,0}</h2>
+<p><span class="fl_l time">{$v.createyear}年作</span>
+<span class="fl_r zan"><a href="{:U('/'.MODULE_NAME.'/aworksshow_'.$v['id'].'_'.$artist['id'])}"><img src="__PUBLIC__/Home/images/pic1_97.jpg"></a> &nbsp;{$v.concern}&nbsp;&nbsp;<a href="#"><img src="__PUBLIC__/Home/images/pic1_94.jpg"></a> &nbsp;{$v.favor}</span></p>
+</div>
+</li>
+</volist>
+</ul>
+
+
+  
+
+</div>
+    
+  <div class="fl_r page_list" style=" clear:both">{$page}</div> 
+    
+    </div>
+
+
+</div>
+
+
+</div></div>
+
+
+<div id="gao5"></div>
+</block>

@@ -270,35 +270,26 @@
         <div class="fl_r r_t2">MORE>></div>
     </div>
 <div class="a_b2_bottom">
+
     <div class="a_b2_t2">
-            <div class="fl_l b2_p1"><a href="person.html"><img src="__PUBLIC__/Home/images/img1_58.jpg" width="493" height="351" /></a>
+        <foreach name="recartist1" item="v">
+            <div class="fl_l b2_p1"><a href="{:U('/'.MODULE_NAME.'/aofficial_'.$v['id'])}"><img src="__ROOT__/{$v.homeportrait}" width="493" height="351" /></a>
             <div id="hot">
-魏传义
-</div>
+               {$v.username}
+               </div>
             </div>
+        </foreach>
             <div class="fl_r b2_p2">
+
             <ul>
-          <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_60.jpg" width="246" height="175" /></a>
+            <foreach name="recartist4" item="v">
+          <li><a href="{:U('/'.MODULE_NAME.'/aofficial_'.$v['id'])}"><img src="__ROOT__/{$v.portrait}" width="246" height="175" /></a>
           
           <div id="hot">
-蔡水况
+{$v.username}
 </div>
           </li>
-            <li class="last"> <a href="person.html"><img src="__PUBLIC__/Home/images/img1_62.jpg" width="246" height="175" /></a>
-            <div id="hot">
-洪永宏
-</div>
-            </li>
-            <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_66.jpg" width="246" height="175" /></a>
-            <div id="hot">
-李维汜
-</div>
-            </li>
-            <li class="last"><a href="person.html"><img src="__PUBLIC__/Home/images/img1_67.jpg" width="246" height="175" /></a>
-            <div id="hot">
-杨炳维
-</div>
-            </li>
+        </foreach>
            
             </ul>
             
@@ -306,48 +297,14 @@
     </div>
     <div class="a_b2_b2">
     <ul>
-    <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_71.jpg" width="246" height="175" /></a>
+    <foreach name="recartist8" item="v">
+    <li><a href="{:U('/'.MODULE_NAME.'/aofficial_'.$v['id'])}"><img src="__ROOT__/{$v.portrait}" width="246" height="175" /></a>
     <div id="hot">
-史海青
+{$v.username}
 </div>
     </li>
-     <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_73.jpg" width="246" height="175" /></a>
-     <div id="hot">
-林生
-</div>
-     </li>
-      <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_74.jpg" width="246" height="175" /></a>
-      <div id="hot">
-吕艺生
-</div>
-      </li>
-     <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_75.jpg" width="246" height="175" /></a>
-     <div id="hot">
-范寿春
-</div>
-     </li>
-       <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_83.jpg" width="246" height="175" /></a>
-       <div id="hot">
-郑小瑛
-</div>
-       </li>
-       <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_84.jpg" width="246" height="175" /></a>
-       <div id="hot">
-洪瑞生
-</div>
-       </li>
-        <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_85.jpg" width="246" height="175" /></a>
-        <div id="hot">
-李开聪
-</div>
-        </li>
-         <li><a href="person.html"><img src="__PUBLIC__/Home/images/img1_86.jpg" width="246" height="175" /></a>
-         <div id="hot">
-翁铭泉
-</div>
-         </li>
-    
-    
+  </foreach>
+     
     </ul>
     
     
@@ -365,27 +322,27 @@
     </div>
 <div class="a_b3_bottom">
   <ul>
+  <foreach name="artistlist" item="v">
   <li class="line">
   <div class="contain">
       <div class="fl_l artor">
-          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_21.jpg" width="141" height="141" /></div>
+          <div class="fl_l a_pic"><img src="__ROOT__/{$v.portrait}" width="141" height="141" /></div>
           <div class="fl_r a_text">
-          <h3>魏传义</h3>
-          <p>籍贯 四川省达州市达县</p>
-          <p>职业 画家</p>
-          <p>毕业院校 中央美术学院油画训练班</p>
+          <h3>{$v.chinesename}</h3>
+          <p>籍贯 {$v.nativeplace}</p>
+          <p>职业 {$v.career}</p>
+          <p>毕业院校 {$v.graduate}</p>
           
           </div>
       </div>
       <div class="fl_r a_product">
-      <h4><a href="person.html">进入艺术家个人官网</a></h4>
+      <h4><a href="{:U('/'.MODULE_NAME.'/aofficial_'.$v['id'])}">进入艺术家个人官网</a></h4>
       <div class="c_a_pic">
       <div class="a_pic1">
       <ul>
-      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_24.jpg" width="115" height="78" /></a></li>
-       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_26.jpg" width="115" height="78" /></a></li>
-        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_28.jpg" width="115" height="78" /></a></li>
-      
+      <foreach name="v.works" item="va">
+      <li <if condition="($key+1) eq 3">class="last"</if>><a href="#"><img src="__ROOT__/{$va.thumb}" width="115" height="78" /></a></li>
+      </foreach>
       </ul>
        </div>
       </div>
@@ -394,106 +351,15 @@
   </div>
   
   </li>
+</foreach>
   
-  <li class="line">
-  <div class="contain">
-      <div class="fl_l artor">
-          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_34.jpg" width="141" height="141" /></div>
-          <div class="fl_r a_text">
-          <h3>林岑</h3>
-
-
-
-          <p>籍贯 福建厦门</p>
-          <p>职业 高级美术师</p>
-          <p>毕业院校 福建工艺美术学校</p>
-          
-          </div>
-      </div>
-      <div class="fl_r a_product">
-      <h4><a href="person.html">进入艺术家个人官网</a></h4>
-      <div class="c_a_pic">
-      <div class="a_pic1">
-      <ul>
-      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_35.jpg" width="115" height="78" /></a></li>
-       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_36.jpg" width="115" height="78" /></a></li>
-        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_37.jpg" width="115" height="78" /></a></li>
-      
-      </ul>
-       </div>
-      </div>
-      
-      </div>
-  </div>
-  
-  </li>
-  
-  <li class="line">
-  <div class="contain">
-      <div class="fl_l artor">
-          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_42.jpg" width="141" height="141" /></div>
-          <div class="fl_r a_text">
-          <h3>吕艺生</h3>
-          <p>籍贯 黑龙江汤原</p>
-          <p>职业 著名舞蹈家、美学家等</p>
-          <p>毕业院校 北京舞蹈学校</p>
-          
-          </div>
-      </div>
-      <div class="fl_r a_product">
-      <h4><a href="person.html">进入艺术家个人官网</a></h4>
-      <div class="c_a_pic">
-      <div class="a_pic1">
-      <ul>
-      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_43.jpg" width="115" height="78" /></a></li>
-       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_44.jpg" width="115" height="78" /></a></li>
-        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_45.jpg" width="115" height="78" /></a></li>
-      
-      </ul>
-       </div>
-      </div>
-      
-      </div>
-  </div>
-  
-  </li>
-  
-  <li class="line">
-  <div class="contain">
-      <div class="fl_l artor">
-          <div class="fl_l a_pic"><img src="__PUBLIC__/Home/images/art1_50.jpg" width="141" height="141" /></div>
-          <div class="fl_r a_text">
-          <h3>朱鸣冈</h3>
-          <p>籍贯 安徽</p>
-          <p>职业 画家</p>
-          <p>毕业院校 苏州美术专科学校</p>
-          
-          </div>
-      </div>
-      <div class="fl_r a_product">
-      <h4><a href="person.html">进入艺术家个人官网</a></h4>
-      <div class="c_a_pic">
-      <div class="a_pic1">
-      <ul>
-      <li><a href="#"><img src="__PUBLIC__/Home/images/art1_51.jpg" width="115" height="78" /></a></li>
-       <li><a href="#"><img src="__PUBLIC__/Home/images/art1_52.jpg" width="115" height="78" /></a></li>
-        <li class="last"><a href="#"><img src="__PUBLIC__/Home/images/art1_53.jpg" width="115" height="78" /></a></li>
-      
-      </ul>
-       </div>
-      </div>
-      
-      </div>
-  </div>
-  
-  </li>
   </ul>
   
   
   
   </div>
   
-  <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8" /></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8" /></a></div>
+  <div class="page_list">{$page}</div>
   
   
     </div>

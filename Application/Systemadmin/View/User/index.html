@@ -17,16 +17,18 @@
 <div class="right-title">
       {$pos}列表<a href="{:U(MODULE_NAME.'/User/user',array('usertype'=>$usertype))}" title="">[添加{$pos}]</a>
 </div>
-
+<form method="post" action="{:U(MODULE_NAME.'/User/sort')}">
 <table class="table">
 <tr class="firstrow">
 <td>ID</td>
 <td>用户名称</td>
 <td>上一次登录时间</td>
 <td>上一次登录IP</td>
-<td>冻结状态(点击修改)</td>
-<td>用户属性</td>
+
+<td>推荐属性</td>
+<td>排序</td>
 <td>操作</td>
+<td>冻结状态(点击修改)</td>
 </tr>
 <foreach name='user' item='v'>
    <tr>
@@ -34,17 +36,26 @@
       <td>{$v.username}</td>
       <td>{$v.logintime|date='y-m-d H:i',###}</td>
       <td>{$v.loginip}</td>
+      
+      <td><foreach name="v.attr" item="va">[{$va.name}]&nbsp;</foreach></td>
+      <td><input type="text" name="{$v.id}" value='{$v.sort}' size="5"></td>
+      <td>
+      <a href="{:U(MODULE_NAME.'/User/edit',array('id'=>$v['id'],'usertype'=>$v['usertype']))}">[修改]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a onclick="return del();" href="{:U(MODULE_NAME.'/User/delete',array('id'=>$v['id']))}">[删除]</a>
+      </td>
       <td>
          <if condition="$v['lockstatus'] eq 1"><a style="color:red;" href="{:U(MODULE_NAME.'/User/setLock',array('lock'=>0,'id'=>$v['id']))}">已冻结</a> <else/>
          <a style="color:green;" href="{:U(MODULE_NAME.'/User/setLock',array('lock'=>1,'id'=>$v['id']))}">未冻结</a>
          </if>
       </td>
-      <td><a href=""></a></td>
-      <td>
-      <a href="{:U(MODULE_NAME.'/User/edit',array('id'=>$v['id'],'usertype'=>$v['usertype']))}">[修改]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a onclick="return del();" href="{:U(MODULE_NAME.'/User/delete',array('id'=>$v['id']))}">[删除]</a></td>
       </foreach>
    </tr>
+   <tr>
+      <td colspan="8">
+      <input type="hidden" name="usertype" value="{$usertype}">
+      <input type="submit" value="排序"></td>
+   </tr>
 </table>
+</form>
 </body>
 </html>

@@ -1,0 +1,221 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+</block>
+<block name="banner">
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+<div id="p_p_box1"><img src="__PUBLIC__/Home/images/p_p1_07.jpg" width="988" height="148" /></div>
+  
+  <div id="gao_p"></div>
+<div id="p_p_box2">
+    <div class="pp_b2_tit">
+    <div class="fl_l home">位置：<a href="index.html">首页</a> ><a href="shop.html">艺术商城</a> > 商品详情</div>
+    <div class="fl_r car"><span class="fl_l g_car"><img src="__PUBLIC__/Home/images/car.jpg" width="15" height="15" /></span><span class="fl_r g_text"><a href="gwcwk.html">我的购物车（1）</a></span></div>
+    </div>
+    <div id="height"></div>
+    <div class="pp_b2_bott">
+    
+    <div class="shangpin">
+    <div class="fl_l pp_b2_pic"><img src="__ROOT__/{$goods.thumb}" width="421" height="387" /></div>
+    <div class="fl_r pp_b2_text">
+    <h1>{$goods.title}</h1>
+    <div class="much">
+    <span class="fl_l much1">
+    <p>作品编号：{$goods.works_id}</p>
+    <p>价格：<strong>￥{$goods.price}</strong></p>
+    </span>
+     <span class="fl_r much2">
+     <p>111</p>
+     <p>累计评价</p>
+     </span>
+    </div>
+    
+   <div class="yishujia"> 
+   <p><span class="fl_l left">艺术家：{$goods.chinesename}</span>                            <span class="fl_r right">材质：{$goods.material}</span></p>
+<p><span class="fl_l left">尺寸：{$goods.size} </span>                              <span class="fl_r right">分类：{$goods.shopcatename}</span></p>
+<p><span class="fl_l left">创作日期：{$goods.createyear}年</span>                           <span class="fl_r right"> 上架时间：{$goods.pubtime|date="Y-m-d",###}</span></p>
+<p><span class="fl_l left">快递: {$goods.expressfee}</span>                           <span class="fl_r right"><span>下载</span> <img src="__PUBLIC__/Home/images/pp.jpg" width="16" height="16" /></span></p>
+<p><span class="fl_l left">推荐指数：
+<if condition="$goods.star eq 1"><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$goods.star eq 2"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$goods.star eq 3"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$goods.star eq 4"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<else/>
+<span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+</if>
+</span></p> 
+
+
+    </div>
+    
+    <div class="tijiao1">
+<span><a href="pay.html"><img src="__PUBLIC__/Home/images/p_p1_14.jpg" width="136" height="41" /></a></span>
+<span><a href="shdz2.html"><img src="__PUBLIC__/Home/images/p_p1_16.jpg" width="182" height="41" /></a></span>
+    <blockquote>
+      <p><span class="fl_l shop"><a href="person.html"><img src="__PUBLIC__/Home/images/p_p1_24.jpg" width="15" height="13" /> 进入店铺</a> &nbsp;<a href="#"><img src="__PUBLIC__/Home/images/p_p1_21.jpg" width="16" height="14" /> 分享</a></span></p></div>
+    </blockquote>
+    </div>
+    
+
+    </div>
+</div>
+</div>
+ 
+  <div id="gao_p"></div>
+    
+    <div id="p_p_box3">
+    <div class="pp_b3_title">
+        <div class="fl_l l_t1"><span><strong>作品简介</strong></span>  / INTRO</div>
+        </div>
+        
+       <div class="pp_b3_text">
+       {$goods.content}
+       
+       </div> 
+        
+        
+    </div>
+    
+    
+    <div id="gao_p"></div>
+    
+    <div id="p_p_box4">
+    <div class="pp_b4_title">
+        <div class="fl_l l_t1"><span><strong>商品评价</strong></span>  / MESSAGE</div>
+        </div>
+        
+       <div class="pp_b4_text">
+      
+       <ul>
+       <li>
+       <div class="tt">
+       <div class="fl_l tt1">
+       <p>果真是世间奇物</p>
+       <span>2014-10-23</span>
+       </div>
+       <div class="fl_l tt2"><span>分类：</span>国画</div>
+       <div class="fl_r tt3">
+       <span class="fl_l img"><a href="#"><img src="__PUBLIC__/Home/images/p_p1_30.jpg" width="38" height="39" /></a></span>
+       <span class="fl_r name">fsdjfajs</span>
+       </div>
+       </div>
+       </li>
+       
+       <li>
+       <div class="tt">
+       <div class="fl_l tt1">
+       <p>还不错啦，希望继续加油！~</p>
+       <span>2014-10-23</span>
+       </div>
+       <div class="fl_l tt2"><span>分类：</span>国画</div>
+       <div class="fl_r tt3">
+       <span class="fl_l img"><a href="#"><img src="__PUBLIC__/Home/images/p_p1_33.jpg" width="38" height="38" /></a></span>
+       <span class="fl_r name">fsdjfajs</span>
+       </div>
+       </div>
+       </li>
+       
+       <li>
+       <div class="tt">
+       <div class="fl_l tt1">
+       <p>还不错啦，希望继续加油！~</p>
+       <span>2014-10-23</span>
+       </div>
+       <div class="fl_l tt2"><span>分类：</span>国画</div>
+       <div class="fl_r tt3">
+       <span class="fl_l img"><a href="#"><img src="__PUBLIC__/Home/images/p_p1_35.jpg" width="38" height="38" /></a></span>
+       <span class="fl_r name">fsdjfajs</span>
+       </div>
+       </div>
+       </li>
+       
+       <li>
+       <div class="tt">
+       <div class="fl_l tt1">
+       <p>还不错啦，希望继续加油！~</p>
+       <span>2014-10-23</span>
+       </div>
+       <div class="fl_l tt2"><span>分类：</span>国画</div>
+       <div class="fl_r tt3">
+       <span class="fl_l img"><a href="#"><img src="__PUBLIC__/Home/images/p_p1_37.jpg" width="38" height="38" /></a></span>
+       <span class="fl_r name">fsdjfajs</span>
+       </div>
+       </div>
+       </li>
+       </ul>
+       
+       
+       
+        </div>  
+
+</div>
+       
+      
+         <div id="gao_p"></div>
+       <div id="p_p_box5">
+    <div class="pp_b5_title">
+        <div class="fl_l l_t1"><span><strong>商品评价</strong></span>  / MESSAGE</div>
+        </div>
+       
+         
+         
+         <div id="pp_b5_bottom">
+<div class="pp_b5_pic">
+<ul>
+<volist name="othergoods" offset="0" length="5" id="v" mod="5">
+<li <eq name="mod" value="4">class="last"</eq>><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'])}"><img src="__ROOT__/{$v.thumb2}" width="156" height="200" /></a>
+<div class="jianjie">
+ <p><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'])}">{$v.title|msubstr=0,11,0}</a></p>
+  <p><strong>￥{$v.price}</strong></p>
+<p>推荐指数：
+<if condition="$v.star eq 1"><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$v.star eq 2"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$v.star eq 3"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<elseif condition="$v.star eq 4"/><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+<else/>
+<span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
+</if>
+</p>
+</div>
+</li>
+</volist>
+
+</ul>
+</div>
+</div>
+  </div>
+         
+         
+           
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>

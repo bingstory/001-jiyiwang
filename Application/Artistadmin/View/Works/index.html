@@ -23,63 +23,84 @@
 </head>
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 作品管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > {$pos}管理</div>
 </div>
 
 <div class="right-title">
-      作品列表<a href="{:U(MODULE_NAME.'/Works/add')}" title="">[添加]</a>
+  {$pos}列表<if condition="$pos eq 作品"><a href="{:U(MODULE_NAME.'/Works/add')}" title="">[添加]</a></if>
 </div>
 
       <table class="table">
         <tr>
                   <form action="{:U(MODULE_NAME.'/Works/index')}" method="post">
-                  <td colspan="9"> 
+                  <td colspan="12"> 
                   分类：<select name="cate_id">
                   <option value="">--请选择--</option>
                   <foreach name="category" item="v">
                      <option value="{$v.id}">{$v.name}</option>
-                  </foreach> 
+                  </foreach>
                   </select>
+                  <input type="hidden" name="isshop" value="{$isshop}"> 
                   <input type="submit" name="" value="搜索"> 
                   </td>
             </form>
             </tr>
-            <tr> 
+            <tr>
                     <td width="100">作品编号</td>
                     <td>标题</td>
                     <td width="100">封面</td>
-                    <td>所属分类</td>
+                    <td>个人分类</td>
+                    <td>商城分类</td>
                     <td width="100">艺术家姓名</td>
                     <td>评论管理</td>
                     <td>附件管理</td>
+                    <td width="30">排序</td>
                     <td>推送到商铺</td>
+                    <td>平台审核状态</td>
                     <td>操作</td>
               </tr>
+              
+              <form method="post" action="{:U(MODULE_NAME.'/Works/sort')}">
+              
             <foreach name="list" item="v">
               <tr>
                <td>{$v.works_id}</td>
                <td>{$v.title}</td>
                <td><img src="__ROOT__/{$v.thumb}" alt="" width="100" height="90" style="border:3px solid #DCE2F3;"/></td>
                <td>{$v.cate}</td>
+               <td>{$v.shopcate}</td>
                <td>{$v.artistname}</td>
                <td><a href="">[评论管理]</a></td>
-               <td><a href="">[附件管理]</a></td>
+               <td><a href="{:U(MODULE_NAME.'/Works/attachment',array('works_id'=>$v['id'],'cate_id'=>$cate_id))}">[附件管理]</a></td>
+               <td>
+               <if condition="!empty($isshop)">
+              <input type="text" name="{$v.id}" value='{$v.shopsort}' size="5">
+              <else/>
+              <input type="text" name="{$v.id}" value='{$v.workssort}' size="5">
+              </if>
+               </td>
                <td>
                <if condition="$v.rec2shop eq 1"><a style="color:green;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>0,'cate_id'=>$cate_id))}">是</a><else/>
                <a style="color:red;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>1,'cate_id'=>$cate_id))}">否</a>
                </if>
                </td>
+               <td><if condition="$v.checkstatus eq 0"><span style="color:orange;">审核中</span><elseif condition="$v.checkstatus eq 1"/><span style="color:green;">通过</span><else/><span style="color:red;">不能通过</span></if></td>
                <td>
-                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id))}">[删除]</a></span>
+                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[删除]</a></span>
                </td>
              </tr>
           </foreach>
             <tr class="firstrow"> 
-            <td colspan="9"><div class="fenye">{$page}</div></td>  
+            <td colspan="12"><div class="fenye">{$page}</div></td>  
             </tr>
-           
-             
-            
+            <tr>
+             <td colspan="12">
+      <input type="hidden" name="isshop" value="{$isshop}">
+      <input type="hidden" name="cate_id" value="{$cate_id}">
+      <input type="submit" value="排序"></td>
+   </tr>
+   </form>
       </table>
+    
 </body>
 </html>

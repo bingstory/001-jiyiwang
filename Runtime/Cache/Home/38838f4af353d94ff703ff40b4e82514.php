@@ -73,7 +73,7 @@ function MM_swapImage() { //v3.0
 			});
 		</script>
 		<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.min.js"></script>
-<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
+        <script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
 		
 <link href="/001-jiyiwang/Public/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
@@ -99,14 +99,27 @@ function MM_swapImage() { //v3.0
 <script src="/001-jiyiwang/Public/Home/js/jquery.min.js"></script>
 <script>
 $(function (){ 
-  $(".left_nav dd").hover(function(){
-  $(".nav_right",this).show();
-  });
-  $(".left_nav dd").mouseleave(function(){
-  $(".nav_right",this).hide();
+  $('ul.m_h1').addClass('current');
+  $('ul.m_h1 h3').addClass('h3');
+  $('ul.bn').hover(function(){
+    $(this).find('h3').addClass('h3');
+    $(this).siblings().find('h3').removeClass('h3');
+    $(this).addClass("current");
+    $(this).siblings().removeClass("current");
   });
 });
 </script>
+<style>
+  #menu .current{
+    height: 108px;
+    background: #e8413b;
+    color: #fff;
+    padding-top: 10px;
+  }
+  #menu .bn .h3{
+    color: #fff;
+  }
+</style>
 
 
 
@@ -114,18 +127,24 @@ $(function (){
 
 <body>
  <!-- 头部 -->
- <div id="header">
+ 
+<div id="header">
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-    <div class="fl_l top1"><h1>您好！欢迎来到集艺网</h1></div>
-    <div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
     <ul>
-    <li><a href="dlzc.html">登录</a></li>
-    <li><a href="dlzc.htmll">注册</a></li>
-    
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
     </ul>
     </div>
+    <?php else: ?>
+    <div class="fl_r top2">
+    <ul>
+    <li><a href="<?php echo U('/'.MODULE_NAME.'/logout');?>">[退出]</a></li>
+    </ul>
+    </div><?php endif; ?>
 </div>
 
 <div class="fl_r top_t2">
@@ -159,7 +178,7 @@ $(function (){
 
 </div>
 <div id="menu"> 
-  <ul class="m_h1"> 
+  <ul class="m_h1 bn"> 
     <h3>美术</h3> 
     <li>国画</li>    
     <li>油画</li>
@@ -170,17 +189,17 @@ $(function (){
     <li>当代艺术</li>
     <li>其他</li>
   </ul>
-  <ul class="m_h2"> 
+  <ul class="m_h2 bn"> 
     <h3>舞蹈</h3>
     <li>原创作品</li> 
     <li>版权</li> 
   </ul>
-  <ul class="m_h3"> 
+  <ul class="m_h3 bn"> 
     <h3>文字</h3>
     <li>原创作品</li>   
     <li>版权</li>
   </ul> 
-  <ul class="m_h4">
+  <ul class="m_h4 bn">
 
     <h3>手工艺</h3>
     <li>原创作品</li>                   
@@ -188,7 +207,7 @@ $(function (){
    <li>版权</li>
   </ul>
 
-<ul class="m_h5">
+<ul class="m_h5 bn">
 
     <h3>影视</h3>
     <li>原创作品</li>                   
@@ -196,7 +215,7 @@ $(function (){
    <li>版权</li>
   </ul>
 
-<ul class="m_h6">
+<ul class="m_h6 bn">
 
     <h3>戏曲</h3>
    <li>原创作品</li>                   
@@ -228,6 +247,7 @@ $(function (){
 
 <!-- Banner END-->
 </div>
+
  <!-- 头部 END -->
 
  <!-- 主体 -->
@@ -573,6 +593,7 @@ $(function (){
  <!-- 主体END -->
  
  <!-- 底部 -->
+ 
  <div id="footer">
 <div id="width_988">
 <div id="f_box">
@@ -604,6 +625,7 @@ $(function (){
 
 
 </div> 
+
  <!-- 底部 END -->
 </body>
 </html>

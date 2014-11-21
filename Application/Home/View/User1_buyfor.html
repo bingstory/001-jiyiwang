@@ -1,0 +1,115 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        
+        <div class="vip_nav" style=" margin-bottom:10px">
+        <ul>
+        <li><a href="#">申请返修，退换货</a></li>
+         <li><a href="#">查看返修退换货记录</a></li>
+         <li><a href="#">查看退款记录</a></li>
+        </ul>
+        </div>
+        
+        
+        <div class="sh_text01">
+     
+        <div class="sh_text2">
+        <h3>
+        <span class="fl_l sh_t1">订单商品</span><span class="fl_l sh_t2">订单编号</span><span class="fl_l sh_t3">状态</span><span class="fl_r sh_t4">日期</span>
+        
+        </h3>
+        <ul>
+        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">未解决</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+      <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">已解决</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+       <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">客服处理中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        
+        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">派送中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+          <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">退款中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
+        </ul>
+        
+        
+        
+        
+        
+        </div>
+        
+        
+        </div>
+        <div class="fl_r page">
+        <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8"></a></div>
+        <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_34.jpg"></a></span>
+        </div>
+        
+        
+        
+        
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

@@ -1,0 +1,193 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+<div id="p_p_box1"><img src="__PUBLIC__/Home/images/p_p1_07.jpg" width="988" height="148" /></div>
+  
+  <div id="gao_p"></div>
+
+<div id="x_box2">
+
+<div class="x_b2_title">
+<p>位置：<a href="index.html">首页</a> ><a href="shop.html">艺术商城</a> > 商品订单</p>
+<h3>订单详情</h3>
+</div>
+
+<div class="x_b2_bottom">
+<div class="x_b2_text">
+<p>当前订单状态： 卖家已发货，请查看页面下方物流信息了解宝贝寄送情况</p>
+<p>如果您已收到货，且对商品满意，您可以 <span><a href="#">确认收货</a></span> 打款给卖家</p>
+<p>如果查看物流还未收到货，请 <span><a href="#">申请退款</a></span></p>
+
+<h4>物流信息</h4>
+
+<p>发货方式：快递</p>
+<p>物流公司：圆通速递</p>
+<p>运单号码：200032712511</p>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+  <div id="gao_p"></div>
+    
+  <div id="x_box3">
+
+    <div class="x_b3_title">
+    <span class="fl_l x_b3_l"><h3>订单详情</h3></span>
+        <span class="fl_r x_b3_r"><h4>有疑问可咨询：<span><a href="#">人工服务</a></span></h4></span>
+     </div>
+       
+     <div class="x_b3_bottom">
+     <div class="x_b3_text">
+     
+    <div class="x_b3_t1"> 
+   
+<dl>
+<dt>收货地址：</dt>
+ <dd>杨晶，13163314914，湖北省 武汉市 洪山区 关山街道东湖开发区大学园路华师园三路光存储产业园4号二楼（从外面可以看见博莱电子大的标示牌）</dd>
+ <dt>买家留言：</dt>
+ <dd>速度，快快</dd>
+
+  </dl>
+ </div>
+    <hr>
+ <div class="x_b3_t2">
+ <h4>卖家信息：</h4> 
+ <ul>
+  <li>个人店铺：<span>个人店铺陈烁</span></li>
+  
+  <li>真实姓名：王峻</li>
+     
+      <li>城市：</li>
+     <li>联系电话：0315-7786695</li>
+     <li class="juli">邮件：820308304@qq.com</li>
+     <li>支付宝: ***</li>
+     
+ </ul>
+ </div>
+      <hr>
+     <div class="x_b3_t3">
+ <h4>订单信息：</h4> 
+ <ul>
+
+     <li>订单编号： 820744233571851</li>
+     <li>支付宝交易号：2014101921001001040050824263</li>
+      <li>成交时间：2014-10-19 16:37:22</li>
+      <hr>
+<li>发货时间：2014-10-19 16:37:54</li>
+<li>付款时间：2014-10-19 16:37:37</li>
+ <hr>
+      </ul>
+      
+  </div>
+        
+     <div class="x_b3_t4">
+     
+     <div class="t4_text">
+     <div class="fl_l t4_l">确认订单信息</div>
+     <div class="fl_r t4_r">
+     <ul>
+     <li>快递</li>
+     <li>状态</li>
+     <li>价格</li>
+     </ul>
+     </div>
+     </div>
+     <p>店铺 ：<span>陈青山个人店铺</span></p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="fl_l t4_p"><a href="#"><img src="__PUBLIC__/Home/images/pp01.jpg" width="96" height="96" /></a></div>
+     <div class="fl_r t4_t">
+     <h3>作品名称作品名称作品名称作品名称</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：陈文苑</li>                            
+     <li>材质：纸本水墨</li> 
+     <li><span>￥10.00</span> </li>                
+      <li><strong>交易成功</strong></li>           
+      <li class="last"><span>126.00</span></li> 
+<li>尺寸：41cm X 27.5cm </li>                   
+<li>上架时间：2014-06-06</li>
+     
+     </ul>
+     </div>
+     </div>
+     
+     </div>
+     </div>
+     
+   
+     </div>
+     
+       <p class="fl_r money">实付款：<span>￥28元</span></p>
+     </div>
+     
+     
+      </div>   
+ 
+ </div> 
+    
+    <div id="gao_p"></div>
+    
+    
+       
+         
+         
+           
+  </div>  
+
+</div>
+
+<div id="gao3"></div>
+</block>

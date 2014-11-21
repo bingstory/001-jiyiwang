@@ -1,0 +1,129 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+
+<link href="__PUBLIC__/Home/css/lanrenzhijia2.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+  $('#toprev').attr('href',function(){
+   return $('#hidepages .prev').attr('href')
+  });
+  $('#tonext').attr('href',function(){
+   return $('#hidepages .next').attr('href')
+  });
+  // alert();
+});
+</script>
+</block>
+<block name="banner">
+<div id="banner3">
+<div id="width_988">
+<div id="b3_bg">
+<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
+</div>
+</div>
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+{:W('Home/artistheader')}
+
+<div id="p_gao"></div>
+<div id="p_box2">
+    <div class="p_b2_title">
+        <div class="fl_l l_t1"><span><strong>个人商店</strong></span>  / SHOP</div>
+        <div class="fl_r r_t2">MORE>></div>
+    </div>
+
+<div id="p_gao"></div>
+<div id="video_box">
+    <div class="video_t">
+        <div class="video_pic">
+            <div class="fl_l v_left"><img src="__PUBLIC__/Home/images/vv1.jpg" width="421" height="387" /></div>
+            <div class="fl_r v_right">
+                <ul>
+                <foreach name="attachment" item="v">
+                    <li>
+                        <div class="fl_l v_pic"><img src="__PUBLIC__/Home/images/vv2.jpg" width="127" height="90" /></div>
+                      <div class="fl_r v_xz">
+                        <h3 style="text-align:left;">{$v.name|msubstr=0,20,0}</h3>
+                           <p><span class="fl_l xz"><a href="#">大图下载 <img src="__PUBLIC__/Home/images/pp.jpg" width="16" height="16" /></a></span><span class="fl_r xz2">所需积分：{$v.credits}</span></p>
+                            <p><span class="fl_l xz">创作日期：{$works.createyear}</span><span class="fl_r xz2">上架时间：{$works.pubtime|date="Y-m-d",###}</span></p>
+                        </div>
+                    </li>
+                </foreach>
+              </ul>
+                
+              <div class="page_ys">  <p><span class="fl_l">{$atpage}/{$pagecount}页<div id="hidepages" style="display:none;">{$page}</div></span></p>
+                <p><span class="fl_r"><a href="#" id="toprev"><img src="__PUBLIC__/Home/images/l_p1.jpg" width="100" height="35" /></a> &nbsp;&nbsp;<a href=""  id="tonext"><img src="__PUBLIC__/Home/images/l_p2.jpg" width="100" height="35" /></a></span></p></div>
+                
+            </div>
+        
+        
+        
+        </div>
+    
+    
+    </div>
+
+<div class="video_b">
+{$works.content}
+</div>
+
+
+
+</div>
+
+
+
+</div></div>
+
+<input type="hidden" name="artist_id" value="{$artist_id}">
+<div id="gao5"></div>
+</block>

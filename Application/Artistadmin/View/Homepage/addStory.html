@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css">
+
+<script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/formverify.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Static/index.js"></script>
+<head>
+</head>
+<body>
+<div class="right-nav">
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 主页管理</div>
+</div>
+
+<div class="right-title">
+      添加事迹
+</div>
+       <form action="{:U(MODULE_NAME.'/Homepage/doAddStory')}" method="post">
+            <table class="table">
+                  
+                  <tr>
+                        <td width="100px;" align="right">年份：</td>
+                        <td>
+                              <select name="year" id="">
+                                    <option value="">请选择</option>
+                                    <foreach name="years" item="v">
+                                       <option value="{$v.id}">{$v.year}</option>
+                                    </foreach>
+                              </select>
+                        </td>
+                  </tr>
+                 <tr>
+                        <td width="100px;" align="right">月/日：</td>
+                        <td>
+                              <select name="month" id="">
+                                    <option value="">请选择</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                              </select>月
+                              <select name="day" id="">
+                                    <option value="">请选择</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                              </select>日
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="right">事迹：</td>
+                        <td >
+                              <textarea id="content" name="story" cols="90" rows="5"></textarea>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td colspan="2" align="center" style="text-align:left; padding-left:200px;">
+                              <input type="submit" value="发布" />
+                        </td>
+                  </tr>
+            </table>
+       </form>
+       
+</body>
+</html>

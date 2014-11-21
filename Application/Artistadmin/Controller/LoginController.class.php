@@ -8,7 +8,7 @@ class LoginController extends Controller{
 	} 
 
     //登陆表单处理
-	public function login(){ 
+	public function login(){
 		   if(!IS_POST) E('页面不存在'); 
        $code   = I('code'); 
        $verify = new \Think\Verify();

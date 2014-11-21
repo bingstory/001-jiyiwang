@@ -1,0 +1,112 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        <div class="vip_nav">
+        <ul>
+        <li><a href="hy_zppl.html">作品评论</a></li>
+         <li><a href="#">网站评论</a></li>
+         <li><a href="hy_plhf.html">收到的回复</a></li>
+         
+        </ul>
+        </div>
+        
+        <div class="vip_bottom">
+        
+          <p class="input">留言标题： <span><input name="" type="text"  style="width:500px"/></span></p>
+          
+                 <p class="input">联系电话： <span><input name="" type="text" style="width:500px"/></span></p>
+           
+                     <p>留言内容：</p>
+                     <p class="input" style=" margin-top:-30px"> <span><textarea name="" cols="" rows=""></textarea></span></p>
+                    <p class="fl_r"><a href="#"><img src="__PUBLIC__/Home/images/tj2.jpg" /></a></p> 
+
+        </div>
+        
+        <div class="l_text">
+        <ul>
+        <li>
+        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
+        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
+        <p><img src="__PUBLIC__/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
+        </li>
+        
+        <li>
+        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
+        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
+        <p><img src="__PUBLIC__/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
+        </li>
+        
+        </ul>
+        
+        </div>
+        <div class="fl_r page">
+        <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8"></a></div>
+        <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_34.jpg"></a></span>
+        </div>
+        
+        </div>
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

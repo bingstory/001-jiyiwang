@@ -1,0 +1,162 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+
+<link href="__PUBLIC__/Home/css/lanrenzhijia2.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+});
+</script>
+</block>
+<block name="banner">
+<div id="banner3">
+<div id="width_988">
+<div id="b3_bg">
+<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
+</div>
+</div>
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+{:W('Home/artistheader')}
+
+<div id="p_gao"></div>
+  <div id="jb_box">
+    <div class="fl_l jb_left">
+      <div class="jb_menu">
+        <ul>
+              <volist name="years" id="v">
+              <li class=""><a href="#year_2013" >{$v.year}</a></li>
+            </volist>
+        </ul>
+      
+      </div>
+      
+    </div>
+    <div class="fl_r jb_right">
+    <div class="year_n">
+    <div id="year_2013">
+    <h1><img src="__PUBLIC__/Home/images/jb_1.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">5月</span><span class="fl_r sq1">（甲申） 69岁 1月23日凌晨7时30分，在北京逝世；</span></li>
+    <li><span class="fl_l yf1">4月</span><span class="fl_r sq1">（壬午） 68岁，担任第十届全军美展评委；</span></li>
+    <li><span class="fl_l yf1">3月</span><span class="fl_r sq1"> 担任中央美术学院2002级造型类高级研修班中国画班导师；</span></li>
+    </ul>
+    </div>
+    
+    <div id="year_2012">
+    <h1><img src="__PUBLIC__/Home/images/jb_1_12.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">9月</span><span class="fl_r sq1">（辛巳） 67岁 9月，《机车大夫》参加"百年中国画"展览；</span></li>
+    
+    </ul>
+    </div>
+    
+    <div id="year_2011">
+    <h1><img src="__PUBLIC__/Home/images/jb_1_14.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">3月13日</span><span class="fl_r sq1">（庚辰） 66岁 4月12日，在上海中国画院举办"周思聪回顾展暨周思聪作品研讨会"；</span></li>
+    <li><span class="fl_l yf1">3月26日</span><span class="fl_r sq1">（己卯） 65岁出版《水墨人物作品选》；</span></li>
+    <li class="bg1"><span class="fl_l yf1">4月11日</span><span class="fl_r sq1">（戊寅） 64岁 被聘为中国美术学院荣誉教授；创作《十字路口》、《苍穹》。其中《苍穹》参加"深圳第一届国际水墨画双年展"；</span></li>
+    
+    <li><span class="fl_l yf1">6月11日</span><span class="fl_r sq1">（丁丑） 63岁 10月－11月，应苏州美术家协会邀请，在苏州举办、刘国辉人物画联展；</span></li>
+    <li><span class="fl_l yf1">9月10日</span><span class="fl_r sq1">应南京艺术学院邀请，在南京艺术学院举办、刘国辉人物画联展；</span></li>
+    </ul>
+    </div>
+    
+    <div id="year_2010">
+    <h1><img src="__PUBLIC__/Home/images/jb_1_19.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">5月21日</span><span class="fl_r sq1">（丁丑） 63岁 10月－11月，应苏州美术家协会邀请，在苏州举办、刘国辉人物画联展；</span></li>
+    <li><span class="fl_l yf1">5月26日</span><span class="fl_r sq1">应南京艺术学院邀请，在南京艺术学院举办、刘国辉人物画联展；</span></li>
+    <li><span class="fl_l yf1">12月4日</span><span class="fl_r sq1">（乙亥） 61岁 在新加坡斯民艺苑举办水墨人物画展。并由斯民艺苑出版《水墨人物画集》；</span></li>
+    
+  
+    </ul>
+    </div>
+    
+    <div id="year_2009">
+    <h1><img src="__PUBLIC__/Home/images/jb_1_21.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">3月20日</span><span class="fl_r sq1">（乙亥） 61岁 在新加坡斯民艺苑举办水墨人物画展。并由斯民艺苑出版《水墨人物画集》；</span></li>
+    <li><span class="fl_l yf1">3月23日</span><span class="fl_r sq1">（甲戌） 60岁 应澳大利亚东方艺术家协会邀请赴澳讲学；</span></li>
+    <li><span class="fl_l yf1">7月8日</span><span class="fl_r sq1">创作都市人物系列《京郊小站》、《畅饮图》、《醉归图》、《三老醉饮图》、《清音》等；</span></li>
+      <li><span class="fl_l yf1">9月8日</span><span class="fl_r sq1">（壬申） 58岁 5月－6月，丸木位里夫妇为看望周思聪再度访华；</span></li>
+    <li><span class="fl_l yf1">11月26日</span><span class="fl_r sq1">夏，应邀住京丰宾馆作画；</span></li>
+  
+    </ul>
+    </div>
+    
+    
+      <div id="year_2008">
+    <h1><img src="__PUBLIC__/Home/images/jb_1_23.jpg" width="771" height="37" /></h1>
+    <ul>
+    <li><span class="fl_l yf1">1月8日</span><span class="fl_r sq1">（戊辰） 54岁1月，结束法国巴黎高等美术学院讲学回国；</span></li>
+    
+    </ul>
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>
+  
+  </div>
+
+
+</div></div>
+
+<div id="gao"></div>
+<div id="gao5"></div>
+</block>

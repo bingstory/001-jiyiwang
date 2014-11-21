@@ -10,5 +10,11 @@ class WorksRelationModel extends RelationModel{
 			'mapping_fields' => 'name',
 			'as_fields'      => 'name:cate'
 			),
+		'category'  => array(
+			'mapping_type'   => self::BELONGS_TO,
+			'foreign_key'    => 'shopcate_id',
+			'mapping_fields' => 'name',
+			'as_fields'      => 'name:shopcate'
+			)
 		);
 }

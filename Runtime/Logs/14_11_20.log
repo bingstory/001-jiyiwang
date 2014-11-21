@@ -1,0 +1,3129 @@
+[ 2014-11-20T13:41:37+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001674s ]
+
+[ 2014-11-20T13:41:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+ERR: 无法加载控制器:User
+
+[ 2014-11-20T13:58:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+ERR: 无法加载控制器:User
+
+[ 2014-11-20T13:58:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+
+[ 2014-11-20T14:00:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+
+[ 2014-11-20T14:00:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/reg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2014-11-20T14:00:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/Public/codeimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001244s ]
+
+[ 2014-11-20T14:01:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+
+[ 2014-11-20T14:01:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+
+[ 2014-11-20T14:02:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+
+[ 2014-11-20T14:02:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2014-11-20T14:02:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2014-11-20T14:07:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+
+[ 2014-11-20T14:08:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2014-11-20T14:08:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/loginform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `jiyi_user` [ RunTime:0.021522s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `username` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000772s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `email` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000457s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `phone` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000419s ]
+
+[ 2014-11-20T14:08:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/loginform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `jiyi_user` [ RunTime:0.004377s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `username` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000513s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `email` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000430s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `phone` = '' ) AND ( `password` = '' ) LIMIT 1   [ RunTime:0.000417s ]
+
+[ 2014-11-20T14:08:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+
+[ 2014-11-20T14:09:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/loginform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+SQL: SHOW COLUMNS FROM `jiyi_user` [ RunTime:0.003842s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `username` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000476s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `email` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `phone` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000330s ]
+
+[ 2014-11-20T14:09:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+
+[ 2014-11-20T14:09:27+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+
+[ 2014-11-20T14:17:01+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2014-11-20T14:17:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+
+[ 2014-11-20T14:17:05+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2014-11-20T14:17:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+
+[ 2014-11-20T14:19:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/loginform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `jiyi_user` [ RunTime:0.004431s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `username` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000533s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `email` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `phone` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000366s ]
+
+[ 2014-11-20T14:19:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2014-11-20T14:19:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+
+[ 2014-11-20T14:20:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+
+[ 2014-11-20T14:20:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+
+[ 2014-11-20T14:21:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+
+[ 2014-11-20T14:21:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+
+[ 2014-11-20T14:21:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+
+[ 2014-11-20T14:23:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2014-11-20T14:28:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001120s ]
+
+[ 2014-11-20T14:29:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+
+[ 2014-11-20T14:34:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+
+[ 2014-11-20T15:11:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+
+[ 2014-11-20T15:11:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2014-11-20T15:11:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+
+[ 2014-11-20T15:18:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+
+[ 2014-11-20T15:18:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2014-11-20T15:18:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+
+[ 2014-11-20T15:18:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage/userid/grzx1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+
+[ 2014-11-20T15:18:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2014-11-20T15:18:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+
+[ 2014-11-20T15:19:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+
+[ 2014-11-20T15:19:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001320s ]
+
+[ 2014-11-20T15:21:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2014-11-20T15:22:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+
+[ 2014-11-20T15:22:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2014-11-20T15:22:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+
+[ 2014-11-20T15:22:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001356s ]
+
+[ 2014-11-20T15:22:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+
+[ 2014-11-20T15:22:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2014-11-20T15:22:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001320s ]
+
+[ 2014-11-20T15:23:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+
+[ 2014-11-20T15:23:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+
+[ 2014-11-20T15:23:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+
+[ 2014-11-20T15:23:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2014-11-20T15:23:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+
+[ 2014-11-20T15:23:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+
+[ 2014-11-20T15:23:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+
+[ 2014-11-20T15:23:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+
+[ 2014-11-20T15:25:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+
+[ 2014-11-20T15:25:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2014-11-20T15:25:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001049s ]
+
+[ 2014-11-20T15:26:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2014-11-20T15:26:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+
+[ 2014-11-20T15:27:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2014-11-20T15:27:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2014-11-20T15:27:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+
+[ 2014-11-20T15:27:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2014-11-20T15:27:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001318s ]
+
+[ 2014-11-20T15:36:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2014-11-20T15:36:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+
+[ 2014-11-20T15:36:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2014-11-20T15:36:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+
+[ 2014-11-20T15:36:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2014-11-20T15:36:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2014-11-20T15:36:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+
+[ 2014-11-20T15:41:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+
+[ 2014-11-20T15:41:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2014-11-20T15:41:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+
+[ 2014-11-20T15:41:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+
+[ 2014-11-20T15:43:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+
+[ 2014-11-20T15:44:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+
+[ 2014-11-20T15:45:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2014-11-20T15:47:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-11-20T15:47:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2014-11-20T15:47:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2014-11-20T15:48:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001083s ]
+
+[ 2014-11-20T15:48:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2014-11-20T15:48:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+
+[ 2014-11-20T15:48:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+
+[ 2014-11-20T15:48:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-11-20T15:48:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T15:49:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+
+[ 2014-11-20T15:49:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+
+[ 2014-11-20T15:49:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2014-11-20T15:49:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2014-11-20T15:49:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+
+[ 2014-11-20T15:49:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+
+[ 2014-11-20T15:49:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+
+[ 2014-11-20T15:49:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2014-11-20T15:49:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001252s ]
+
+[ 2014-11-20T15:49:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+
+[ 2014-11-20T15:51:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2014-11-20T15:54:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+
+[ 2014-11-20T15:55:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+
+[ 2014-11-20T15:55:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2014-11-20T16:02:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001045s ]
+
+[ 2014-11-20T16:02:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001019s ]
+
+[ 2014-11-20T16:04:42+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+
+[ 2014-11-20T16:18:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+
+[ 2014-11-20T16:18:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+
+[ 2014-11-20T16:18:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+
+[ 2014-11-20T16:18:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+
+[ 2014-11-20T16:18:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+
+[ 2014-11-20T16:18:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+
+[ 2014-11-20T16:18:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+
+[ 2014-11-20T16:18:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2014-11-20T16:18:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2014-11-20T16:18:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+
+[ 2014-11-20T16:18:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+
+[ 2014-11-20T16:18:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+
+[ 2014-11-20T16:18:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2014-11-20T16:18:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T16:18:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+
+[ 2014-11-20T16:19:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+
+[ 2014-11-20T16:19:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+
+[ 2014-11-20T16:19:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+
+[ 2014-11-20T16:20:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001021s ]
+
+[ 2014-11-20T16:20:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2014-11-20T16:21:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+
+[ 2014-11-20T16:21:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+
+[ 2014-11-20T16:22:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2014-11-20T16:26:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2014-11-20T16:26:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+
+[ 2014-11-20T16:32:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001060s ]
+
+[ 2014-11-20T16:33:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2014-11-20T16:33:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2014-11-20T16:33:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T16:34:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2014-11-20T16:40:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2014-11-20T16:40:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+
+[ 2014-11-20T16:40:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001427s ]
+
+[ 2014-11-20T16:40:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T16:40:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+
+[ 2014-11-20T16:51:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-11-20T16:55:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001137s ]
+
+[ 2014-11-20T16:56:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2014-11-20T16:56:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+
+[ 2014-11-20T17:01:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T17:03:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2014-11-20T17:03:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T17:03:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+
+[ 2014-11-20T17:06:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+
+[ 2014-11-20T17:06:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2014-11-20T17:06:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+
+[ 2014-11-20T17:06:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+
+[ 2014-11-20T17:07:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001093s ]
+
+[ 2014-11-20T17:07:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2014-11-20T17:07:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+
+[ 2014-11-20T17:07:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+
+[ 2014-11-20T17:07:42+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+
+[ 2014-11-20T17:07:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T17:07:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+
+[ 2014-11-20T17:07:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-11-20T17:07:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+
+[ 2014-11-20T17:14:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2014-11-20T17:14:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001204s ]
+
+[ 2014-11-20T17:14:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001301s ]
+
+[ 2014-11-20T17:15:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2014-11-20T17:16:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+
+[ 2014-11-20T17:19:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+
+[ 2014-11-20T17:19:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001260s ]
+
+[ 2014-11-20T17:19:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001153s ]
+
+[ 2014-11-20T17:19:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+
+[ 2014-11-20T17:19:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+
+[ 2014-11-20T17:19:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+
+[ 2014-11-20T17:19:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+
+[ 2014-11-20T17:20:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+
+[ 2014-11-20T17:20:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+
+[ 2014-11-20T17:20:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000948s ]
+
+[ 2014-11-20T17:21:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-11-20T17:22:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2014-11-20T17:22:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2014-11-20T17:22:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001169s ]
+
+[ 2014-11-20T17:22:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+
+[ 2014-11-20T17:22:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+
+[ 2014-11-20T17:22:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+
+[ 2014-11-20T17:22:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+
+[ 2014-11-20T18:51:00+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+
+[ 2014-11-20T18:51:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001444s ]
+
+[ 2014-11-20T18:51:04+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2014-11-20T18:51:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+
+[ 2014-11-20T18:51:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/s.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+
+[ 2014-11-20T18:51:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T18:51:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/p.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2014-11-20T18:51:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/e.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001141s ]
+
+[ 2014-11-20T18:51:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/u.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T18:53:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+
+[ 2014-11-20T18:53:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2014-11-20T18:53:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+
+[ 2014-11-20T19:17:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2014-11-20T19:19:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+
+[ 2014-11-20T19:20:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+
+[ 2014-11-20T19:20:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T19:20:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2014-11-20T19:20:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001354s ]
+
+[ 2014-11-20T19:21:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001213s ]
+
+[ 2014-11-20T19:21:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+
+[ 2014-11-20T19:21:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+
+[ 2014-11-20T19:23:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+ERR: 非法数据对象！:[realname=>wangyibing]
+
+[ 2014-11-20T19:24:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2014-11-20T19:27:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2014-11-20T19:30:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+
+[ 2014-11-20T19:31:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2014-11-20T19:32:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T19:32:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T19:32:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+
+[ 2014-11-20T19:32:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+
+[ 2014-11-20T19:37:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2014-11-20T19:37:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-11-20T19:38:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+
+[ 2014-11-20T19:38:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2014-11-20T19:38:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+
+[ 2014-11-20T19:39:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2014-11-20T19:40:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-11-20T19:40:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T19:40:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-11-20T19:41:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+
+[ 2014-11-20T19:41:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+
+[ 2014-11-20T19:42:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T19:43:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+
+[ 2014-11-20T19:43:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+
+[ 2014-11-20T19:45:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+
+[ 2014-11-20T19:46:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000984s ]
+
+[ 2014-11-20T19:46:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001091s ]
+
+[ 2014-11-20T19:47:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+
+[ 2014-11-20T19:47:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001331s ]
+
+[ 2014-11-20T19:48:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-11-20T19:48:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2014-11-20T19:49:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001192s ]
+
+[ 2014-11-20T19:49:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T19:50:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T19:50:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2014-11-20T19:50:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+
+[ 2014-11-20T19:50:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+
+[ 2014-11-20T19:50:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001168s ]
+
+[ 2014-11-20T19:50:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-11-20T19:50:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T19:51:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+
+[ 2014-11-20T19:51:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2014-11-20T19:52:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+
+[ 2014-11-20T19:52:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+
+[ 2014-11-20T19:52:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+
+[ 2014-11-20T19:53:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T19:55:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+
+[ 2014-11-20T19:56:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+
+[ 2014-11-20T19:56:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-11-20T19:56:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+
+[ 2014-11-20T19:56:42+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-11-20T19:56:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+
+[ 2014-11-20T19:56:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+
+[ 2014-11-20T19:56:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2014-11-20T19:57:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T19:57:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+
+[ 2014-11-20T19:57:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001069s ]
+
+[ 2014-11-20T19:57:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001114s ]
+
+[ 2014-11-20T19:57:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+
+[ 2014-11-20T19:57:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T19:58:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T19:59:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-11-20T19:59:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+
+[ 2014-11-20T19:59:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2014-11-20T20:00:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-11-20T20:00:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001106s ]
+
+[ 2014-11-20T20:00:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+
+[ 2014-11-20T20:04:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+
+[ 2014-11-20T20:05:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+
+[ 2014-11-20T20:05:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2014-11-20T20:06:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001262s ]
+
+[ 2014-11-20T20:06:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+
+[ 2014-11-20T20:06:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2014-11-20T20:07:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T20:07:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+
+[ 2014-11-20T20:07:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2014-11-20T20:07:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+
+[ 2014-11-20T20:07:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2014-11-20T20:07:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001029s ]
+
+[ 2014-11-20T20:07:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+
+[ 2014-11-20T20:07:42+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2014-11-20T20:07:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+
+[ 2014-11-20T20:32:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001804s ]
+
+[ 2014-11-20T20:32:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+
+[ 2014-11-20T20:33:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T20:33:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+
+[ 2014-11-20T20:33:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001341s ]
+
+[ 2014-11-20T20:33:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+
+[ 2014-11-20T20:33:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+
+[ 2014-11-20T20:33:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T20:34:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+
+[ 2014-11-20T20:34:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+
+[ 2014-11-20T20:34:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+
+[ 2014-11-20T20:36:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T20:36:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2014-11-20T20:36:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+
+[ 2014-11-20T20:37:34+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+
+[ 2014-11-20T20:37:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001187s ]
+
+[ 2014-11-20T20:37:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+
+[ 2014-11-20T20:38:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T20:38:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2014-11-20T20:38:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+
+[ 2014-11-20T20:39:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+
+[ 2014-11-20T20:42:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001071s ]
+
+[ 2014-11-20T20:42:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+
+[ 2014-11-20T20:42:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T20:42:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2014-11-20T20:43:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T20:43:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+
+[ 2014-11-20T20:43:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2014-11-20T20:43:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+
+[ 2014-11-20T20:43:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2014-11-20T20:43:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+
+[ 2014-11-20T20:43:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+
+[ 2014-11-20T20:44:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+
+[ 2014-11-20T20:44:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+
+[ 2014-11-20T20:44:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001292s ]
+
+[ 2014-11-20T20:44:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+
+[ 2014-11-20T20:44:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+
+[ 2014-11-20T20:44:49+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001276s ]
+
+[ 2014-11-20T20:45:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2014-11-20T20:46:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+
+[ 2014-11-20T20:46:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+
+[ 2014-11-20T20:46:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+
+[ 2014-11-20T20:47:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+
+[ 2014-11-20T20:47:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+
+[ 2014-11-20T20:48:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000998s ]
+
+[ 2014-11-20T20:48:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+
+[ 2014-11-20T20:48:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+
+[ 2014-11-20T20:48:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001289s ]
+
+[ 2014-11-20T20:48:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+
+[ 2014-11-20T20:48:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+
+[ 2014-11-20T20:48:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+
+[ 2014-11-20T20:48:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+
+[ 2014-11-20T20:48:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001182s ]
+
+[ 2014-11-20T20:49:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001167s ]
+
+[ 2014-11-20T20:49:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+
+[ 2014-11-20T20:49:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+
+[ 2014-11-20T20:50:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2014-11-20T20:53:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2014-11-20T20:53:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-11-20T20:56:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+
+[ 2014-11-20T20:57:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+
+[ 2014-11-20T20:58:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T20:58:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+
+[ 2014-11-20T20:58:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-11-20T20:58:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-11-20T20:58:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T20:59:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2014-11-20T20:59:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+
+[ 2014-11-20T20:59:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+
+[ 2014-11-20T20:59:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+
+[ 2014-11-20T20:59:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+
+[ 2014-11-20T20:59:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2014-11-20T20:59:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+
+[ 2014-11-20T20:59:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001237s ]
+
+[ 2014-11-20T20:59:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-11-20T20:59:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+
+[ 2014-11-20T20:59:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+
+[ 2014-11-20T21:00:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+
+[ 2014-11-20T21:00:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001195s ]
+
+[ 2014-11-20T21:00:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+
+[ 2014-11-20T21:00:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2014-11-20T21:01:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+
+[ 2014-11-20T21:01:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T21:01:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T21:01:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+
+[ 2014-11-20T21:02:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+
+[ 2014-11-20T21:02:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001297s ]
+
+[ 2014-11-20T21:02:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2014-11-20T21:02:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-11-20T21:20:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2014-11-20T21:20:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+
+[ 2014-11-20T21:20:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+
+[ 2014-11-20T21:20:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-11-20T21:21:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2014-11-20T21:21:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+
+[ 2014-11-20T21:21:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+
+[ 2014-11-20T21:22:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T21:22:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000902s ]
+
+[ 2014-11-20T21:22:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2014-11-20T21:22:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+
+[ 2014-11-20T21:22:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2014-11-20T21:23:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+
+[ 2014-11-20T21:23:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+
+[ 2014-11-20T21:23:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001287s ]
+
+[ 2014-11-20T21:23:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001139s ]
+
+[ 2014-11-20T21:23:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+
+[ 2014-11-20T21:23:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+
+[ 2014-11-20T21:23:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+
+[ 2014-11-20T21:24:22+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+
+[ 2014-11-20T21:24:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+
+[ 2014-11-20T21:25:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2014-11-20T21:25:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+
+[ 2014-11-20T21:25:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+
+[ 2014-11-20T21:25:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2014-11-20T21:25:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+
+[ 2014-11-20T21:26:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+
+[ 2014-11-20T21:26:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001561s ]
+
+[ 2014-11-20T21:26:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+
+[ 2014-11-20T21:28:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2014-11-20T21:30:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2014-11-20T21:30:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+
+[ 2014-11-20T21:30:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2014-11-20T21:30:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+
+[ 2014-11-20T21:30:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+
+[ 2014-11-20T21:30:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000974s ]
+
+[ 2014-11-20T21:30:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2014-11-20T21:31:09+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001038s ]
+
+[ 2014-11-20T21:31:10+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+
+[ 2014-11-20T21:31:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001450s ]
+
+[ 2014-11-20T21:31:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2014-11-20T21:31:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2014-11-20T21:32:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T21:32:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+
+[ 2014-11-20T21:32:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+
+[ 2014-11-20T21:32:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+
+[ 2014-11-20T21:32:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+
+[ 2014-11-20T21:32:42+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T21:33:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2014-11-20T21:34:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2014-11-20T21:34:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+
+[ 2014-11-20T21:34:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+
+[ 2014-11-20T21:34:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+
+[ 2014-11-20T21:34:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T21:34:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+
+[ 2014-11-20T21:34:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+
+[ 2014-11-20T21:34:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001434s ]
+
+[ 2014-11-20T21:34:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+
+[ 2014-11-20T21:34:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T21:34:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+
+[ 2014-11-20T21:34:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001150s ]
+
+[ 2014-11-20T21:34:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-11-20T21:35:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000984s ]
+
+[ 2014-11-20T21:35:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2014-11-20T21:35:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2014-11-20T21:35:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+
+[ 2014-11-20T21:35:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001218s ]
+
+[ 2014-11-20T21:36:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2014-11-20T21:36:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001152s ]
+
+[ 2014-11-20T21:36:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2014-11-20T21:36:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2014-11-20T21:36:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+
+[ 2014-11-20T21:36:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+
+[ 2014-11-20T21:36:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001102s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000870s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000857s ]
+
+[ 2014-11-20T21:36:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+
+[ 2014-11-20T21:36:16+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+
+[ 2014-11-20T21:36:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001181s ]
+
+[ 2014-11-20T21:36:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-11-20T21:36:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+
+[ 2014-11-20T21:36:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+
+[ 2014-11-20T21:36:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2014-11-20T21:36:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+
+[ 2014-11-20T21:36:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2014-11-20T21:36:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2014-11-20T21:36:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+
+[ 2014-11-20T21:36:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+
+[ 2014-11-20T21:36:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001206s ]
+
+[ 2014-11-20T21:36:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T21:36:44+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2014-11-20T21:36:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+
+[ 2014-11-20T21:37:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-11-20T21:37:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+
+[ 2014-11-20T21:37:05+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001066s ]
+
+[ 2014-11-20T21:37:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+
+[ 2014-11-20T21:37:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+
+[ 2014-11-20T21:37:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+
+[ 2014-11-20T21:37:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+
+[ 2014-11-20T21:37:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2014-11-20T21:37:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+
+[ 2014-11-20T21:37:38+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000998s ]
+
+[ 2014-11-20T21:37:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-11-20T21:38:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001126s ]
+
+[ 2014-11-20T21:38:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+
+[ 2014-11-20T21:38:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-11-20T21:39:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001071s ]
+
+[ 2014-11-20T21:40:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+
+[ 2014-11-20T21:40:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001105s ]
+
+[ 2014-11-20T21:40:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+
+[ 2014-11-20T21:40:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+
+[ 2014-11-20T21:41:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T21:41:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+
+[ 2014-11-20T21:48:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+
+[ 2014-11-20T21:48:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2014-11-20T21:48:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001264s ]
+
+[ 2014-11-20T21:48:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+
+[ 2014-11-20T21:49:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+
+[ 2014-11-20T21:49:01+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-11-20T21:49:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+
+[ 2014-11-20T21:49:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+
+[ 2014-11-20T21:49:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+
+[ 2014-11-20T21:49:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2014-11-20T21:50:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T21:50:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2014-11-20T21:51:59+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+
+[ 2014-11-20T21:52:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+
+[ 2014-11-20T21:52:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+
+[ 2014-11-20T21:53:21+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-20T21:53:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+
+[ 2014-11-20T21:53:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+
+[ 2014-11-20T21:55:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000945s ]
+
+[ 2014-11-20T21:55:07+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001377s ]
+
+[ 2014-11-20T21:55:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+
+[ 2014-11-20T21:55:11+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2014-11-20T21:55:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+
+[ 2014-11-20T21:55:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+
+[ 2014-11-20T21:56:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2014-11-20T21:56:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+
+[ 2014-11-20T21:56:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+
+[ 2014-11-20T21:56:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001205s ]
+
+[ 2014-11-20T21:56:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2014-11-20T21:56:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+
+[ 2014-11-20T21:56:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2014-11-20T21:57:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+
+[ 2014-11-20T21:57:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2014-11-20T21:57:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-11-20T21:57:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+
+[ 2014-11-20T21:57:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2014-11-20T21:57:56+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2014-11-20T21:57:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+
+[ 2014-11-20T21:57:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+
+[ 2014-11-20T21:58:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+
+[ 2014-11-20T21:59:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+
+[ 2014-11-20T21:59:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+
+[ 2014-11-20T22:00:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001272s ]
+
+[ 2014-11-20T22:00:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+
+[ 2014-11-20T22:00:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+
+[ 2014-11-20T22:00:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+
+[ 2014-11-20T22:00:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+
+[ 2014-11-20T22:01:03+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+
+[ 2014-11-20T22:01:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+
+[ 2014-11-20T22:01:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-11-20T22:01:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/modifyPersonInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-11-20T22:01:35+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+
+[ 2014-11-20T22:04:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+
+[ 2014-11-20T22:04:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001142s ]
+
+[ 2014-11-20T22:04:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+
+[ 2014-11-20T22:04:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:19+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001229s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+
+[ 2014-11-20T22:05:20+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:23+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+
+[ 2014-11-20T22:05:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+
+[ 2014-11-20T22:05:33+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+
+[ 2014-11-20T22:05:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:05:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001305s ]
+
+[ 2014-11-20T22:05:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+
+[ 2014-11-20T22:05:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:07:25+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:07:28+08:00 ] ::1 /001-jiyiwang/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+
+[ 2014-11-20T22:07:30+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001086s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:07:37+08:00 ] ::1 /001-jiyiwang/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2014-11-20T22:07:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+
+[ 2014-11-20T22:07:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:07:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2014-11-20T22:07:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+ERR: 无法加载控制器:Home
+
+[ 2014-11-20T22:09:08+08:00 ] ::1 /001-jiyiwang/index.php/Home/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+ERR: 无法加载控制器:Homepage
+
+[ 2014-11-20T22:09:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+ERR: 无法加载控制器:Homepage
+
+[ 2014-11-20T22:09:36+08:00 ] ::1 /001-jiyiwang/index.php/Home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+
+[ 2014-11-20T22:09:45+08:00 ] ::1 /001-jiyiwang/index.php/Home/User/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+
+[ 2014-11-20T22:09:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T22:10:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/User/homepage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T22:10:15+08:00 ] ::1 /001-jiyiwang/index.php/Home/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+
+[ 2014-11-20T22:10:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/loginform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `jiyi_user` [ RunTime:0.006099s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `username` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000723s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `email` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000516s ]
+SQL: SELECT * FROM `jiyi_user` WHERE ( `usertype` = 'normal' ) AND ( `phone` = '123' ) AND ( `password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000609s ]
+SQL: UPDATE `jiyi_user` SET `logintime`=1416492624 WHERE ( `id` = 29 ) [ RunTime:0.000424s ]
+
+[ 2014-11-20T22:10:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+
+[ 2014-11-20T22:10:27+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+
+[ 2014-11-20T22:10:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2014-11-20T22:16:32+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2014-11-20T22:16:48+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+
+[ 2014-11-20T22:16:49+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+
+[ 2014-11-20T22:16:49+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+
+[ 2014-11-20T22:16:49+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-11-20T22:16:50+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+
+[ 2014-11-20T22:17:04+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/grzx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2014-11-20T22:17:06+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+
+[ 2014-11-20T22:17:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/homepage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2014-11-20T22:17:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/accountsafety.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+
+[ 2014-11-20T22:18:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/accountsafety.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+
+[ 2014-11-20T22:39:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/accountsafety.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+
+[ 2014-11-20T22:39:55+08:00 ] ::1 /001-jiyiwang/index.php/Home/User1/accountsafety.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+

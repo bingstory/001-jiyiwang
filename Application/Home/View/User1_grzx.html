@@ -1,0 +1,207 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+<block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script src="__PUBLIC__/Static/PCASClass.js"></script>
+<script>
+
+$(function(){
+     $('#msubmit').click(function(){
+                    $('label[name=email]').html('');
+                    email = $('input[name=email]').val();
+                    if(email == ''){
+                        $('label[name=email]').html('<span style="color:red; margin-left:5px;">*邮箱不能为空！</span>');
+                        return false;
+                    }
+                    if (!email.match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+                        $('label[name=email]').html('<span style="color:red; margin-left:5px;">*邮箱格式不正确！</span>');
+                        $("#email").focus();
+                        return false;
+                    }
+                    alert('修改成功');
+                    $('form[name=modifyform]').submit();
+                });
+      // $("#province").prepend("<option value='0'>请选择</option>");
+ });
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+ 
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+    <div class="vip_h">
+        <div class="vip_left">
+            <ul>
+                <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        <div class="vip_nav">
+        <ul>
+        <li><a href="#">基本信息</a></li>
+         <li><a href="#">修改密码</a></li>
+        </ul>
+        </div>
+        
+        <div class="vip_bottom">
+        <form name="modifyform" action="{:U(MODULE_NAME.'/User1/modifyPersonInfo')}" method="post" enctype="multipart/form-data">
+        <p>
+            头像：            
+            <span>
+            <img id="img1" <if condition="!empty($user['portrait'])">src="__ROOT__/{$user.portrait}"<else/>src="__PUBLIC__/Home/images/xx1_06.jpg" </if> width="48" height="48"  />      
+                <input type="file" name='picurl1' id="picurl1" style="display:none;" />
+                <script>
+                $(function(){
+                    $('#upimg').click(function(){
+                        $('#picurl1').click();
+                    });
+                });
+
+                </script>
+                <script type="text/javascript" src="__PUBLIC__/Static/thumb2.js"></script>
+                <img id="upimg" style="cursor:pointer;" src="__PUBLIC__/Home/images/xx1_10.jpg" width="110" height="27" />        
+            </span>
+        </p>
+        <p class="input">
+            真实姓名：
+            <span>
+                <input name="realname" type="text" value="{$user.realname}" />        
+            </span>
+        </p>
+        <p>
+            昵称：
+            <span>
+                <input name="username" type="text" value="{$user.username}" />        
+            </span>
+        </p>
+        <p class="xb">
+            性别：
+            <span>
+            <if condition="$user.gender eq girl">
+                <input name="gender" type="radio" value="girl" checked="checked" />女士
+                <input name="gender" type="radio" value="boy" />男士
+            <else/>
+                <input name="gender" type="radio" value="girl" />女士
+                <input name="gender" type="radio" value="boy" checked="checked" />男士
+            </if>
+                
+            </span>
+        </p>
+        <p class="input">
+            手机号码：
+            <span>
+                <input name="phone" type="text" value="{$user.phone}" />        
+            </span>
+        </p>
+        <p class="yx">
+            <span style=" color:#f17e4f; margin-left:0">*</span>
+            电子邮箱：
+            <span>
+                <input name="email" type="text" value="{$user.email}" /><label name="email"></label>        
+            </span>
+        </p>
+        <p class="input">
+            固定电话：
+            <span>
+                <input name="dianhua" type="text" value="{$user.dianhua}" />        
+            </span>
+        </p>
+
+        <p class="input">
+            详细地址：
+            <span>
+
+                <select name="province" id="province" style="width:100px;"></select>
+                <select name="city" id="city" style="width:80px;"></select>
+                <select name="area" id="area" style="width:80px;"></select>
+                <input name="address" value="{$user.address}" type="text" />
+            </span>
+          <script>
+          
+          $(function(){
+            var province1 = "{$user.province}";
+          var city1 = "{$user.city}";
+          var area1 = "{$user.county}";
+            if(province1 != ''){
+                $('#province').find('option:selected').text("{$user.province}"); 
+                
+            }
+                // $('#province').val("{$user.province}");
+            if(province1 != ''){
+                $('#city').find('option:selected').text("{$user.city}");
+            }
+            if(area1 != ''){
+                $('#area').find('option:selected').text("{$user.county}");
+
+            }
+          
+        });</script> 
+<script language="javascript" defer>new PCAS("province","city","area");</script>
+
+            <!-- <span> 
+                <select name="">        
+                <option>中国</option>
+            </select>
+            <select name="">
+                <option>请选择</option>
+            </select>
+            省
+            <select name="">
+                <option>请选择</option>
+            </select>
+            市/县
+            <input name="" type="text" />
+        </span> -->
+        </p>
+        <p class="input">
+        注册时间：
+        <span>{$user.regtime|date="Y-m-d H:i:s",###}</span>
+        </p>
+        <p class="input">
+        最后修改：
+        <span>{$user.modifytime|date="Y-m-d H:i:s",###}</span>
+        </p>
+        <p class="input">
+        最后登录：
+        <span>{$user.logintime|date="Y-m-d H:i:s",###}</span>
+        </p>
+        <p class="last">
+        <span style=" margin-left:142px;">
+             
+        <img id="msubmit" style="cursor:pointer;" src="__PUBLIC__/Home/images/bc.jpg" width="126" height="42" />        
+              
+        </span>
+        </p>
+    </form>
+        </div>
+        </div>
+        </div>
+    </div>
+</div></div>
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

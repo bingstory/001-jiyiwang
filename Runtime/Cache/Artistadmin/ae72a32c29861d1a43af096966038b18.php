@@ -165,6 +165,7 @@
                         <td colspan="2" align="center">
                               <input type="hidden" name="search_cate_id" value="<?php echo ($cate_id); ?>" />
                               <input type="hidden" name="id" value="<?php echo ($works["id"]); ?>" />
+                              <input type="hidden" name="isshop" value="<?php echo ($isshop); ?>" />
                               <input type="submit" value="发布" />
                         </td>
                   </tr>
