@@ -16,6 +16,7 @@
             window.UEDITOR_CONFIG.savePath = ['Uploads'];
             window.UEDITOR_CONFIG.imageUrl = "{:U(MODULE_NAME.'/Common/c_upload',array('folder'=>'Works'))}";       //图片上传提交地址
             window.UEDITOR_CONFIG.imagePath = "__ROOT__/Uploads/";
+            window.UEDITOR_CONFIG.toolbars = "";
             UE.getEditor('content');
       }
 </script>
@@ -26,45 +27,43 @@
 <div class="right-nav">
       <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 作品管理</div>
 </div>
-
+<form action="{:U(MODULE_NAME.'/Works/goBack')}" method="post">
 <div class="right-title">
-      作品修改
+      作品查看&nbsp;&nbsp;&nbsp;<input style="cursor:pointer;" type="submit" value="&nbsp;&nbsp;返&nbsp;&nbsp;回&nbsp;&nbsp;" />
+      <input type="hidden" name="prevurl" value="<?php echo $_SERVER['HTTP_REFERER']?>" />
+      <input type="hidden" name="cate_id" value="{$cate_id}" />
+                              <input type="hidden" name="isshop" value="{$isshop}" />
 </div>
-       <form action="{:U(MODULE_NAME.'/Works/doEdit')}" method="post" enctype="multipart/form-data">
+       
             <table class="table">
                   <tr>
                         <td align="right">作品编号：</td>
                         <td>
-                              <input type="text" size="18" name="works_id" value="{$works.works_id}" />
+                              {$works.works_id}"
                         </td>
                   </tr>
                   <tr>
                         <td align="right">名称：</td>
                         <td>
-                              <input type="text" size="68" name="title" value="{$works.title}" />
+                              {$works.title}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">艺术家姓名：</td>
                         <td>
-                              <input type="text" size="18" name="artistname" value="{$works.artistname}" />
+                             {$works.artistname}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">创作日期：</td>
                         <td>
-                              <input type="text" size="4" name="createyear" value="{$works.createyear}" />年（*只填写数字）
+                             {$works.createyear}
                         </td>
                   </tr>
                   <tr>
                         <td width="100px;" align="right">所属分类：</td>
                         <td>
-                              <select name="cate_id" id="">
-                                    <option value="{$works.cate_id}">{$works.cate}</option>
-                                    <foreach name="category" item="v">
-                                       <option value="{$v.id}">{$v.html}{$v.name}</option>
-                                    </foreach>
-                              </select><label id="selecterror" for=""></label>
+                              {$works.cate}
                         </td>
                   </tr>
                   <tr>
@@ -73,8 +72,7 @@
                               <div style='width:120px; height:100px;'>
                                       <img id="img1" <if condition="!empty($works['thumb'])">src="__ROOT__/{$works['thumb']}"<else/>src="__PUBLIC__/Admin/images/empty_thumb.gif"</if> width="180" height="165" />
                                   </div><br><br><br><br><br>
-                                  (图片大小：421px*387px)
-                                  <input type="file" name='thumb' id="picurl1" />
+                                  
                         </td>
                         
                   </tr>
@@ -84,69 +82,68 @@
                               <div style='width:120px; height:100px;'>
                                       <img id="img2" <if condition="!empty($works['thumb2'])">src="__ROOT__/{$works['thumb2']}"<else/>src="__PUBLIC__/Admin/images/empty_thumb.gif"</if> width="156" height="200" />
                                   </div><br><br><br><br><br><br><br>
-                                  (图片大小：156px*200px)
-                                  <input type="file" name='thumb2' id="picurl2" />
+                                  
                         </td>
                         <script type="text/javascript" src="__PUBLIC__/Static/thumb2.js"></script>
                   </tr>
                   <tr>
                         <td align="right">材质：</td>
                         <td>
-                              <input type="text" name="material" maxlength="125" size="18" value="{$works.material}"/>
+                              {$works.material}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">下载所需积分：</td>
                         <td>
-                              <input type="text" name="credit" maxlength="125" size="5" value="{$works.credit}"/>积分（*只填写数字）
+                              {$works.credit}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">价格：</td>
                         <td>
-                              <input type="text" name="price" maxlength="125" size="5" value="{$works.createyear}"/>元（人民币）（*只填写数字）
+                              {$works.createyear}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">运费：</td>
                         <td>
-                              <input type="text" name="expressfee" maxlength="125" size="5" value="{$works.expressfee}"/>元（人民币）（*只填写数字）
+                              {$works.expressfee}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">尺寸：</td>
                         <td>
-                              <input type="text" name="size" maxlength="125" size="15" value="{$works.size}"/>（如：60*80cm）
+                              {$works.size}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">推荐指数：</td>
                         <td>
-                              <input type="text" name="star" maxlength="125" size="5" value="{$works.star}"/>星（*只填写数字，最高4颗星）
+                              {$works.star}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">关注人数：</td>
                         <td>
-                              <input type="text" name="concern" maxlength="125" size="5" value="{$works.concern}"/>（*只填写数字）
+                              {$works.concern}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">喜欢人数：</td>
                         <td>
-                              <input type="text" name="favor" maxlength="125" size="5" value="{$works.favor}"/>（*只填写数字）
+                              {$works.favor}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">关键词：</td>
                         <td>
-                              <input type="text" name="keywords" maxlength="125" size="68" value="{$works.keywords}"/><span>【仅用于SEO】</span>
+                              {$works.keywords}
                         </td>
                   </tr>
                   <tr>
                         <td align="right">描述：</td>
                         <td>
-                              <textarea name="description" rows="3" cols="60">{$works.description}</textarea><span>【仅用于SEO】</span>
+                              <textarea name="description" rows="3" cols="60">{$works.description}</textarea>
                         </td>
                   </tr>
                   
@@ -163,17 +160,8 @@
                         <td align="left" colspan="2">作品推送到商铺时，须填写以下内容</td>
                   </tr> -->
                   
-                  <tr>
-                        <td colspan="2" align="center">
-                              <input type="hidden" name="prevurl" value="<?php echo $_SERVER['HTTP_REFERER']?>" />
-                              <input type="hidden" name="search_cate_id" value="{$cate_id}" />
-                              <input type="hidden" name="id" value="{$works.id}" />
-                              <input type="hidden" name="isshop" value="{$isshop}" />
-                              <input type="submit" value="发布" />
-                        </td>
-                  </tr>
             </table>
-       </form>
+      </form>
        
 </body>
 </html>

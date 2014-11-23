@@ -396,4 +396,173 @@ class HomepageController extends CommonController{
             $this->error('删除失败');
         }
     }
+
+    // 附件管理
+    public function attachment(){
+        $works_id = I('works_id','','intval');
+        $this->assign('works_id',$works_id);
+        // p($works_id);die;
+        $this->attachment = M('videoattach')->where(array('works_id'=>$works_id))->select();
+        $this->display();
+    }
+
+    // 添加附件
+    public function addAttachment(){
+        $works_id = I('works_id','','intval');
+        $this->works = M('video')->find($works_id);
+        $this->display();
+    }
+
+    // 添加附件 表单处理
+    public function doAddAttachment(){ 
+        $upload = new \Think\Upload();                             // 实例化上传类    
+        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg','txt','zip','rar');  // 设置附件上传类型   
+        $upload->rootPath  =  './';
+        $upload->savePath  =  'Uploads/Works/';                   // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['picurl']); 
+        $info2   = $upload->uploadOne($_FILES['attachment']); 
+        $haspic = $info['savename']; 
+        $haspic2 = $info2['savename']; 
+        if(empty($haspic)&&empty($haspic2)){
+            $data = array(
+            'works_id' => I('works_id'),
+            'name' => I('name'),
+            'credits' => I('credits')
+            );
+        }elseif(!empty($haspic)&&empty($haspic2)){
+            // 生成缩略图
+            $getpic = $info['savepath'].$info['savename'];//获取上传的图片 
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+            if(!$info) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+                $data = array(
+                    'works_id' => I('works_id'),
+                    'name' => I('name'),
+                    'picurl' => $info['savepath'].$info['savename'],
+                    'credits' => I('credits')
+                    );
+            }
+        }elseif(empty($haspic)&&!empty($haspic2)){
+            if(!$info2) {               // 上传错误提示错误信息        
+                $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+                $data = array(
+                    'works_id' => I('works_id'),
+                    'name' => I('name'),
+                    'attachment' => $info2['savepath'].$info2['savename'],
+                    'credits' => I('credits')
+                    );
+            }
+        }elseif(!empty($haspic)&&!empty($haspic2)){
+            // 生成缩略图
+            $getpic = $info['savepath'].$info['savename'];//获取上传的图片
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+            if(!$info||!$info2) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+                $data = array(
+                  'works_id' => I('works_id'),
+                  'name' => I('name'),
+                  'picurl' => $info['savepath'].$info['savename'],
+                  'attachment' => $info2['savepath'].$info2['savename'],
+                  'credits' => I('credits')
+                );
+            }
+        }
+        // p($data);die;
+        if(M('videoattach')->add($data) !== false){
+            $this->success('添加成功',U(MODULE_NAME.'/Homepage/attachment',array('works_id'=>I('works_id'))));
+        }else{
+            $this->error('添加失败');
+        } 
+    }
+
+    // 附件修改
+    public function editAttachment(){
+        $id = I('id');
+        $works_id = I('works_id');
+        $this->works = M('works')->find($works_id);
+        $this->attachment = M('videoattach')->find($id);
+        $this->display();
+    }
+
+    // 附件修改 表单处理
+    public function doEditAttachment(){
+        $upload = new \Think\Upload();                             // 实例化上传类    
+        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg','txt','zip','rar');  // 设置附件上传类型
+        $upload->rootPath  =  './';
+        $upload->savePath  =  'Uploads/Works/';                   // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['picurl']); 
+        $info2   = $upload->uploadOne($_FILES['attachment']); 
+        $haspic = $info['savename']; 
+        $haspic2 = $info2['savename'];  
+        if(empty($haspic)&&empty($haspic2)){
+            $data = array(
+            'id' => I('id'),
+            'name' => I('name'),
+            'credits' => I('credits')
+            );
+        }elseif(!empty($haspic)&&empty($haspic2)){
+            // 生成缩略图
+            $getpic = $info['savepath'].$info['savename'];//获取上传的图片 
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+            if(!$info) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息   
+                $data = array(
+            'id' => I('id'),
+            'name' => I('name'),
+            'picurl' => $info['savepath'].$info['savename'],
+            'credits' => I('credits')
+            );
+            }
+        }elseif(empty($haspic)&&!empty($haspic2)){
+            if(!$info2) {               // 上传错误提示错误信息        
+                $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+                $data = array(
+                    'id' => I('id'),
+                    'name' => I('name'),
+                    'attachment' => $info2['savepath'].$info2['savename'],
+                    'credits' => I('credits')
+                    );
+            }
+        }elseif(!empty($haspic)&&!empty($haspic2)){
+            // 生成缩略图
+            $getpic = $info['savepath'].$info['savename'];//获取上传的图片
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(127, 90,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+            if(!$info||!$info2) {               // 上传错误提示错误信息        
+            $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+                $data = array(
+                  'id' => I('id'),
+                  'name' => I('name'),
+                  'picurl' => $info['savepath'].$info['savename'],
+                  'attachment' => $info2['savepath'].$info2['savename'],
+                  'credits' => I('credits')
+                );
+            }
+        }
+        // p($data);die;
+        if(M('videoattach')->save($data) !== false){
+            $this->success('修改成功',U(MODULE_NAME.'/Homepage/attachment',array('works_id'=>I('works_id'))));
+        }else{
+            $this->error('修改失败');
+        } 
+    }
 }

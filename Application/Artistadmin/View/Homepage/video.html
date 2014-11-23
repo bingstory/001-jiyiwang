@@ -47,18 +47,15 @@
 
                     <div class="con">【标题】：{$v.title|msubstr=0,10,1}</div>
                     <div class="con">【简介】：{$v.summary|msubstr=0,40,1}</div>
-                    <div class="action"><span class="modify"><a href="{:U(MODULE_NAME.'/Homepage/editVideo',array('id'=>$v['id']))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Homepage/deleteVideo',array('id'=>$v['id']))}">[删除]</a></span></div>
+                    <div class="action"><span class="modify"><a href="{:U(MODULE_NAME.'/Homepage/attachment',array('works_id'=>$v['id']))}">[附件管理]</a></span><span class="modify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U(MODULE_NAME.'/Homepage/editVideo',array('id'=>$v['id']))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Homepage/deleteVideo',array('id'=>$v['id']))}">[删除]</a></span></div>
                   </div>
                 </foreach> 
-                  </td>
-                  
+                  </td> 
             </tr>
             <tr class="firstrow"> 
             <td><div class="fenye">{$page}</div></td>  
             </tr>
            
-             
-            
       </table>
 </body>
 </html>

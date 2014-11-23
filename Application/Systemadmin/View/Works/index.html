@@ -55,7 +55,6 @@
                     <td>评论管理</td>
                     <td>附件管理</td>
                     <td width="30">排序</td>
-                    <td>推送到商铺</td>
                     <td>平台审核状态</td>
                     <td>操作</td>
               </tr>
@@ -79,14 +78,10 @@
               <input type="text" name="{$v.id}" value='{$v.workssort}' size="5">
               </if>
                </td>
-               <td>
-               <if condition="$v.rec2shop eq 1"><a style="color:green;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>0,'cate_id'=>$cate_id))}">是</a><else/>
-               <a style="color:red;" href="{:U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>1,'cate_id'=>$cate_id))}">否</a>
-               </if>
-               </td>
+               
                <td><if condition="$v.checkstatus eq 0"><span style="color:orange;">审核中</span><elseif condition="$v.checkstatus eq 1"/><span style="color:green;">通过</span><else/><span style="color:red;">不能通过</span></if></td>
                <td>
-                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/preview',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop))}">[查看]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[删除]</a></span>
+                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[删除]</a></span>
                </td>
              </tr>
           </foreach>

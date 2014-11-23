@@ -4,7 +4,7 @@ use Think\Controller;
 class CategoryController extends CommonController{
 	//分类列表
     public function index(){
-        $uid   = session('uid');
+        $uid   = session('uid');  // p($uid);die;
         $where = array('artist_id'=>$uid);
         $this->cate = M('artistcate')->order('sort desc')->where($where)->select();
     	$this->display();

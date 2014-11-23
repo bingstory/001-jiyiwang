@@ -53,7 +53,6 @@
                     <td>评论管理</td>
                     <td>附件管理</td>
                     <td width="30">排序</td>
-                    <td>推送到商铺</td>
                     <td>平台审核状态</td>
                     <td>操作</td>
               </tr>
@@ -74,13 +73,10 @@
               <?php else: ?>
               <input type="text" name="<?php echo ($v["id"]); ?>" value='<?php echo ($v["workssort"]); ?>' size="5"><?php endif; ?>
                </td>
-               <td>
-               <?php if($v["rec2shop"] == 1): ?><a style="color:green;" href="<?php echo U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>0,'cate_id'=>$cate_id));?>">是</a><?php else: ?>
-               <a style="color:red;" href="<?php echo U(MODULE_NAME.'/Works/rec2shop',array('id'=>$v['id'],'rec2shop'=>1,'cate_id'=>$cate_id));?>">否</a><?php endif; ?>
-               </td>
+               
                <td><?php if($v["checkstatus"] == 0): ?><span style="color:orange;">审核中</span><?php elseif($v["checkstatus"] == 1): ?><span style="color:green;">通过</span><?php else: ?><span style="color:red;">不能通过</span><?php endif; ?></td>
                <td>
-                 <span class="modify"><a href="<?php echo U(MODULE_NAME.'/Works/preview',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop));?>">[查看]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop));?>">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="<?php echo U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1));?>">[删除]</a></span>
+                 <span class="modify"><a href="<?php echo U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1));?>">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="<?php echo U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1));?>">[删除]</a></span>
                </td>
              </tr><?php endforeach; endif; ?>
             <tr class="firstrow"> 

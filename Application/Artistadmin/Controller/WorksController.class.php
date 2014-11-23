@@ -247,6 +247,7 @@ class WorksController extends CommonController{
     //新闻编辑操作
     public function doEdit(){
     	$cate_id = I('search_cate_id','','intval');
+    	$isshop = I('isshop');
     	$this->isshop = I('isshop');
     	$upload = new \Think\Upload();                             // 实例化上传类    
         $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
@@ -388,7 +389,9 @@ class WorksController extends CommonController{
         }
     	 
     	if(M('works')->save($data) !== false){
-    		$this->success('修改成功',U(MODULE_NAME.'/Works/index',array('cate_id'=>$cate_id,'isshop'=>1)));
+    		$prevurl = I('prevurl');
+    		redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/'.$isshop);
+    		// $this->success('修改成功',U(MODULE_NAME.'/Works/index',array('cate_id'=>$cate_id,'isshop'=>1)));
     	}else{
     		$this->error('修改失败');
     	} 
@@ -611,6 +614,31 @@ class WorksController extends CommonController{
 		}
 		$prevurl = $_SERVER['HTTP_REFERER'];
 		redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/'.$isshop);
+    }
+
+    // 预览
+    public function preview(){ 
+       $this->cate_id = I('cate_id','','intval');
+       $this->isshop = I('isshop');
+       //所属分类
+	   $uid = session('uid');
+	   $where = array('artist_id'=>$uid);
+       $this->category = M('artistcate')->where($where)->select();
+	   
+       $id = I('id');
+       $this->works = D('WorksRelation')->relation(true)->find($id);
+       // p($this->works);die;
+       
+       $this->display();
+    }
+
+    // 返回
+    public function goBack(){
+    	$cate_id = I('cate_id','','intval');
+    	$isshop = I('isshop');
+    	// p($cate_id);die;
+    	$prevurl = I('prevurl');
+    	redirect($prevurl.'/cate_id/'.$cate_id.'/isshop/'.$isshop);
     }
 }
 

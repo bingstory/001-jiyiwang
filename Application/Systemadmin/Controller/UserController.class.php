@@ -98,7 +98,7 @@ class UserController extends CommonController{
 			$attr[$v['id']] = $v;
 		}
 		$this->isattr = $attr;
-		$this->attr   = M('attr')->select();
+		$this->attr   = M('attr')->where(array('type'=>'artist'))->select();
 		$this->display();
 	}
 

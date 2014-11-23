@@ -16,6 +16,7 @@
             window.UEDITOR_CONFIG.savePath = ['Uploads'];
             window.UEDITOR_CONFIG.imageUrl = "<?php echo U(MODULE_NAME.'/Common/c_upload',array('folder'=>'Works'));?>";       //图片上传提交地址
             window.UEDITOR_CONFIG.imagePath = "/001-jiyiwang/Uploads/";
+            window.UEDITOR_CONFIG.toolbars = "";
             UE.getEditor('content');
       }
 </script>
@@ -26,43 +27,43 @@
 <div class="right-nav">
       <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 作品管理</div>
 </div>
-
+<form action="<?php echo U(MODULE_NAME.'/Works/goBack');?>" method="post">
 <div class="right-title">
-      作品修改
+      作品查看&nbsp;&nbsp;&nbsp;<input style="cursor:pointer;" type="submit" value="&nbsp;&nbsp;返&nbsp;&nbsp;回&nbsp;&nbsp;" />
+      <input type="hidden" name="prevurl" value="<?php echo $_SERVER['HTTP_REFERER']?>" />
+      <input type="hidden" name="cate_id" value="<?php echo ($cate_id); ?>" />
+                              <input type="hidden" name="isshop" value="<?php echo ($isshop); ?>" />
 </div>
-       <form action="<?php echo U(MODULE_NAME.'/Works/doEdit');?>" method="post" enctype="multipart/form-data">
+       
             <table class="table">
                   <tr>
                         <td align="right">作品编号：</td>
                         <td>
-                              <input type="text" size="18" name="works_id" value="<?php echo ($works["works_id"]); ?>" />
+                              <?php echo ($works["works_id"]); ?>"
                         </td>
                   </tr>
                   <tr>
                         <td align="right">名称：</td>
                         <td>
-                              <input type="text" size="68" name="title" value="<?php echo ($works["title"]); ?>" />
+                              <?php echo ($works["title"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">艺术家姓名：</td>
                         <td>
-                              <input type="text" size="18" name="artistname" value="<?php echo ($works["artistname"]); ?>" />
+                             <?php echo ($works["artistname"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">创作日期：</td>
                         <td>
-                              <input type="text" size="4" name="createyear" value="<?php echo ($works["createyear"]); ?>" />年（*只填写数字）
+                             <?php echo ($works["createyear"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td width="100px;" align="right">所属分类：</td>
                         <td>
-                              <select name="cate_id" id="">
-                                    <option value="<?php echo ($works["cate_id"]); ?>"><?php echo ($works["cate"]); ?></option>
-                                    <?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); echo ($v["name"]); ?></option><?php endforeach; endif; ?>
-                              </select><label id="selecterror" for=""></label>
+                              <?php echo ($works["cate"]); ?>
                         </td>
                   </tr>
                   <tr>
@@ -71,8 +72,7 @@
                               <div style='width:120px; height:100px;'>
                                       <img id="img1" <?php if(!empty($works['thumb'])): ?>src="/001-jiyiwang/<?php echo ($works['thumb']); ?>"<?php else: ?>src="/001-jiyiwang/Public/Admin/images/empty_thumb.gif"<?php endif; ?> width="180" height="165" />
                                   </div><br><br><br><br><br>
-                                  (图片大小：421px*387px)
-                                  <input type="file" name='thumb' id="picurl1" />
+                                  
                         </td>
                         
                   </tr>
@@ -82,69 +82,68 @@
                               <div style='width:120px; height:100px;'>
                                       <img id="img2" <?php if(!empty($works['thumb2'])): ?>src="/001-jiyiwang/<?php echo ($works['thumb2']); ?>"<?php else: ?>src="/001-jiyiwang/Public/Admin/images/empty_thumb.gif"<?php endif; ?> width="156" height="200" />
                                   </div><br><br><br><br><br><br><br>
-                                  (图片大小：156px*200px)
-                                  <input type="file" name='thumb2' id="picurl2" />
+                                  
                         </td>
                         <script type="text/javascript" src="/001-jiyiwang/Public/Static/thumb2.js"></script>
                   </tr>
                   <tr>
                         <td align="right">材质：</td>
                         <td>
-                              <input type="text" name="material" maxlength="125" size="18" value="<?php echo ($works["material"]); ?>"/>
+                              <?php echo ($works["material"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">下载所需积分：</td>
                         <td>
-                              <input type="text" name="credit" maxlength="125" size="5" value="<?php echo ($works["credit"]); ?>"/>积分（*只填写数字）
+                              <?php echo ($works["credit"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">价格：</td>
                         <td>
-                              <input type="text" name="price" maxlength="125" size="5" value="<?php echo ($works["createyear"]); ?>"/>元（人民币）（*只填写数字）
+                              <?php echo ($works["createyear"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">运费：</td>
                         <td>
-                              <input type="text" name="expressfee" maxlength="125" size="5" value="<?php echo ($works["expressfee"]); ?>"/>元（人民币）（*只填写数字）
+                              <?php echo ($works["expressfee"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">尺寸：</td>
                         <td>
-                              <input type="text" name="size" maxlength="125" size="15" value="<?php echo ($works["size"]); ?>"/>（如：60*80cm）
+                              <?php echo ($works["size"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">推荐指数：</td>
                         <td>
-                              <input type="text" name="star" maxlength="125" size="5" value="<?php echo ($works["star"]); ?>"/>星（*只填写数字，最高4颗星）
+                              <?php echo ($works["star"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">关注人数：</td>
                         <td>
-                              <input type="text" name="concern" maxlength="125" size="5" value="<?php echo ($works["concern"]); ?>"/>（*只填写数字）
+                              <?php echo ($works["concern"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">喜欢人数：</td>
                         <td>
-                              <input type="text" name="favor" maxlength="125" size="5" value="<?php echo ($works["favor"]); ?>"/>（*只填写数字）
+                              <?php echo ($works["favor"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">关键词：</td>
                         <td>
-                              <input type="text" name="keywords" maxlength="125" size="68" value="<?php echo ($works["keywords"]); ?>"/><span>【仅用于SEO】</span>
+                              <?php echo ($works["keywords"]); ?>
                         </td>
                   </tr>
                   <tr>
                         <td align="right">描述：</td>
                         <td>
-                              <textarea name="description" rows="3" cols="60"><?php echo ($works["description"]); ?></textarea><span>【仅用于SEO】</span>
+                              <textarea name="description" rows="3" cols="60"><?php echo ($works["description"]); ?></textarea>
                         </td>
                   </tr>
                   
@@ -161,17 +160,8 @@
                         <td align="left" colspan="2">作品推送到商铺时，须填写以下内容</td>
                   </tr> -->
                   
-                  <tr>
-                        <td colspan="2" align="center">
-                              <input type="hidden" name="prevurl" value="<?php echo $_SERVER['HTTP_REFERER']?>" />
-                              <input type="hidden" name="search_cate_id" value="<?php echo ($cate_id); ?>" />
-                              <input type="hidden" name="id" value="<?php echo ($works["id"]); ?>" />
-                              <input type="hidden" name="isshop" value="<?php echo ($isshop); ?>" />
-                              <input type="submit" value="发布" />
-                        </td>
-                  </tr>
             </table>
-       </form>
+      </form>
        
 </body>
 </html>

@@ -34,26 +34,32 @@
 </div>
 
 <div class="right-title">
-      视频列表<a href="<?php echo U(MODULE_NAME.'/Homepage/addVideo');?>" title="">[添加]</a>
+      个人动态列表<a href="<?php echo U(MODULE_NAME.'/Homepage/addDynamic');?>" title="">[添加]</a>
 </div>
 
       <table class="table">
        
-            <tr> 
-                  <td>
-                  <?php if(is_array($list)): foreach($list as $key=>$v): ?><div class="enlighten">
-                    <img src="/001-jiyiwang/<?php echo ($v["picurl"]); ?>">
-
-                    <div class="con">【标题】：<?php echo (msubstr($v["title"],0,10,1)); ?></div>
-                    <div class="con">【简介】：<?php echo (msubstr($v["summary"],0,40,1)); ?></div>
-                    <div class="action"><span class="modify"><a href="<?php echo U(MODULE_NAME.'/Homepage/attachment',array('works_id'=>$v['id']));?>">[附件管理]</a></span><span class="modify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo U(MODULE_NAME.'/Homepage/editVideo',array('id'=>$v['id']));?>">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="<?php echo U(MODULE_NAME.'/Homepage/deleteVideo',array('id'=>$v['id']));?>">[删除]</a></span></div>
-                  </div><?php endforeach; endif; ?> 
-                  </td> 
+            <tr class="firstrow">
+                  <td width="20px">ID</td>
+                  <td>标题</td> 
+                  <td>内容</td>
+                  <td>发布时间</td>
+                  <td>操作</td>
             </tr>
-            <tr class="firstrow"> 
-            <td><div class="fenye"><?php echo ($page); ?></div></td>  
+            <?php if(is_array($list)): foreach($list as $key=>$v): ?><tr> 
+                   
+                  <td align="right"><?php echo ($v["id"]); ?></td>
+                  <td align="right" width="150px"><?php echo ($v["title"]); ?> </td> 
+                  <td align="right"><?php echo ($v["content"]); ?></td>
+                  <td align="right" width="170"><?php echo (date('Y-m-d H:i:s',$v["pubtime"])); ?></td>
+                  <td align="right" width="170">
+                    [<a href="<?php echo U(MODULE_NAME.'/Homepage/editDynamic',array('id'=>$v['id'],'artist_id'=>$artist_id));?>">修改</a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    [<a onclick="return del()" href="<?php echo U(MODULE_NAME.'/Homepage/deleteDynamic',array('id'=>$v['id'],'artist_id'=>$artist_id));?>">删除</a>]
+                  </td>
+            </tr><?php endforeach; endif; ?>
+             <tr class="firstrow"> 
+                  <td colspan="6"><div class="fenye"><?php echo ($page); ?><div></td>  
             </tr>
-           
       </table>
 </body>
 </html>
