@@ -15,6 +15,12 @@ class WorksRelationModel extends RelationModel{
 			'foreign_key'    => 'shopcate_id',
 			'mapping_fields' => 'name',
 			'as_fields'      => 'name:shopcate'
-			)
+			),
+		'attr' => array(
+			'mapping_type' => self::MANY_TO_MANY,
+			'relation_table' => 'jiyi_works_attr',
+			'foreign_key'  => 'works_id',
+			'relation_key' => 'attr_id'
+			),
 		);
 }

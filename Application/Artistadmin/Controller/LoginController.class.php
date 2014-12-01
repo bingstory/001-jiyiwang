@@ -16,7 +16,7 @@ class LoginController extends Controller{
 
        $username = I('username');
        $pwd      = I('password','','md5');
-       $usertype = I('usertype');
+       $usertype = 'artist';
        $db       = M('user');
        $where    = array('username'=>$username, 'password'=>$pwd,'usertype'=>$usertype);
        $result   = $db->where($where)->find(); 

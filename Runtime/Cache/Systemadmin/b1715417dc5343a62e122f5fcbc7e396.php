@@ -75,21 +75,21 @@ window.attachEvent("onload", correctPNG);
                   <td height="149">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td height="80" align="right" valign="top"><img src="/001-jiyiwang/Public/Admin/images/logo.png" width="279" height="68"></td>
+                  <td height="80" align="center" valign="top"><img src="/001-jiyiwang/Public/Admin/images/logo.png" width="279" height="78"></td>
                 </tr>
                 <tr>
                   <td height="198" align="right" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td width="35%">&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"><p>1- 地区商家信息网门户站建立的首选方案...</p></td>
+                      <td height="25" colspan="2" class="left_txt"><p></p></td>
                     </tr>
                     <tr>
                       <td>&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"><p>2- 一站通式的整合方式，方便用户使用...</p></td>
+                      <td height="25" colspan="2" class="left_txt"><p></p></td>
                     </tr>
                     <tr>
                       <td>&nbsp;</td>
-                      <td height="25" colspan="2" class="left_txt"><p>3- 强大的后台系统，管理内容易如反掌...</p></td>
+                      <td height="25" colspan="2" class="left_txt"><p></p></td>
                     </tr>
                     <tr>
                       <td>&nbsp;</td>
@@ -156,7 +156,7 @@ window.attachEvent("onload", correctPNG);
   <tr>
     <td height="20"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="login-buttom-bg">
       <tr>
-        <td align="center"><span class="login-buttom-txt">Copyright &copy; 2009-2014 www.yiyom.net</span></td>
+        <td align="center"><span class="login-buttom-txt">Copyright &copy; 2009-2014 </span></td>
       </tr>
     </table></td>
   </tr>

@@ -20,7 +20,6 @@
     }
     }
     </script>
- 
 <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 <script>
 $(function(){
@@ -39,8 +38,27 @@ $(function(){
     });
     $('.vcon').slideUp().eq(tabs_i).slideDown();
   });
+  
+  var money = 200;
+  var jifen = 2000;
+  $('.buyjifen li').click(function(){
+    $(this).addClass('buyjifen_HOVER').siblings().removeClass('buyjifen_HOVER');
+       money = $(this).find('span').text();
+       jifen = money*10;
+       $('#jifen').text(jifen);
+  });
+  $('#csubmit').click(function(){
+    $('#ordtitle').val(jifen+'积分');
+    $('#ordprice').val(money);
+    $('#ordfee').val(money);
+    // alert($('#ordtitle').val());
+    // alert($('#ordprice').val());
+    // alert($('#ordfee').val());
+    $('#cform').submit();
+  });
 })
 </script>
+<style>.buyjifen li{ cursor:pointer;}</style>
 </block>
 <block name="banner"></block>
 <block name="body">
@@ -54,49 +72,75 @@ $(function(){
         </div>
         <div class="vip_right">
         <div class="vip_text">
-        
-        <div class="vip_nav" style=" margin-bottom:10px">
+        <div class="vip_nav">
         <ul>
-        <li><a href="#">申请返修，退换货</a></li>
-         <li><a href="#">查看返修退换货记录</a></li>
-         <li><a href="#">查看退款记录</a></li>
+        <li><a href="grzx1.html">购买积分</a></li>
+         <li style="float:right;color: #747474;">可用的积分：<span style="color:#F00">{$user['jifen']}&nbsp;&nbsp;</span></li>
         </ul>
         </div>
-        
-        
-        <div class="sh_text01">
-     
-        <div class="sh_text2">
-        <h3>
-        <span class="fl_l sh_t1">订单商品</span><span class="fl_l sh_t2">订单编号</span><span class="fl_l sh_t3">状态</span><span class="fl_r sh_t4">日期</span>
-        
-        </h3>
-        <ul>
-        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">未解决</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
-        
-      <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">已解决</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
-        
-       <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">客服处理中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
-        
-        <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">派送中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
-          <li> <span class="fl_l sh_t1">购买 陈奕迅作品大图</span><span class="fl_l sh_t2">151315641351</span><span class="fl_l sh_t3">退款中</span><span class="fl_l sh_t4">2014-10-27 10:21:20</span></li>
-        </ul>
-        
-        
-        
-        
-        
+        <form id="cform" action="{:U(MODULE_NAME.'/Pay/createOrder_jifen')}" method="post">
+        <div class="vip_bottom">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="130" align="left" valign="top"><img src="__PUBLIC__/Home/images/HY-mgdh.jpg" width="111" height="130" /></td>
+              <td valign="top"><table style="font-size:12px" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="68%" align="left"><label for="textfield"></label>
+                    <!-- <input type="text" name="textfield" style="width:370px; padding:0 4px; height:30px; line-height:30px" id="textfield" /> -->
+                    {$username}
+                    </td>
+                  <td width="32%" align="left"><input type="submit" name="button" id="button" value="确定" style="visibility:hidden;padding:10px 20px; color:#FFF; background:#e8413b; border:0" /></td>
+                </tr>
+                <tr>
+                  <td height="55" colspan="2" align="left">
+                      <div>
+                          <ul class="buyjifen">
+                                <li><span>0.1</span>元</li>
+                                <li><span>10</span>元</li>
+                                <li><span>20</span>元</li>
+                                <li><span>50</span>元</li>
+                                <li><span>100</span>元</li>
+                                <li class="buyjifen_HOVER"><span>200</span>元</li>
+                                <li><span>500</span>元</li>
+                                <!-- <li class="gmdh_hy"><input type="text" size="6" />元</li> -->
+                          </ul>
+                        </div>
+                        <input type="hidden" name="ordid" value="{$trade_no}">        <!--商户订单号-->
+                        <input type="hidden" id="ordtitle" name="ordtitle">   <!--订单名称-->
+                        <input type="hidden" id="ordprice" name="ordprice"> <!-- 产品单价 -->
+                        <input type="hidden" id="ordfee" name="ordfee">  <!--付款总金额-->
+                        <input type="hidden" name="ordbody" value="积分">         <!--订单描述-->
+                  </td>
+                  </tr>
+                <tr>
+                <td height="30" align="left"><strong><span id="jifen">2000</span>积分</strong></td>
+                  <td align="left">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="30" colspan="2" align="left"><table style="margin-left:80px" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img class="cursor" id="csubmit" src="__PUBLIC__/Home/images/BUYxy.jpg" width="127" height="39" /></td>
+                      <td>充值有问题,请联系客服</td>
+                    </tr>
+                  </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          <table style="margin-top:150px; " width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left"><strong>关于账户充值后生效问题</strong><br />
+1.1元人民币兑换1个积分；<br />
+2.网银在线、支付宝、财付通、手机充值卡支付：程序自动处理，立刻生效的 ；<br />
+3.其他的支付方式：请在付款后联系我们。我们确认后，管理员手动给你处理，几分钟后即可生效；<br />
+4.请您仔细核实被充值用户，防止出错带来的经济损失，一旦交费成功，系统将无法进行回退；<br />
+5.到账时间：充值后一般1~10分钟左右快速到账，如遇系统繁忙时，可能会导致到账延时；<br />
+6.若银行卡已扣款但积分未到账，请勿重复充值，避免重复扣款。如超24小时账户任未增加，可咨询网站“客服”；<br />
+7.因浏览器原因可能造成跳转银行缴费页面失败，请更换浏览器重新尝试。</td>
+            </tr>
+          </table>
+        </form>
         </div>
-        
-        
-        </div>
-        <div class="fl_r page">
-        <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8"></a></div>
-        <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_34.jpg"></a></span>
-        </div>
-        
-        
-        
         
         </div>
         
@@ -108,6 +152,7 @@ $(function(){
 </div></div>
 
 
+<div id="gao1"></div>
 <div id="gao1"></div>
 </block>
 <block name="footer">

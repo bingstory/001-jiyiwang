@@ -113,8 +113,66 @@ $(function(){
     });
     $('.vcon').slideUp().eq(tabs_i).slideDown();
   });
+  $('#asubmit').click(function(){ 
+        var province = $('#province').val();
+        var city = $('#city').val();
+        var area = $('#area').val();
+        var detailaddr = $('#detailaddr').val();
+        var name = $('input[name=name]').val();
+        if(province == ''){
+            alert('请选择省份');
+            return false;
+        }
+        if(city == ''){
+            alert('请选择城市');
+            return false;
+        }
+        if(area == ''){
+            alert('请选择地区');
+            return false;
+        }
+        if(detailaddr == ''){
+            alert('请填写详细地址');
+            return false;
+        }
+        if(name == ''){
+            alert('请填写收货人姓名');
+            return false;
+        }
+        if ($("#defaultaddr").is(":checked")){
+          var da = 1;
+        }else{
+          var da = 0;
+        }
+       
+       $.ajax({
+            url:"<?php echo U(MODULE_NAME.'/User1/doShippingAddress','','');?>",
+            type:'POST',
+            data:{
+              code       : $('input[name=code]').val(),
+              province   : $('#province').val(),
+              detailaddr : $('#detailaddr').val(),
+              defaultaddr : da,
+              city       : $('#city').val(),
+              area       : $('#area').val(),
+              name       : $('input[name=name]').val(),
+              phone      : $('#phone').val(),
+              fp1        : $('#fp1').val(),
+              fp2        : $('#fp2').val(),
+              fp3        : $('#fp3').val(),
+            },
+            success:function(response,status,xhr){  
+              if(response == 0){
+                alert('只能保存5条地址！');
+              }else{ 
+                $('#addAddr').html(response);
+              }
+            }
+            });
+      });
 })
 </script>
+<script src="/001-jiyiwang/Public/Static/PCASClass.js"></script>
 
 
 
@@ -127,8 +185,8 @@ $(function(){
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -207,21 +265,24 @@ $(function(){
         
         
         <div class="vip_bottom"> 
-        <p class="input">固定电话： <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><select name=""  style="height:30px;">
-                       <option>中国</option>
-                     </select> <select name="" style=" width:240px;height:30px;">
-                       <option>请选择城市</option>
-                     </select></span></p>
+        <form name="aform" action="<?php echo U(MODULE_NAME.'/User1/doShippingAddress');?>" method="post">
+        <p class="input">收货地址： <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0">
+                <select name="province" id="province" style="height:30px;width:80px;"></select>
+                <select name="city" id="city" style="height:30px;width:80px;"></select>
+                <select name="area" id="area" style="height:30px;width:80px;"></select>
+                <input name="detailaddr" id="detailaddr" placeholder="详细地址" type="text" />
+<script language="javascript" defer>new PCAS("province","city","area");</script>
+                     </span></p>
         
-          <p class="input" style=" margin-left:-10px">收货人姓名：  <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><input name="" type="text" /></span></p>
+          <p class="input" style=" margin-left:-10px">收货人姓名：  <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><input name="name" type="text" /></span></p>
             
             
-                 <p class="input">手机号码： &nbsp;<span style="margin-left:2px"><input name="" type="text" /></span></p>
+                 <p class="input">手机号码： &nbsp;<span style="margin-left:2px"><input name="phone" id="phone" type="text" /></span></p>
         
-                     <p class="input">固定电话： &nbsp;<span style="margin-left:2px"><input name="" type="text"  style="width:86px"/> . <input name="" type="text"  style="width:86px"/> . <input name="" type="text"  style="width:88px"/> </span></p>
-                     <p style=" margin-top:20px; margin-left:68px"><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476" style=" height:10px; width:14px"/>设置为默认收货地址</p>
-                     <p><a href="#"><img src="/001-jiyiwang/Public/Home/images/sh1.jpg" /></a></p>
-
+                     <p class="input">固定电话： &nbsp;<span style="margin-left:2px"><input name="fp1" id="fp1" type="text"  style="width:86px"/> . <input name="fp2" id="fp2" type="text"  style="width:86px"/> . <input id="fp3" name="fp3" type="text"  style="width:88px"/> </span></p>
+                     <p style=" margin-top:20px; margin-left:68px"><input class="J_CheckBoxItem" id="defaultaddr" type="checkbox" name="setDefault" value="1" style=" height:10px; width:14px"/>设置为默认收货地址</p>
+                     <p><img class="cursor" id="asubmit" src="/001-jiyiwang/Public/Home/images/sh1.jpg" /></p>
+                   </form>
         </div>
         
         <div class="sh_text">
@@ -231,14 +292,9 @@ $(function(){
         <span class="fl_l sh_t2">所在地区</span><span class="fl_l sh_t3">详细地址</span><span class="fl_l sh_t4">邮编</span><span class="fl_l sh_t5">电话/手机</span><span class="fl_r sh_t6">操作</span>
         
         </h3>
-        <ul>
-        <li> <span class="fl_l sh_t1">杨晶</span><span class="fl_l sh_t2">湖北省 武汉市 洪山区 关山大道</span><span class="fl_l sh_t3">东湖开发区大学园路华师园三路存储产业园4号二楼（从外面可以看见博莱电子大的标识牌）</span><span class="fl_l sh_t4">430200</span><span class="fl_l sh_t5">13163314914</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
+        <ul id="addAddr">
+        <?php if(is_array($addr)): foreach($addr as $key=>$v): ?><li> <span class="fl_l sh_t1"><?php echo ($v["name"]); ?></span><span class="fl_l sh_t2"><?php echo ($v["province"]); ?> <?php echo ($v["city"]); ?> <?php echo ($v["county"]); ?></span><span class="fl_l sh_t3"><?php echo ($v["detailaddr"]); ?></span><span class="fl_l sh_t4">430200</span><span class="fl_l sh_t5"><?php echo ($v["phone"]); ?></span><span class="fl_r sh_t6"><a href="<?php echo U('/'.MODULE_NAME.'/User1/editShippingAddr/id/'.$v['id']);?>">修改</a> | <a href="<?php echo U('/'.MODULE_NAME.'/User1/deleteShippingAddr/id/'.$v['id']);?>">删除</a></span>        </li><?php endforeach; endif; ?>
         
-        <li> <span class="fl_l sh_t1">孙小洁</span><span class="fl_l sh_t2">辽宁省 沈阳市 和平区</span><span class="fl_l sh_t3">和平区南京南街和鸿国际花园A座206</span><span class="fl_l sh_t4">110002</span><span class="fl_l sh_t5">15542253200</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
-        
-        <li> <span class="fl_l sh_t1">刘诗琪</span><span class="fl_l sh_t2">湖北省 武汉市 江汉区</span><span class="fl_l sh_t3">建设大道青年路招商大厦11楼1110</span><span class="fl_l sh_t4">430115</span><span class="fl_l sh_t5">18502748647</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
-        
-        <li> <span class="fl_l sh_t1">郑春华</span><span class="fl_l sh_t2">湖北省 孝感市 云梦县</span><span class="fl_l sh_t3">城关镇陈赵村二组</span><span class="fl_l sh_t4">432500</span><span class="fl_l sh_t5">0712-4222289 13733510651</span><span class="fl_r sh_t6"><a href="#">修改</a> | <a href="#">删除</a></span>        </li>
         </ul>
         
         

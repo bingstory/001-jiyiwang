@@ -565,4 +565,52 @@ class HomepageController extends CommonController{
             $this->error('修改失败');
         } 
     }
+    
+    // 主页大图设置
+    public function setBg(){
+        $artist_id = session('uid');
+        $this->artist = M('user')->find($artist_id);
+        $this->display();
+    }
+
+    // 主页大图设置 
+    public function editSetBg(){
+        $artist_id = session('uid');
+        $this->artist = M('user')->find($artist_id);
+        $this->display();
+    }
+
+    // 主页大图设置 表单处理
+    public function doEditBg(){
+        $artist_id = session('uid');
+        $upload = new \Think\Upload();                             // 实例化上传类    
+        $upload->maxSize   =  3145728 ;                            // 设置附件上传大小    
+        $upload->exts      =  array('jpg', 'gif', 'png', 'jpeg');  // 设置附件上传类型   
+        $upload->rootPath  =  './';
+        $upload->savePath  =  'Uploads/Homepage/';                   // 设置附件上传目录    // 上传单个文件    
+        $info   = $upload->uploadOne($_FILES['picurl2']); 
+        $haspic = $info['savename']; 
+
+        if(empty($haspic)){
+             $this->error('没有图片被上传！');
+        }else{
+            // 生成缩略图
+            $getpic = $info['savepath'].$info['savename'];//获取上传的图片 
+            $image = new \Think\Image(); 
+            $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
+            $image->thumb(988, 393,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+
+            if(!$info) {               // 上传错误提示错误信息        
+               $this->error($upload->getError());   
+            }else{                      // 上传成功 获取上传文件信息        
+               $homepagebg = $info['savepath'].$info['savename']; 
+               if(M('user')->where(array('id'=>$artist_id))->setField('homepagebg',$homepagebg)){
+                    $this->success('修改成功',U(MODULE_NAME.'/Homepage/setBg'));
+                }else{
+                    $this->error('修改失败');
+                } 
+            }
+        } 
+     }
+  
 }

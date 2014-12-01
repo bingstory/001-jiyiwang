@@ -106,8 +106,8 @@ class WorksController extends CommonController{
 				'price'       => I('price'),
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'star'        => I('star'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
@@ -138,8 +138,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -152,7 +152,7 @@ class WorksController extends CommonController{
         	$getpic = $info2['savepath'].$info2['savename'];//获取上传的图片 
             $image = new \Think\Image(); 
             $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
-            $image->thumb(156, 200,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+            $image->thumb(260, 366,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
 
         	if(!$info2) {               // 上传错误提示错误信息        
             $this->error($upload->getError());   
@@ -172,8 +172,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -189,7 +189,7 @@ class WorksController extends CommonController{
             $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
             $image->thumb(421, 387,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
             $image->open($getpic2);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
-            $image->thumb(156, 200,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic2);
+            $image->thumb(260, 366,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic2);
 
         	if(!$info||!$info2) {               // 上传错误提示错误信息        
             $this->error($upload->getError());   
@@ -209,8 +209,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -231,12 +231,18 @@ class WorksController extends CommonController{
     //新闻编辑操作
     public function edit(){ 
        $this->cate_id = I('cate_id','','intval');
-       $this->isshop = I('isshop');
+       $isshop = I('isshop','','intval');   // p($isshop);die;
+          $this->assign('isshop',$isshop);
+          $this->pos = empty($isshop) ? '作品' : '商品';
        //所属分类
 	   $uid = session('uid');
 	   $where = array('artist_id'=>$uid);
        $this->category = M('artistcate')->where($where)->select();
 	   
+
+	   $cate = M('category')->select();
+       import('Class/Category');
+       $this->shopcategory = \Category::unlimitedForLevel($cate,'└',31);
        $id = I('id');
        $this->works = D('WorksRelation')->relation(true)->find($id);
        // p($this->works);die;
@@ -273,8 +279,8 @@ class WorksController extends CommonController{
 				'price'       => I('price'),
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'star'        => I('star'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
@@ -305,8 +311,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -319,7 +325,7 @@ class WorksController extends CommonController{
         	$getpic = $info2['savepath'].$info2['savename'];//获取上传的图片 
             $image = new \Think\Image(); 
             $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
-            $image->thumb(156, 200,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
+            $image->thumb(260, 366,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
 
         	if(!$info2) {               // 上传错误提示错误信息        
             $this->error($upload->getError());   
@@ -339,8 +345,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -356,7 +362,7 @@ class WorksController extends CommonController{
             $image->open($getpic);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
             $image->thumb(421, 387,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic);
             $image->open($getpic2);// 生成一个缩放后填充为150*150的缩略图并保存为thumb.jpg
-            $image->thumb(156, 200,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic2);
+            $image->thumb(260, 366,\Think\Image::IMAGE_THUMB_FIXED)->save($getpic2);
 
         	if(!$info||!$info2) {               // 上传错误提示错误信息        
             $this->error($upload->getError());   
@@ -376,8 +382,8 @@ class WorksController extends CommonController{
 				'expressfee'  => I('expressfee'),
 				'size'        => I('size'),
 				'star'        => I('star'),
-				'concern'     => I('concern'),
-				'favor'       => I('favor'),
+				// 'concern'     => I('concern'),
+				// 'favor'       => I('favor'),
 				'keywords'    => I('keywords'),
 				'description' => I('description'),
 				'content'     => $_POST['content'],
@@ -619,7 +625,9 @@ class WorksController extends CommonController{
     // 预览
     public function preview(){ 
        $this->cate_id = I('cate_id','','intval');
-       $this->isshop = I('isshop');
+       $isshop = I('isshop','','intval');   // p($isshop);die;
+          $this->assign('isshop',$isshop);
+          $this->pos = empty($isshop) ? '作品' : '商品';
        //所属分类
 	   $uid = session('uid');
 	   $where = array('artist_id'=>$uid);

@@ -23,7 +23,7 @@ class UserController extends CommonController{
     	$where = array('usertype'=>$usertype);
         // $this->user = M('user')->where($where)->select();
         $this->user = D('UserattrRelation')->relation(true)->where($where)->order('sort desc,id desc')->select();
-        // p($this->user);die;
+        // $this->count = count($this->)
     	$this->display();
     }
    // 添加用户界面
@@ -113,12 +113,9 @@ class UserController extends CommonController{
 				); 
 		};
 		M('artist_attr')->where(array('artist_id'=>$id))->delete();
-		if(M('artist_attr')->addAll($attr)){
-			$this->success('修改成功',U(MODULE_NAME.'/User/index',array('usertype'=>'artist')));
-		}else{
-			$this->error('修改失败');
-		};
-
+		M('artist_attr')->addAll($attr);
+		$this->success('修改成功',U(MODULE_NAME.'/User/index',array('usertype'=>'artist')));
+		
 	}
 
 	public function sort(){

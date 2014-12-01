@@ -74,6 +74,21 @@ function MM_swapImage() { //v3.0
 		</script>
 		<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.min.js"></script>
         <script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
+        <style>.nav ul li .navcurrent{ background:#e8413b; padding: 40px 15px 40px 15px; color:#fff;border-right:1px solid #e8413b;border-left:1px solid #e8413b}</style>
+        <script>
+           $(function(){
+           	var navtag = $('#navtag').attr('value');
+           	if(navtag == 'index'){$('#nav-index').addClass('navcurrent');}
+           	if(navtag == 'artist'){$('#nav-artist').addClass('navcurrent');}
+           	if(navtag == 'news'){$('#nav-news').addClass('navcurrent');}
+           	if(navtag == 'shop'){$('#nav-shop').addClass('navcurrent');}
+           	if(navtag == 'customize'){$('#nav-customize').addClass('navcurrent');}
+           	if(navtag == 'risingstar'){$('#nav-star').addClass('navcurrent');}
+           	if(navtag == 'publishing'){$('#nav-publishing').addClass('navcurrent');}
+           	if(navtag == 'enlighten'){$('#nav-enlighten').addClass('navcurrent');}
+           	if(navtag == 'aboutus'){$('#nav-aboutus').addClass('navcurrent');}
+           });
+        </script>
 		
 <link href="/001-jiyiwang/Public/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
@@ -132,8 +147,8 @@ $(function (){
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -160,72 +175,29 @@ $(function (){
 </div>
 <div id="header_nav">
 <div id="width_988">
-<div class="fl_l logo"><img src="/001-jiyiwang/Public/Home/images/pic1_07.jpg" width="223" height="74" /></div>
+<div class="fl_l logo"><a href="/001-jiyiwang"><img src="/001-jiyiwang/Public/Home/images/pic1_07.jpg" width="223" height="74" /></a></div>
 
 <div class="fl_r nav nav1">
 <ul>
-<li><a href="/001-jiyiwang">首页</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/a');?>">艺术家</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/news');?>">集艺新闻</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/s');?>">艺术商城</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/c');?>">个性化定制</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/r');?>">明日之星</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/p');?>">出版中心</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/e');?>">美育启蒙</a></li>
-<li class="last"><a href="<?php echo U('/'.MODULE_NAME.'/u');?>">关于我们</a></li>
+<li><a href="/001-jiyiwang" id="nav-index">首页</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/a');?>" id="nav-artist">艺术家</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/news');?>" id="nav-news">集艺新闻</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/s');?>" id="nav-shop">艺术商城</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/c');?>" id="nav-customize">个性化定制</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/r');?>" id="nav-star">明日之星</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/p');?>" id="nav-publishing">出版中心</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/e');?>" id="nav-enlighten">美育启蒙</a></li>
+<li class="last"><a href="<?php echo U('/'.MODULE_NAME.'/u');?>" id="nav-aboutus">关于我们</a></li>
 </ul> 
- 
+<label id="navtag" value="<?php echo ($navtag); ?>"></label>
 
 </div>
 <div id="menu"> 
-  <ul class="m_h1 bn"> 
-    <h3>美术</h3> 
-    <li>国画</li>    
-    <li>油画</li>
-    <li>书法</li>
-    <li>雕塑</li>
-    <li>摄影</li>
-    <li>水粉水彩</li>
-    <li>当代艺术</li>
-    <li>其他</li>
-  </ul>
-  <ul class="m_h2 bn"> 
-    <h3>舞蹈</h3>
-    <li>原创作品</li> 
-    <li>版权</li> 
-  </ul>
-  <ul class="m_h3 bn"> 
-    <h3>文字</h3>
-    <li>原创作品</li>   
-    <li>版权</li>
-  </ul> 
-  <ul class="m_h4 bn">
-
-    <h3>手工艺</h3>
-    <li>原创作品</li>                   
- 
-   <li>版权</li>
-  </ul>
-
-<ul class="m_h5 bn">
-
-    <h3>影视</h3>
-    <li>原创作品</li>                   
- 
-   <li>版权</li>
-  </ul>
-
-<ul class="m_h6 bn">
-
-    <h3>戏曲</h3>
-   <li>原创作品</li>                   
- 
-   <li>版权</li>
-  </ul>
-
-  <ul class="m_h7"> 
-    <h3>其他</h3> 
-  </ul> 
+<?php if(is_array($category)): foreach($category as $key=>$v): ?><ul class="m_h<?php echo ($key+1); ?> bn"> 
+    <h3><?php echo ($v["name"]); ?></h3> 
+    <?php if(is_array($v["child"])): foreach($v["child"] as $key=>$va): ?><li><?php echo ($va["name"]); ?></li><?php endforeach; endif; ?> 
+  </ul><?php endforeach; endif; ?>
+  
   <ul class="m_h8">
 &nbsp; 
   </ul> 
@@ -263,64 +235,24 @@ $(function (){
     </div>
   
   <div class="S_box1_pic">
-<div class="fl_l S_b1_p1"><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_05.jpg" width="260" height="366" />
-
-</a>
-<div class="zuopin">
-<span class="fl_l zp1">山乡</span>
-<span class="fl_r zp2"><strong>￥89999.00</strong></span>
-</div>
-
-</div>
-
+  <?php if(is_array($celebrityworks1)): foreach($celebrityworks1 as $key=>$v): ?><div class="fl_l S_b1_p1">
+      <a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>">
+        <img src="/001-jiyiwang/<?php echo ($v["thumb2"]); ?>" width="260" height="366" />
+      </a>
+      <div class="zuopin">
+        <span class="fl_l zp1"><a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>"><?php echo (msubstr($v["title"],0,10,0)); ?></a></span>
+        <span class="fl_r zp2"> <strong>￥<?php echo ($v["price"]); ?></strong></span>
+      </div>
+    </div><?php endforeach; endif; ?>
 <div class="fl_r S_b1_p2">
 <ul>
-<li><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_07.jpg" width="210" height="151" /></a>
+<?php if(is_array($celebrityworks6)): $i = 0; $__LIST__ = $celebrityworks6;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 3 );++$i;?><li <?php if(($mod) == "2"): ?>class="last"<?php endif; ?>><a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>"><img src="/001-jiyiwang/<?php echo ($v["thumb"]); ?>" width="210" height="151" /></a>
 <div class="zuopin">
-<span class="fl_l zp1">幽兰</span>
-<span class="fl_r zp2"><strong>￥75000.00</strong></span>
+  <span class="fl_l zp1"><a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>"><?php echo (msubstr($v["title"],0,8,0)); ?></a></span>
+<span class="fl_r zp2"><strong>￥<?php echo ($v["price"]); ?></strong></span>
 </div>
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
 
-</li>
-<li><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_007.jpg" width="210" height="151" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">命运之石</span>
-<span class="fl_r zp2"><strong>￥27000.00</strong></span>
-
-</div>
-
-</li>
-<li class="last"><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_09.jpg" width="210" height="151" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">雄风</span>
-<span class="fl_r zp2"><strong>￥34000.00</strong></span>
-
-</div>
-
-</li>
-<li><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_11.jpg" width="210" height="151" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">晨曲</span>
-<span class="fl_r zp2"><strong>￥19000.00</strong></span>
-
-</div>
-
-</li>
-<li><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_16.jpg" width="210" height="151" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">晨雾</span>
-<span class="fl_r zp2"><strong>￥25000.00</strong></span>
-</div>
-
-</li>
-<li class="last"><a href="p_pages.html"><img src="/001-jiyiwang/Public/Home/images/pp1_008.jpg" width="210" height="151" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">鲁美宿舍</span>
-<span class="fl_r zp2"><strong>￥1800.00</strong></span>
-
-</div>
-
-</li>
 
 </ul>
 </div>
@@ -339,56 +271,14 @@ $(function (){
 
 
 <ul>
-<li>
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_25.jpg" width="314" height="201" /></a></h1>
+<?php if(is_array($cp6)): foreach($cp6 as $key=>$v): ?><li <?php if(($key+1)%3 == 0): ?>class="last"<?php endif; ?>>
+<h1><a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>"><img src="/001-jiyiwang/<?php echo ($v["thumb"]); ?>" width="314" height="201" /></a></h1>
 <div class="xushu">
-<span class="fl_l zt"><h2>艺术的起源</h2>
-杨明智所著图书</span>
-<span class="fl_r xh">￥6500.00</span>
+<span class="fl_l zt"><h2><?php echo (msubstr($v["title"],0,15,0)); ?></h2>
+<?php echo ($v["artistname"]); ?>所著图书</span>
+<span class="fl_r xh">￥<?php echo ($v["price"]); ?></span>
 </div>
-
-
-</li>
-<li>
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_27.jpg" width="314" height="201" /></a></h1>
-<div class="xushu">
-<span class="fl_l zt"><h2>设计与美学</h2>
-齐佳华所著图书</span>
-<span class="fl_r xh">￥75120.00</span>
-</div>
-</li>
-<li class="last">
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_29.jpg" width="314" height="201" /></a></h1>
-<div class="xushu">
-<span class="fl_l zt"><h2>观念艺术与艺术观念</h2>
-顾丞峰</span>
-<span class="fl_r xh">￥35465.00</span>
-</div>
-</li>
-<li>
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_35.jpg" width="314" height="201" /></a></h1>
-<div class="xushu">
-<span class="fl_l zt"><h2>现代中式家具</h2>
-展示设计、品牌营销策划</span>
-<span class="fl_r xh">￥78645.00</span>
-</div>
-</li>
-<li>
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_38.jpg" width="314" height="201" /></a></h1>
-<div class="xushu">
-<span class="fl_l zt"><h2>国画山水风景</h2>
-国画院国展中心</span>
-<span class="fl_r xh">￥45664.00</span>
-</div>
-</li>
-<li class="last">
-<h1><a href="copyright_1.html"><img src="/001-jiyiwang/Public/Home/images/pp1_36.jpg" width="314" height="201" /></a></h1>
-<div class="xushu">
-<span class="fl_l zt"><h2>世博会设计方案</h2>
-设计研究院</span>
-<span class="fl_r xh">￥5400.00</span>
-</div>
-</li>
+</li><?php endforeach; endif; ?>
 </ul>
 
 
@@ -460,22 +350,22 @@ $(function (){
      </div> 
       
        <div class="fl_r s_b3_right">
-       <div class="b3_r_top"><a href="person_video.html"><img src="/001-jiyiwang/Public/Home/images/pic1_451.jpg" /></a></div>
+       <div class="b3_r_top"><a href="#"><img src="/001-jiyiwang/Public/Home/images/pic1_451.jpg" /></a></div>
         <div class="b3_r_botto">
         <ul>
-        <li><span><strong>[第一期]</strong></span><a href="person_video.html">一世华彩梦 水彩画家...</a>
+        <li><span><strong>[第一期]</strong></span><a href="#">一世华彩梦 水彩画家...</a>
         <p>2014-12-13</p>
         </li>
         
-        <li><span><strong>[第一期]</strong></span><a href="person_video.html">石上生花 石刻版画家... </a>
+        <li><span><strong>[第一期]</strong></span><a href="#">石上生花 石刻版画家... </a>
         <p>2014-12-13</p>
         </li>
         
-        <li><span><strong>[第一期]</strong></span><a href="person_video.html">往事模糊芦花岸...</a>
+        <li><span><strong>[第一期]</strong></span><a href="#">往事模糊芦花岸...</a>
         <p>2014-12-13</p>
         </li>
         
-        <li><span><strong>[第一期]</strong></span><a href="person_video.html">一来多情付笔墨...</a>
+        <li><span><strong>[第一期]</strong></span><a href="#">一来多情付笔墨...</a>
         <p>2014-12-13</p>
         </li>
         
@@ -496,89 +386,15 @@ $(function (){
     </div>
   <div class="S_b4_bottom">
   <ul>
-  <li>
+  <?php if(is_array($gs9)): foreach($gs9 as $key=>$v): ?><li <?php if(($key+1)%3 == 0): ?>class="last"<?php endif; ?>>
   <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_43.jpg" /></a></div>
+  <div class="fl_l s_pic4"><a href="<?php echo U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id']);?>"><img src="/001-jiyiwang/<?php echo ($v["thumb"]); ?>" width="152" height="85" /></a></div>
   <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>魏传义</strong></span>《川江小景》</p>
+  <h3><a href="<?php echo U('/'.MODULE_NAME.'/aofficial_'.$v['artist_id']);?>" style="color:#fff;">进入店铺</a></h3>
+  <p><span><strong><?php echo ($v["artistname"]); ?></strong></span><?php echo (msubstr($v["title"],0,7,0)); ?></p>
   <p><strong class="jiage">￥54665.00</strong></p>
   </div>
-  </div></li>
-  <li>
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_46.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>李维汜</strong></span>《林则徐纪念像》</p>
-  <p><strong class="jiage">￥5753.00</strong></p>
-  </div>
-  </div></li>
-  <li class="last">
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_49.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>林生</strong></span>《江南四月天》</p>
-  <p><strong class="jiage">￥70000.00</strong></p>
-  </div>
-  </div></li>
-  
-  <li>
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_54.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>蔡水况</strong></span>《陆文龙战金兀术》</p>
-  <p><strong class="jiage">￥575786.00</strong></p>
-  </div>
-  </div></li>
-  <li>
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_55.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>谢澄光</strong></span>《大字麻姑仙坛记》</p>
-  <p><strong class="jiage">￥97322.00</strong></p>
-  </div>
-  </div></li>
-  <li class="last">
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_56.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>洪瑞生</strong></span>《八卦楼》</p>
-  <p><strong class="jiage">￥678678.00</strong></p>
-  </div>
-  </div></li>
-  
-  <li>
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_561.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>洪永宏</strong></span>《飞云浦》</p>
-  <p><strong class="jiage">￥36453.00</strong></p>
-  </div>
-  </div></li>
-  <li>
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_60.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>朱鸣冈</strong></span>《盛世难逢今幸逢》</p>
-  <p><strong class="jiage">￥657867.00</strong></p>
-  </div>
-  </div></li>
-  <li class="last">
-  <div class="shop">
-  <div class="fl_l s_pic4"><a href="person.html"><img src="/001-jiyiwang/Public/Home/images/pp1_61.jpg" /></a></div>
-  <div class="fl_r s_text4">
-  <h3>进入店铺</h3>
-  <p><span><strong>林再福</strong></span>《漳州古街》</p>
-  <p><strong class="jiage">￥1688.00</strong></p>
-  </div>
-  </div></li>
+  </div></li><?php endforeach; endif; ?>
   </ul>
   
   

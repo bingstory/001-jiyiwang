@@ -54,12 +54,7 @@ $(function (){
 </script>
 </block>
 <block name="banner">
-<div id="banner3">
-<div id="width_988">
-<div id="b3_bg">
-<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
-</div>
-</div>
+{:W('Home/homepageBg')}
 </block>
 <block name="body">
 <div id="middle">
@@ -75,9 +70,9 @@ $(function (){
 <div class="p_pic2">
 <ul>
 <foreach name="shop" item="v">
-<li <if condition="($key+1) % 5 eq 0">class="last"</if>><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'].'_'.$artist_id)}"><img src="__ROOT__/{$v.thumb2}" width="156" height="200" /></a>
+<li <if condition="($key+1) % 5 eq 0">class="last"</if>><a href="{:U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$artist_id)}"><img src="__ROOT__/{$v.thumb2}" width="156" height="200" /></a>
         <div class="jianjie">
-            <p><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'].'_'.$artist_id)}">{$v.title|msubstr=0,11,0}</a></p>
+            <p><a href="{:U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$artist_id)}">{$v.title|msubstr=0,11,0}</a></p>
             <p><strong>￥{$v.price}</strong></p>
             <p>推荐指数：
 

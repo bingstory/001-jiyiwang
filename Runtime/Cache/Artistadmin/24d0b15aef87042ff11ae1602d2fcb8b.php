@@ -23,7 +23,7 @@
 </head>
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > <?php echo ($pos); ?>管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > <?php echo ($pos); ?>管理</div>
 </div>
 
 <div class="right-title">
@@ -44,28 +44,30 @@
             </form>
             </tr>
             <tr>
+                    <td>ID</td>
                     <td width="100">作品编号</td>
                     <td>标题</td>
                     <td width="100">封面</td>
-                    <td>个人分类</td>
-                    <td>商城分类</td>
-                    <td width="100">艺术家姓名</td>
-                    <td>评论管理</td>
-                    <td>附件管理</td>
+                    <!-- <td>个人分类</td>
+                    <td>商城分类</td> -->
+                    <td width="70">艺术家姓名</td>
+                    <td width="70">评论管理</td>
+                    <td width="70">附件管理</td>
                     <td width="30">排序</td>
                     <td>推送到商铺</td>
                     <td>平台审核状态</td>
-                    <td>操作</td>
+                    <td width="130">操作</td>
               </tr>
               
-              <form method="post" action="<?php echo U(MODULE_NAME.'/Works/sort');?>">
+          <form method="post" action="<?php echo U(MODULE_NAME.'/Works/sort');?>">
               
             <?php if(is_array($list)): foreach($list as $key=>$v): ?><tr>
+               <td><?php echo ($v["id"]); ?></td>
                <td><?php echo ($v["works_id"]); ?></td>
                <td><?php echo ($v["title"]); ?></td>
                <td><img src="/001-jiyiwang/<?php echo ($v["thumb"]); ?>" alt="" width="100" height="90" style="border:3px solid #DCE2F3;"/></td>
-               <td><?php echo ($v["cate"]); ?></td>
-               <td><?php echo ($v["shopcate"]); ?></td>
+               <!-- <td><?php echo ($v["cate"]); ?></td>
+               <td><?php echo ($v["shopcate"]); ?></td> -->
                <td><?php echo ($v["artistname"]); ?></td>
                <td><a href="">[评论管理]</a></td>
                <td><a href="<?php echo U(MODULE_NAME.'/Works/attachment',array('works_id'=>$v['id'],'cate_id'=>$cate_id));?>">[附件管理]</a></td>

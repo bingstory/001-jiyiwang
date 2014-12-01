@@ -113,6 +113,21 @@ $(function(){
     });
     $('.vcon').slideUp().eq(tabs_i).slideDown();
   });
+  $('#lsubmit').click(function(){
+    if($('input[name=title]').val() == ''){
+            alert('留言标题不能为空！');
+            return false;
+        }
+    if($('input[name=phone]').val() == ''){
+            alert('联系电话不能为空！');
+            return false;
+        }
+    if($('textarea[name=content]').val() == ''){
+            alert('留言内容不能为空！');
+            return false;
+        }
+    $('form[name=lform]').submit();
+  });
 })
 </script>
 
@@ -127,8 +142,8 @@ $(function(){
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -192,7 +207,7 @@ $(function(){
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/grzx');?>">个人中心</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/accountSafety');?>">账户安全</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/shoppingCart');?>">我的购物车</a></li>
-                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/orderDetail');?>">交易记录</a></li>
+                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/jyjl');?>">交易记录</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/leaveMessage');?>">留言管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/creditsManage');?>">积分管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/buyfor');?>">购买兑换</a></li>
@@ -207,44 +222,38 @@ $(function(){
         <div class="vip_nav">
         <ul>
         <li><a href="hy_zppl.html">作品评论</a></li>
-         <li><a href="#">网站评论</a></li>
+         <li><a href="#" class="messagehover">网站评论</a></li>
          <li><a href="hy_plhf.html">收到的回复</a></li>
          
         </ul>
         </div>
-        
+        <form name="lform" action="<?php echo U(MODULE_NAME.'/User1/doLeaveMessage');?>" method="post">
         <div class="vip_bottom">
         
-          <p class="input">留言标题： <span><input name="" type="text"  style="width:500px"/></span></p>
+          <p class="input">留言标题： <span><input name="title" type="text"  style="width:500px"/></span></p>
           
-                 <p class="input">联系电话： <span><input name="" type="text" style="width:500px"/></span></p>
+                 <p class="input">联系电话： <span><input name="phone" type="text" style="width:500px"/></span></p>
            
                      <p>留言内容：</p>
-                     <p class="input" style=" margin-top:-30px"> <span><textarea name="" cols="" rows=""></textarea></span></p>
-                    <p class="fl_r"><a href="#"><img src="/001-jiyiwang/Public/Home/images/tj2.jpg" /></a></p> 
+                     <p class="input" style=" margin-top:-30px"> <span><textarea name="content" cols="" rows=""></textarea></span></p>
+                    <p class="fl_r"><img id="lsubmit" class="cursor" src="/001-jiyiwang/Public/Home/images/tj2.jpg" /></p> 
 
         </div>
-        
+      </form>
         <div class="l_text">
         <ul>
-        <li>
-        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
-        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
-        <p><img src="/001-jiyiwang/Public/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
-        </li>
-        
-        <li>
-        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
-        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
-        <p><img src="/001-jiyiwang/Public/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
-        </li>
+        <?php if(is_array($message)): foreach($message as $key=>$v): ?><li>
+        <span class="fl_l l_l"><h3><?php echo ($v["title"]); ?></h3></span>
+        <span class="fl_r l_r"><h3>留言时间：<span>【<?php echo (date("Y-m-d",$v["pubtime"])); ?>】</span></h3></span>
+        <p><img src="/001-jiyiwang/Public/Home/images/wx.jpg" /> <?php echo ($v["content"]); ?></p>
+        </li><?php endforeach; endif; ?>
+      
         
         </ul>
         
         </div>
         <div class="fl_r page">
-        <div class="page_list"><a href="#"><img src="/001-jiyiwang/Public/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="/001-jiyiwang/Public/Home/images/art1_61.jpg" width="8" height="8"></a></div>
-        <span><a href="#"><img src="/001-jiyiwang/Public/Home/images/jiaoyi1_34.jpg"></a></span>
+        <div class="page_list"><?php echo ($page); ?></span>
         </div>
         
         </div>

@@ -130,8 +130,8 @@ $(function(){
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -196,7 +196,7 @@ $(function(){
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/grzx');?>">个人中心</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/accountSafety');?>">账户安全</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/shoppingCart');?>">我的购物车</a></li>
-                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/orderDetail');?>">交易记录</a></li>
+                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/jyjl');?>">交易记录</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/leaveMessage');?>">留言管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/creditsManage');?>">积分管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/buyfor');?>">购买兑换</a></li>
@@ -294,19 +294,19 @@ $(function(){
           var area1 = "<?php echo ($user["county"]); ?>";
             if(province1 != ''){
                 $('#province').find('option:selected').text("<?php echo ($user["province"]); ?>"); 
-                
+                $('#province').find('option:selected').val("<?php echo ($user["province"]); ?>"); 
             }
-                // $('#province').val("<?php echo ($user["province"]); ?>");
             if(province1 != ''){
                 $('#city').find('option:selected').text("<?php echo ($user["city"]); ?>");
+                $('#city').find('option:selected').val("<?php echo ($user["city"]); ?>");
             }
             if(area1 != ''){
                 $('#area').find('option:selected').text("<?php echo ($user["county"]); ?>");
-
+                $('#area').find('option:selected').val("<?php echo ($user["county"]); ?>");
             }
           
         });</script> 
-<script language="javascript" defer>new PCAS("province","city","area");</script>
+        <script language="javascript" defer>new PCAS("province","city","area");</script>
 
             <!-- <span> 
                 <select name="">        

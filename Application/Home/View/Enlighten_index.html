@@ -57,7 +57,7 @@ $(function(){
         <ul>
 
         <volist name="list" id="v">
-        <li <if condition="($key+1)%3 eq 0">class="last"<else/></if>><p><a href="#"><img src="__ROOT__/{$v.picurl}" width="199" height="128" /></a></p>
+        <li <if condition="($key+1)%3 eq 0">class="last"<else/></if>><p><a href="{:U('/'.MODULE_NAME.'/ens_'.$v['id'])}"><img src="__ROOT__/{$v.picurl}" width="199" height="128" /></a></p>
         <h4>作品名称：<span>{$v.title|msubstr=0,10,0}</span></h4>
          <h4>详细介绍：<span>{$v.summary|msubstr=0,25}</span></h4> 
         </li>

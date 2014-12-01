@@ -71,5 +71,20 @@ function MM_swapImage() { //v3.0
 		</script>
 		<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.jslides.js"></script>
+        <style>.nav ul li .navcurrent{ background:#e8413b; padding: 40px 15px 40px 15px; color:#fff;border-right:1px solid #e8413b;border-left:1px solid #e8413b}</style>
+        <script>
+           $(function(){
+           	var navtag = $('#navtag').attr('value');
+           	if(navtag == 'index'){$('#nav-index').addClass('navcurrent');}
+           	if(navtag == 'artist'){$('#nav-artist').addClass('navcurrent');}
+           	if(navtag == 'news'){$('#nav-news').addClass('navcurrent');}
+           	if(navtag == 'shop'){$('#nav-shop').addClass('navcurrent');}
+           	if(navtag == 'customize'){$('#nav-customize').addClass('navcurrent');}
+           	if(navtag == 'risingstar'){$('#nav-star').addClass('navcurrent');}
+           	if(navtag == 'publishing'){$('#nav-publishing').addClass('navcurrent');}
+           	if(navtag == 'enlighten'){$('#nav-enlighten').addClass('navcurrent');}
+           	if(navtag == 'aboutus'){$('#nav-aboutus').addClass('navcurrent');}
+           });
+        </script>
 		<block name="head"></block>
 

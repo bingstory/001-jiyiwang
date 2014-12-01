@@ -44,22 +44,15 @@
 <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 <script>
 $(function (){
-  $(".left_nav dd").hover(function(){
-  $(".nav_right",this).show();
-  });
-  $(".left_nav dd").mouseleave(function(){
-  $(".nav_right",this).hide();
-  });
+$('.todetail').click(function(){
+    $(this).parent('p').replaceWith("<p class='toreplace'>111{$v.content}<a class='todetail'>[收起]</a></p>");
+})
 });
 </script>
+<style>.bedetail{}</style>
 </block>
 <block name="banner">
-<div id="banner3">
-<div id="width_988">
-<div id="b3_bg">
-<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
-</div>
-</div>
+{:W('Home/homepageBg')}
 </block>
 <block name="body">
 <div id="middle">
@@ -74,8 +67,9 @@ $(function (){
 <ul>
 <foreach name="dynamic" item="v">
 <li>
-<h2><span class="fl_l zj_bt"><a href="#">{$v.title}</a></span><span class="fl_r zj_time"> <strong>{$v.celebrityname}</strong> {$v.pubtime|date="Y-m-d",###}</span></h2>
-<p><a href="#">尊敬的各位领导！亲爱的同志们！朋友们！您们好!今天，我从厦门不远千里专程赶来与大家一起出席林跃油画展的开幕式，感到十分高兴。首先，请允许我致以衷心的祝贺！四川是我的故乡，青年时期我在成都读书...[详细]</a></p>
+<h2><span class="fl_l zj_bt">{$v.title}</span><span class="fl_r zj_time"> <strong>{$v.celebrityname}</strong> {$v.pubtime|date="Y-m-d",###}</span></h2>
+<p class="toreplace">{$v.content|msubstr=0,100}<a class="todetail">[详细]</a></p>
+<span></span>
 </li>
 </foreach>
 </ul>
@@ -83,8 +77,7 @@ $(function (){
 
 </div>
 <div class="fl_r page_list" style=" clear:both">{$page}</div>
-
-  </div>
+</div>
 
 
 

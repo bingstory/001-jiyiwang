@@ -1,0 +1,133 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+  $('#asubmit').click(function(){ 
+        var province = $('#province').val();
+        var city = $('#city').val();
+        var area = $('#area').val();
+        var detailaddr = $('#detailaddr').val();
+        var name = $('input[name=name]').val();
+        if(province == ''){
+            alert('请选择省份');
+            return false;
+        }
+        if(city == ''){
+            alert('请选择城市');
+            return false;
+        }
+        if(area == ''){
+            alert('请选择地区');
+            return false;
+        }
+        if(detailaddr == ''){
+            alert('请填写详细地址');
+            return false;
+        }
+        if(name == ''){
+            alert('请填写收货人姓名');
+            return false;
+        }
+        $('#aform').submit();
+      });
+})
+</script>
+<script src="__PUBLIC__/Static/PCASClass.js"></script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        <div class="vip_bottom">
+        <form name="aform" id="aform" action="{:U(MODULE_NAME.'/User1/doEditShippingAddr')}" method="post">
+        <p class="input">收货地址： <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0">
+                <select name="province" id="province" style="height:30px;width:80px;"></select>
+                <select name="city" id="city" style="height:30px;width:80px;"></select>
+                <select name="area" id="area" style="height:30px;width:80px;"></select>
+                <input name="detailaddr" id="detailaddr" placeholder="详细地址" value="{$addr.detailaddr}" type="text" />
+        <script>
+          $(function(){
+            var province1 = "{$addr.province}";
+          var city1 = "{$addr.city}";
+          var area1 = "{$addr.county}";
+            if(province1 != ''){
+                $('#province').find('option:selected').text("{$addr.province}"); 
+                $('#province').find('option:selected').val("{$addr.province}"); 
+            }
+            if(province1 != ''){
+                $('#city').find('option:selected').text("{$addr.city}");
+                $('#city').find('option:selected').val("{$addr.city}");
+            }
+            if(area1 != ''){
+                $('#area').find('option:selected').text("{$addr.county}");
+                $('#area').find('option:selected').val("{$addr.county}");
+            }
+          });
+          </script> 
+          <script language="javascript" defer>new PCAS("province","city","area");</script>
+                     </span></p>
+        
+          <p class="input" style=" margin-left:-10px">收货人姓名：  <span style=" color:#f17e4f; margin-left:0">*</span><span style="margin-left:0"><input name="name"value="{$addr.name}" type="text" /></span></p>
+            
+            
+                 <p class="input">手机号码： &nbsp;<span style="margin-left:2px"><input value="{$addr.phone}" name="phone" id="phone" type="text" /></span></p>
+                     <p class="input">固定电话： &nbsp;<span style="margin-left:2px"><input value="{$addr.fixedphone1}" name="fp1" id="fp1" type="text"  style="width:86px"/> . <input value="{$addr.fixedphone2}" name="fp2" id="fp2" type="text"  style="width:86px"/> . <input value="{$addr.fixedphone3}" id="fp3" name="fp3" type="text"  style="width:88px"/> </span></p>
+                     <p style=" margin-top:20px; margin-left:68px"><input <if condition="$addr.defaultaddr eq 1">checked="checked"<else/></if> class="J_CheckBoxItem" id="defaultaddr" type="checkbox" name="setDefault" value="1" style=" height:10px; width:14px"/>设置为默认收货地址</p>
+                     <input type="hidden" name="id" value="{$addr.id}">
+                     <p><img class="cursor" id="asubmit" src="__PUBLIC__/Home/images/sh1.jpg" /></p>
+                   </form>
+        </div>
+        </div>
+        </div>
+    </div> 
+</div></div>
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

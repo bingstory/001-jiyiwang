@@ -20,10 +20,7 @@
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="{:U(MODULE_NAME.'/System/baseinfo')}" target="main">基本信息</a></li> 
-          <li><a href="{:U(MODULE_NAME.'/Banner/index')}" target="main">幻灯片设置</a></li> 
-          <li><a href="{:U(MODULE_NAME.'/Link/link')}" target="main">增加链接</a></li>
-          <li><a href="{:U(MODULE_NAME.'/Link/index')}" target="main">管理链接</a></li>
+          <li><a href="{:U(MODULE_NAME.'/System/baseinfo')}" target="main">基本信息</a></li>
           <li><a href="{:U(MODULE_NAME.'/System/area')}" target="main">地区管理</a></li>
         </ul>
       </div>
@@ -62,6 +59,9 @@
         </table>
         <ul class="MM">
           <li><a href="{:U(MODULE_NAME.'/Works/index')}" target="main">作品管理</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Works/index',array('isshop'=>1))}" target="main">商品管理</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Works/index')}" target="main">名家真品</a></li>
+          <li><a href="{:U(MODULE_NAME.'/Works/index')}" target="main">版权</a></li>
         </ul>
       </div>
 
@@ -80,22 +80,7 @@
         </ul>
       </div>
     </div>
-        <h1 class="type"><a href="javascript:void(0)">其它参数管理</a></h1>
-      <div class="content">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td><img src="__PUBLIC__/Admin/images/menu_topline.gif" width="182" height="5" /></td>
-            </tr>
-          </table>
-        <ul class="MM">
-          <li><a href="http://www.mycodes.net" target="main">管理设置</a></li>
-          <li><a href="http://www.mycodes.net" target="main">主机状态</a></li>
-          <li><a href="http://www.mycodes.net" target="main">攻击状态</a></li>
-          <li><a href="http://www.mycodes.net" target="main">登陆记录</a></li>
-          <li><a href="http://www.mycodes.net" target="main">运行状态</a></li>
-        </ul>
-      </div>
-      </div>
+       
         <script type="text/javascript">
 		var contents = document.getElementsByClassName('content');
 		var toggles = document.getElementsByClassName('type');

@@ -2,9 +2,12 @@
 namespace Home\Controller;
 use Think\Controller;
 class ArtistController extends Controller {
+    public function _initialize(){
+        $this->navtag = 'artist';
+    }
     public function index(){
-    	
-    	// p($recartist);die;
+        // 明日之星4
+        $this->celebrity4 = M('works')->order('pubtime desc')->limit(7,4)->select();
     	$attr = M('artist_attr')->where(array('attr_id'=>1))->select();
     	foreach ($attr as $k => $v) {
     		// $ids[] = $v['attr_id'];
@@ -51,7 +54,8 @@ class ArtistController extends Controller {
 
     // 艺术家官网 
     public function officialsite(){
-    	$id = I('artist_id');
+        $id = I('artist_id');
+        M('user')->where(array('id'=>$id))->setInc('view');
     	$this->artist = M('user')->find($id);
 
         // 个人商店 5个商品
@@ -147,6 +151,13 @@ class ArtistController extends Controller {
         $this->display();
     }
 
+    // 视频 详细页
+    public function videoShow(){
+        $id = I('id');
+        $this->video = M('video')->find($id);
+        $this->display();
+    }
+
     // 个人动态
     public function dynamic(){
         $id = I('artist_id');
@@ -184,14 +195,7 @@ class ArtistController extends Controller {
         $this->display();
     }
 
-    // 商品详情
-    public function goodsShow(){
-        $id = I('id');
-        $this->goods = D('WorksView')->find($id);
-        $this->artist_id = $this->goods['artist_id'];
-        $this->othergoods = M('works')->where(array('rec2shop'=>1,'checkstatus'=>1,'id'=>array('NEQ',$id)))->order('shopsort desc')->select();
-        $this->display();
-    }
+    
 
     // 作品详情
     public function worksShow(){
@@ -210,10 +214,5 @@ class ArtistController extends Controller {
         $this->display();
     }
 
-    // 视频详情
-    public function videoShow(){
-        $id = I('id');
-        $this->video = M('video')->find($id);
-        $this->display();
-    }
+    
 }

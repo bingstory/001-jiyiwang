@@ -2,6 +2,9 @@
 namespace Home\Controller;
 use Think\Controller;
 class CustomizeController extends Controller {
+    public function _initialize(){
+        $this->navtag =strtolower(CONTROLLER_NAME);
+    }
     // 新闻页
     public function index(){
     	// 右侧导航

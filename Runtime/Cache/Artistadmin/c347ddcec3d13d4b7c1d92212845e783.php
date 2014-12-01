@@ -8,7 +8,7 @@
 <body>
 <link rel="stylesheet" href="/001-jiyiwang/Public/Admin/css/common.css">
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 分类管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 分类管理</div>
 </div>
 
 <div class="right-title">

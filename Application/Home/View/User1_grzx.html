@@ -146,19 +146,19 @@ $(function(){
           var area1 = "{$user.county}";
             if(province1 != ''){
                 $('#province').find('option:selected').text("{$user.province}"); 
-                
+                $('#province').find('option:selected').val("{$user.province}"); 
             }
-                // $('#province').val("{$user.province}");
             if(province1 != ''){
                 $('#city').find('option:selected').text("{$user.city}");
+                $('#city').find('option:selected').val("{$user.city}");
             }
             if(area1 != ''){
                 $('#area').find('option:selected').text("{$user.county}");
-
+                $('#area').find('option:selected').val("{$user.county}");
             }
           
         });</script> 
-<script language="javascript" defer>new PCAS("province","city","area");</script>
+        <script language="javascript" defer>new PCAS("province","city","area");</script>
 
             <!-- <span> 
                 <select name="">        

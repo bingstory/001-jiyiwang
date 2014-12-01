@@ -24,4 +24,29 @@ class PublicController extends Controller{
             echo 1;
         }
     }
+
+    // 关注
+    public function concern(){
+        $id = $_POST['id'];
+        $uid = session('userid');
+        $result = M('works')->where(array('id'=>$id))->setInc('concern');
+        $works  = M('works')->find($id);
+        $concern  = $works['concern']; 
+        if($result){
+            echo $concern;
+        }
+    }
+    
+
+    // 喜欢
+    public function like(){
+        $id = $_POST['id'];
+        $uid = session('userid');
+        $result = M('works')->where(array('id'=>$id))->setInc('favor');
+        $works  = M('works')->find($id);
+        $favor  = $works['favor']; 
+        if($result){
+            echo $favor;
+        }
+    }
 }

@@ -250,7 +250,7 @@ function MM_swapImage() { //v3.0
     <h5>已经有集艺网通行证</h5>
     <p>邮箱、手机号或用户名：<br><input name="loginname" type="text" /></p>
      <p><br>密码：<br><input name="loginpassword" type="password" /></p>
-     <p><span class="fl_l"><img id="loginsubmit" src="/001-jiyiwang/Public/Home/images/aa110.jpg" width="124" height="36" /></span> <span class="fl_r"><a href="#">忘记密码？</a></span></p>
+     <p><span class="fl_l"><img id="loginsubmit" style="cursor:pointer;" src="/001-jiyiwang/Public/Home/images/aa110.jpg" width="124" height="36" /></span> <span class="fl_r"><a href="#">忘记密码？</a></span></p>
     </div>
   </form>
     

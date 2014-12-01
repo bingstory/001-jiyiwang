@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 网站基本信息设置</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 网站基本信息设置</div>
 </div>
 
 <div class="right-title">

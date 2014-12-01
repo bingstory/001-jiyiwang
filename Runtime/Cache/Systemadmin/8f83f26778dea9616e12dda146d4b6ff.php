@@ -20,7 +20,7 @@ function showsubmenu(sid) {
 }
 </script>
 <meta http-equiv=Content-Type content=text/html;charset=utf-8>
-<meta http-equiv="refresh" content="60">
+
 <script language=JavaScript1.2>
 function showsubmenu(sid) {
 	var whichEl = eval("submenu" + sid);
@@ -44,7 +44,7 @@ $('#logout').click(function(){
 <body leftmargin="0" topmargin="0">
 <table width="100%" height="64" border="0" cellpadding="0" cellspacing="0" class="admin_topbg">
   <tr>
-    <td valign="top" width="61%" height="64"><img src="/001-jiyiwang/Public/Admin/images/logo.png" width="120" height="34"></td>
+    <td valign="top" width="61%" height="64"><img src="/001-jiyiwang/Public/Admin/images/logo.png" width="133" height="37" style="border-right:48px solid #fff;"></td>
     <td width="39%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="74%" height="38" class="admin_txt">管理员：<b><?php echo $_SESSION['username'] ?></b> 您好,感谢登陆使用！&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo U('/Home/Index');?>" target="_blank" title="" style="color:white;">【访问网站】</a></td>

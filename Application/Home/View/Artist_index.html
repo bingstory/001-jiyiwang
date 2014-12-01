@@ -223,34 +223,16 @@
     </div>
     <div class="news1">
         <ul>
-<li><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_29.jpg" width="295" height="145" /></a>
+      
+<foreach name="celebrity4" item="v">
+<li <if condition="($key+1)%2 eq 0">class="last"</if>><a href="{:U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$v['artist_id'])}"><img src="__ROOT__/{$v.thumb}" width="295" height="145" /></a>
 <div class="zuopin">
-<span class="fl_l zp1">代表作品：赤壁夜游</span>
-<span class="fl_r zp2">姓名：魏传义</span>
+<span class="fl_l zp1">代表作品：{$v.title|msubstr=0,10,0}</span>
+<span class="fl_r zp2">姓名：{$v.artistname}</span>
 </div>
-
 </li>
-<li class="last"><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_31.jpg" width="295" height="145" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">代表作品：卡纳克神庙</span>
-<span class="fl_r zp2">姓名：翁铭泉</span>
-</div>
+</foreach>
 
-</li>
-<li><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_35.jpg" width="295" height="145" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">代表作品：五湾缘印象之三</span>
-<span class="fl_r zp2">姓名：王雪峰</span>
-</div>
-
-</li>
-<li class="last"><a href="star_1.html"><img src="__PUBLIC__/Home/images/pic1_37.jpg" width="295" height="145" /></a>
-<div class="zuopin">
-<span class="fl_l zp1">代表作品：九江烟水亭</span>
-<span class="fl_r zp2">姓名：孙煌</span>
-</div>
-
-</li>
 
 </ul>
         

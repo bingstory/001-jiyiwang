@@ -1,0 +1,225 @@
+[ 2014-12-01T09:41:04+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013231s ]
+
+[ 2014-12-01T09:41:26+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+
+[ 2014-12-01T09:44:36+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2014-12-01T09:46:27+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+
+[ 2014-12-01T09:47:28+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+
+[ 2014-12-01T09:47:29+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2014-12-01T09:47:45+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+
+[ 2014-12-01T09:52:13+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-12-01T09:52:31+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2014-12-01T09:53:14+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+
+[ 2014-12-01T09:53:16+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+
+[ 2014-12-01T09:53:19+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001067s ]
+
+[ 2014-12-01T09:53:54+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+
+[ 2014-12-01T09:54:50+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+
+[ 2014-12-01T09:55:17+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+
+[ 2014-12-01T09:56:47+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2014-12-01T09:57:38+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000996s ]
+
+[ 2014-12-01T09:59:48+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+
+[ 2014-12-01T09:59:51+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-12-01T09:59:53+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2014-12-01T10:00:01+08:00 ] ::1 /001-jiyiwang/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+
+[ 2014-12-01T10:00:02+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001306s ]
+
+[ 2014-12-01T10:00:39+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+
+[ 2014-12-01T10:00:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001047s ]
+
+[ 2014-12-01T10:01:29+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001021s ]
+
+[ 2014-12-01T10:01:40+08:00 ] ::1 /001-jiyiwang/index.php/Home/a.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+
+[ 2014-12-01T10:02:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+
+[ 2014-12-01T10:02:41+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2014-12-01T10:02:43+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-12-01T10:03:52+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+
+[ 2014-12-01T10:03:54+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001099s ]
+
+[ 2014-12-01T10:04:13+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2014-12-01T10:04:31+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+
+[ 2014-12-01T10:06:58+08:00 ] ::1 /001-jiyiwang/index.php/Home/c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2014-12-01T10:07:49+08:00 ] ::1 /001-jiyiwang/index.php/Home/e.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+
+[ 2014-12-01T10:08:00+08:00 ] ::1 /001-jiyiwang/index.php/Home/e.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2014-12-01T10:08:12+08:00 ] ::1 /001-jiyiwang/index.php/Home/news.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+
+[ 2014-12-01T10:09:17+08:00 ] ::1 /001-jiyiwang/index.php/Home/e.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+
+[ 2014-12-01T10:09:18+08:00 ] ::1 /001-jiyiwang/index.php/Home/p.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+
+[ 2014-12-01T10:09:46+08:00 ] ::1 /001-jiyiwang/index.php/Home/r.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+
+[ 2014-12-01T10:09:47+08:00 ] ::1 /001-jiyiwang/index.php/Home/r.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+
+[ 2014-12-01T10:12:14+08:00 ] ::1 /001-jiyiwang/index.php/Home/r.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+
+[ 2014-12-01T10:12:26+08:00 ] ::1 /001-jiyiwang/index.php/Home/s.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2014-12-01T10:14:24+08:00 ] ::1 /001-jiyiwang/index.php/Home/u.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001272s ]
+
+[ 2014-12-01T10:14:57+08:00 ] ::1 /001-jiyiwang/index.php/Home/u.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+

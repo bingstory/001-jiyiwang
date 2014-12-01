@@ -109,8 +109,8 @@ function MM_swapImage() { //v3.0
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -173,8 +173,8 @@ function MM_swapImage() { //v3.0
                                 <li class="vip_xz"><a href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>">首页</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/grzx');?>">个人中心</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/accountSafety');?>">账户安全</a></li>
-                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/shoppingCart');?>">我的购物车</a></li>
-                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/orderDetail');?>">交易记录</a></li>
+                <li><a href="<?php echo U('/'.MODULE_NAME.'/Pay/shopCart');?>">我的购物车</a></li>
+                <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/jyjl');?>">交易记录</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/leaveMessage');?>">留言管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/creditsManage');?>">积分管理</a></li>
                 <li><a href="<?php echo U('/'.MODULE_NAME.'/User1/buyfor');?>">购买兑换</a></li>
@@ -188,21 +188,21 @@ function MM_swapImage() { //v3.0
         <div class="vip_text">
         <div class="vip_r_t">
         <span class="fl_l qq">
-        <h2><?php echo session('normalusername'); ?>&nbsp;&nbsp;&nbsp;<span>欢迎进入集艺网</span></h2>
+        <h2><?php echo session('fusername'); ?>&nbsp;&nbsp;&nbsp;<span>欢迎进入集艺网</span></h2>
         <h5>常用操作</h5>
         </span>
           <span class="fl_r jf">
           <h4>可用积分</h4>
-          <h1>353</h1>
+          <h1><?php echo ($user["jifen"]); ?></h1>
           </span>
         </div>
         
         <div class="vip_r_b">
         <ul>
-        <li><p><a href="grzx1.html"><img src="/001-jiyiwang/Public/Home/images/hy1_07.jpg" width="84" height="84" /></a></p><p>个人信息</p></li>
-        <li><p><a href="ddxq.html"><img src="/001-jiyiwang/Public/Home/images/hy1_09.jpg" width="84" height="84" /></a></p><p>订单管理</p></li>
-        <li><p><a href="hy_lygl1.html"><img src="/001-jiyiwang/Public/Home/images/hy1_11.jpg" width="84" height="84" /></a></p><p>评价管理</p></li>
-        <li><p><a href="hy_shdz.html"><img src="/001-jiyiwang/Public/Home/images/hy1_13.jpg" width="84" height="84" /></a></p><p>收货地址</p></li>
+        <li><p><a href="<?php echo U('/'.MODULE_NAME.'/User1/grzx');?>"><img src="/001-jiyiwang/Public/Home/images/hy1_07.jpg" width="84" height="84" /></a></p><p>个人信息</p></li>
+        <li><p><a href="<?php echo U('/'.MODULE_NAME.'/User1/jyjl');?>"><img src="/001-jiyiwang/Public/Home/images/hy1_09.jpg" width="84" height="84" /></a></p><p>订单管理</p></li>
+        <li><p><a href="<?php echo U('/'.MODULE_NAME.'/User1/leaveMessage');?>"><img src="/001-jiyiwang/Public/Home/images/hy1_11.jpg" width="84" height="84" /></a></p><p>评价管理</p></li>
+        <li><p><a href="<?php echo U('/'.MODULE_NAME.'/User1/shippingAddress');?>"><img src="/001-jiyiwang/Public/Home/images/hy1_13.jpg" width="84" height="84" /></a></p><p>收货地址</p></li>
         </ul>
         </div>
         

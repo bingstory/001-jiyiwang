@@ -1,0 +1,145 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+    
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+
+<link href="__PUBLIC__/Home/css/lanrenzhijia2.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function (){
+  $(".left_nav dd").hover(function(){
+  $(".nav_right",this).show();
+  });
+  $(".left_nav dd").mouseleave(function(){
+  $(".nav_right",this).hide();
+  });
+});
+</script>
+</block>
+<block name="banner">
+{:W('Home/homepageBg')}
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+{:W('Home/artistheader')}
+
+<div id="p_gao"></div>
+<div id="video_box">
+    <div class="video_t">
+        <div class="video_pic">
+            <div class="fl_l v_left"><img src="__ROOT__/{$video.picurl}" width="421" height="387" /></div>
+            <div class="fl_r v_right">
+                <ul>
+                    <li>
+                        <div class="fl_l v_pic"><img src="__PUBLIC__/Home/images/vv2.jpg" width="127" height="90" /></div>
+                      <div class="fl_r v_xz">
+                        <h3>升平署脸谱之状元脸谱之状元脸谱之状元脸谱之状元</h3>
+                           <p><span class="fl_l xz"><a href="#">视频下载 <img src="__PUBLIC__/Home/images/pp.jpg" width="16" height="16" /></a></span><span class="fl_r xz2">所需积分：5</span></p>
+                            <p><span class="fl_l xz">创作日期：2014</span><span class="fl_r xz2">上架时间：2014-06-06</span></p>
+                        </div>
+                    </li>
+                    
+      <li>
+                        <div class="fl_l v_pic"><img src="__PUBLIC__/Home/images/vv2.jpg" width="127" height="90" /></div>
+                      <div class="fl_r v_xz">
+                        <h3>升平署脸谱之状元脸谱之状元脸谱之状元脸谱之状元</h3>
+                           <p><span class="fl_l xz"><a href="#">视频下载 <img src="__PUBLIC__/Home/images/pp.jpg" width="16" height="16" /></a></span><span class="fl_r xz2">所需积分：5</span></p>
+                            <p><span class="fl_l xz">创作日期：2014</span><span class="fl_r xz2">上架时间：2014-06-06</span></p>
+                        </div>
+                    </li>
+                    
+      <li>
+                        <div class="fl_l v_pic"><img src="__PUBLIC__/Home/images/vv2.jpg" width="127" height="90" /></div>
+                      <div class="fl_r v_xz">
+                        <h3>升平署脸谱之状元脸谱之状元脸谱之状元脸谱之状元</h3>
+                           <p><span class="fl_l xz"><a href="#">视频下载 <img src="__PUBLIC__/Home/images/pp.jpg" width="16" height="16" /></a></span><span class="fl_r xz2">所需积分：5</span></p>
+                            <p><span class="fl_l xz">创作日期：2014</span><span class="fl_r xz2">上架时间：2014-06-06</span></p>
+                        </div>
+                    </li>
+                    
+                    
+              </ul>
+                
+            <div class="page_ys">  <p><span class="fl_l">共9-12页</span></p>
+                <p><span class="fl_r"><a href="#"><img src="__PUBLIC__/Home/images/l_p1.jpg" width="100" height="35" /></a> &nbsp;&nbsp;<a href="#"><img src="__PUBLIC__/Home/images/l_p2.jpg" width="100" height="35" /></a></span></p></div>
+                
+            </div>
+        
+        
+        
+        </div>
+    
+    
+    </div>
+
+<div class="video_b">
+
+<p>名    称：</p>
+<p>升平署脸谱之状元</p>
+<p>材    质： 宣纸</p>
+<p>尺    寸：30×40CM</p>
+<p>色    系：暖色系</p>
+<p>制作工艺：</p>
+<p>博物馆级大师原作版画——来自世界博物馆收藏技术</p>
+<p>版画是西洋艺术的三大支柱：雕塑、油画、版画之一。版画是视觉艺术的一个重要门类，在文化艺术史上具有独立的艺术价值与地位。 版画是一种素材通过制版等高科技数字技术完成的、具有复数性和艺术性的平靣作品表现方式，是艺术家本人作品的二次重现。
+原作版画是通过现代博物馆级Giclee版画复制技术，采用国家文物保护设备限量创作的艺术品，同时经过美术馆、博物馆以及艺术家的授权进行限量制作，其最大的特点是百分之百忠于原作，在视觉效果、细节处理和材质选用都是与原作完全一致，连艺术家本人都难于区分两者的区别。具备与原作一致的艺术欣赏价值，同时也具有收藏价值。</p>
+<p>适用风格：新中式/中式</p>
+<p>适用空间：玄关/客厅/书房/餐厅/卧室/走廊/卫生间/办公室/会议室/餐饮/酒店/会所/店铺</p>
+<p>相关描述：</p>
+<p>作品类型属于 国画 </p>
+
+<p class="last">该作品属于绘画集《升平署脸谱》，再现了早期京剧脸谱艺术,是清朝同治期间（1851-1874年）或以后的一名宫廷画师的作品。 清朝成立了和平办事处，管理剧团事务。 举行御前演出和庆典仪式时，该办事处就负责戏剧演出。 演员的妆容一般都遵循统一的脸谱和颜色。 该画集中的 97 幅图片展现了 9 种不同戏剧演出的妆容。 插图精美，颜色新鲜，无论是丝绸背景还是颜料都称得上是最高品质。 不出意料，该绘画集是"皇家的玩赏之物"。此绘画集因其艺术造诣和传达的信息而备受推崇，是学习早期京剧服装和脸谱宝贵的历史资源。 </p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div></div>
+
+
+<div id="gao5"></div>
+</block>

@@ -1,0 +1,427 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    $(function(){
+      $('#psubmit').click(function(){
+        var paytype = $('input:radio[name="bank"]:checked').val();
+        if(paytype == null){
+          alert('请先选择支付方式');
+          return false;
+        }
+        $('form[name=pay]').submit();
+    });
+      $('#asubmit').click(function(){ 
+        var province = $('#province').val();
+        var city = $('#city').val();
+        var area = $('#area').val();
+        var detailaddr = $('#detailaddr').val();
+        var name = $('input[name=name]').val();
+        if(province == ''){
+            alert('请选择省份');
+            return false;
+        }
+        if(city == ''){
+            alert('请选择城市');
+            return false;
+        }
+        if(area == ''){
+            alert('请选择地区');
+            return false;
+        }
+        if(detailaddr == ''){
+            alert('请填写详细地址');
+            return false;
+        }
+        if(name == ''){
+            alert('请填写收货人姓名');
+            return false;
+        }
+        if ($("#defaultaddr").is(":checked")){
+          var da = 1;
+        }else{
+          var da = 0;
+        }
+       
+       $.ajax({
+            url:"{:U(MODULE_NAME.'/User1/doShippingAddress','','')}",
+            type:'POST',
+            data:{
+              ischeck    : '1',
+              code       : $('input[name=code]').val(),
+              province   : $('#province').val(),
+              detailaddr : $('#detailaddr').val(),
+              defaultaddr : da,
+              city       : $('#city').val(),
+              area       : $('#area').val(),
+              name       : $('input[name=name]').val(),
+              phone      : $('#phone').val(),
+              fp1        : $('#fp1').val(),
+              fp2        : $('#fp2').val(),
+              fp3        : $('#fp3').val(),
+            },
+            success:function(response,status,xhr){  
+              if(response == 0){
+                alert('只能保存5条地址！');
+              }else{
+                $('#addrplace').html(response);
+                $('#reset1').click();
+              }
+            }
+            });
+      });
+    $('.editaddr').click(function(){
+        $.ajax({
+            url:"{:U(MODULE_NAME.'/User1/returnAddr','','')}",
+            type:'POST',
+            data:{
+               addrid:$(this).attr('data'),
+            },
+            success:function(response,status,xhr){  
+             
+                $('#editaddr').html(response).show();
+                
+            }
+            });
+          
+    });
+    });
+    </script>
+    <script src="__PUBLIC__/Static/PCASClass.js"></script>
+    <style>
+       #newaddr{display: none;}
+       #editaddr{display: none;}
+       #fapiao{display: none;}
+       tr.de{display: none;}
+    </style>
+    <script>
+    $(function(){
+        $('#addaddr').click(function(){
+            $('#newaddr').toggle(100);
+        });
+        $('#checkfp').click(function(){
+            if($(this).is(':checked')){
+                $('#fapiao').slideDown(1000);
+            }else{
+                $('#fapiao').hide();
+                $('input[name="fptype"]').prop('checked',false);
+                $('input[name="fpt"]').prop('checked',false);
+                $('input[name="dw"]').prop('checked',false);
+                $('tr.de').hide(100);
+            }
+        });
+        $('#usenew').click(function(){
+            $('tr.de').show(100);
+        });
+        $('#nor').click(function(){
+            $('tr.de').hide(100);
+                $('input[name="fpt"]').prop('checked',false);
+                $('input[name="dw"]').prop('checked',false);
+        });
+        $('#ordersubmit').click(function(){
+          var addrid = $('input[name=addr]:checked').val();
+            $('input[name=addrid]').val(addrid);
+            $('#orderf').submit();
+        });
+    });
+    </script>
+</block>
+<block name="banner">
+</block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+<div id="p_p_box1"><img src="__PUBLIC__/Home/images/p_p1_07.jpg" width="986" height="148" /></div>
+  
+  <div id="gao_p"></div>
+
+<div id="x_box2">
+
+<div class="x_b2_title">
+<p>位置：<a href="index.html">首页</a> ><a href="shop.html">艺术商城</a> > 商品订单</p>
+</div>
+</div>
+<div id="dz_box2">
+
+<div class="block"> 
+    <div class="progress clearfix">
+    <ul class="progress-1">
+      <li class="step-3"><b style="BACKGROUND: url(images/progress_bg_LEFT.gif) no-repeat;"></b>1 我的购物车 </li>
+      <li class="step-1"><b></b>2 填写核对订单信息 </li>
+      <li class="step-2">3 成功提交订单 </li>
+    </ul>
+  </div>
+</div>
+</div>
+  <div id="gao_p"></div>
+    
+  <div id="dz1_box3">
+
+    <div class="dz1_b3_title">
+    <h2>收货信息</h2>
+        
+</div>
+       
+     <div class="dz1_b3_bottom">
+     <div class="dz1_b3_text">
+     <div id="addrplace">
+     <foreach name="addr" item="v">
+     <p class="child"><input name="addr" type="radio"  value="{$v['id']}" <if condition="$v.defaultaddr eq 1">checked="checked"<else/></if>/>{$v.province} {$v.city} {$v.county} {$v.detailaddr} {$v.phone} <span><a class="editaddr" data="{$v.id}"><!-- 修改 --></a></span> <span><a href="{:U('/'.MODULE_NAME.'/User1/deleteShippingAddr/id/'.$v['id'])}">删除</a></span></p>
+      </foreach>
+     </div>
+     
+     <input type="reset" id="reset1" style="display:none;">
+        <p><a id="addaddr">+新增收货地址</a></p>
+        <form >
+        <div id="newaddr">
+        <p>所在地区： <span>*</span> 
+                        <select name="province" id="province" style="height:30px;width:80px;"></select>
+                        <select name="city" id="city" style="height:30px;width:80px;"></select>
+                        <select name="area" id="area" style="height:30px;width:80px;"></select>
+                        <input name="detailaddr" id="detailaddr" placeholder="详细地址" type="text" />
+                        <script language="javascript" defer>new PCAS("province","city","area");</script>
+        </p>
+        <p>收货人姓名：  <span>*</span> <input name="name" type="text" placeholder=" 长度不超过25个字符"/></p>
+        <p>手机号码： &nbsp;&nbsp;&nbsp;&nbsp;<input id="phone" name="" type="text" placeholder=" 电话号码、手机号码必须填一项" /></p>
+        <p><input class="J_CheckBoxItem" id="defaultaddr" type="checkbox" name="setDefault" value="1" style=" height:10px; width:14px"/>设置为默认收货地址</p>
+             <span class="fl_l anliu1"><img style="cursor:pointer;" id="asubmit" src="__PUBLIC__/Home/images/anl.jpg" width="70" height="28" /></span>
+         </div>
+         </form>
+         <form >
+        <div id="editaddr">
+        
+         </div>
+         </form>
+      </div>   
+      
+        </div>   
+      
+      
+      
+      
+      
+      
+ 
+ </div> 
+    
+<div id="gao_p"></div>
+ 
+ <div id="dz1_box4">
+
+    <div class="dz1_b4_title">
+    <h2 style="width:90px;">支付及配送方式</h2>
+        
+</div>
+       
+     <div class="dz1_b4_bottom">
+     <div class="dz1_b4_text">
+        <table width="100%" border="0" cellpadding="10" cellspacing="20">
+  <tr>
+    <td width="15%"><!-- <input type="radio" name="radio" id="radio" value="radio" /> -->
+      <label for="radio">在线支付</label></td>
+    <td width="85%">即时到账，支持觉大多数银行卡及部分银行信用卡</td>
+  </tr>
+  <tr>
+    <td><strong>配送方式</strong></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><!-- <input type="radio" name="radio" id="radio2" value="radio" /> -->
+      快递运输</td>
+    <td>由商家选择合作快递为您配送</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><!-- <a href="#"><img src="__PUBLIC__/Home/images/anl.jpg" width="70" height="28" /></a> --></td>
+  </tr>
+</table>
+
+      </div>   
+      
+        </div>   
+      
+      
+      
+      
+      
+      
+ 
+ </div>   
+    
+     <form id="orderf" action="{:U(MODULE_NAME.'/Pay/pay')}" method="post">
+     <div id="gao_p"></div>  
+    <div id="dz1_box5">
+
+    <div class="dz1_b5_title">
+    <h2>发票</h2>
+        
+</div>
+       
+     <div class="dz1_b5_bottom">
+     <div class="dz1_b5_text">
+    <p><input class="J_CheckBoxItem" id="checkfp" type="checkbox" name="items[]"> 需要发票</p>
+
+    <table id="fapiao" width="100%" border="0" cellpadding="10" cellspacing="20">
+      <tr>
+        <td width="41%"><input type="radio" name="fptype" id="nor" value="个人普通发票" />
+          <label for="radio3">个人&nbsp;普通发票&nbsp;  <!-- <a class="blue" href="#">编辑</a>&nbsp; <a class="blue" href="#">修改</a> --></label></td>
+        <td width="59%"><!-- 即时到账，支持觉大多数银行卡及部分银行信用卡 --></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="fptype" id="usenew" value="" />使用新的发票信息</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="de">
+        <td>发票开据方式：
+          <input type="radio" name="fpt" id="radio4" value="普通能票（纸质）" />
+          普通能票（纸质）</td>
+        <td><!-- 由商家选择合作快递为您配送 --></td>
+      </tr>
+      <tr class="de">
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;发票抬头：
+          <input type="radio" name="dw" id="radio6" value="个人" /> 
+          个人 &nbsp; <input type="radio" name="dw" id="radio7" value="单位" />单位 </td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><!-- <a href="#"><img src="__PUBLIC__/Home/images/anl.jpg" width="70" height="28" /></a> --></td>
+      </tr>
+    </table>
+
+      </div>   
+      
+        </div>   
+      
+      
+      
+      
+      
+      
+ 
+ </div>     
+    
+    
+<div id="gao_p"></div> 
+    <div id="dz_box3">
+
+    <div class="jy_b3_title">
+    <div class="fl_l jy_b3_l"><h3 style=" margin-bottom:10px">确认订单信息</h3></div>
+      
+     </div>
+       
+     <div class="dz_b3_bottom">
+     <div class="dz1_b3_text">
+     
+  
+        
+     <div class="dz1_b3_t4">
+     
+     <div class="t4_text">
+     <div class="fl_l t4_l">确认订单信息</div>
+     <div class="fl_r t4_r">
+     <ul>
+     <li>快递</li>
+     <li>数量</li>
+     <li class="last">价格</li>
+     
+     
+     </ul>
+     </div>
+     </div>
+     <foreach name="orderworks" item="v">
+     <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>{$v.artistname}个人店铺</span></span>
+    
+     </p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "></div></div>
+     
+     <div class="fl_l t4_p"><a href="{:U('/'.MODULE_NAME.'/gs2_'.$v['id'])}" target="_blank"><img src="__ROOT__/{$v.thumb}" width="96" height="96" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>{$v.title}</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：{$v.artistname}</li>                            
+     <li>材质：{$v.material}</li> 
+     <li class="yf"><span>￥{$v.expressfee}</span> </li>                
+              
+   
+<li>尺寸：{$v.size} </li>                   
+<li>上架时间：{$v.pubtime|date="Y-m-d",###}</li>
+ 
+     </ul>
+     </div>
+     
+     
+     </div>
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>￥{$v.price}</p>
+     
+     
+     </p>
+     </div>
+      
+     </div>
+     </div>
+     
+     </div>
+   </foreach>
+     
+       
+       
+      
+     
+   
+   
+   <div class="dz_bott">
+   <p>实付款：<span>￥</span><strong>{$totalmoney}</strong></p>
+   <p><span><a href="{:U(MODULE_NAME.'/User1/shopcart')}"><img src="__PUBLIC__/Home/images/jj1.jpg" /></a></span><img id="ordersubmit" style="cursor:pointer;" src="__PUBLIC__/Home/images/jj2.jpg" /><span></span></p>
+   </div>
+   </div>
+   </div>
+     
+     
+      </div>   
+      
+      
+      
+      
+      
+      
+      
+      <input type="hidden" name="addrid">
+      <input type="hidden" name="id" value="{$id}">
+      <input type="hidden" name="ordid" value="{$ordid}">
+ 
+ </div>     
+           
+  </div>  
+
+</div>
+
+</form>
+
+
+<div id="gao3"></div>
+</block>

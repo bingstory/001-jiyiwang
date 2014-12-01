@@ -30,11 +30,8 @@ body {
         <td valign="top">&nbsp;</td>
       </tr>
       <tr>
-        <td colspan="2" valign="top"><span class="left_bt">感谢您使用 亦扬互动 网站管理系统程序</span><br>
-              <br>
-            <span class="left_txt">&nbsp;<img src="/001-jiyiwang/Public/Admin/images/ts.gif" width="16" height="16"> 提示：<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亦扬互动的宗旨是为成长型客户提供一站式网络营销服务。我们致力于个性化产品的发掘和提升，我们提供从高端网站咨询与建设、电子商务策划运营、数字互动营销策划、媒介广告代理投放、网站SEO优化、互动创意设计、UI设计、VI设计、FLASH网站创作等一系列专业服务。<br>
-</span></td>
+        <td colspan="2" valign="top"><span class="left_bt">集艺网 艺术家/经纪人后台管理</span><br>
+             </td>
         <td width="7%">&nbsp;</td>
         <td width="40%" valign="top"> </td>
       </tr>
@@ -60,8 +57,7 @@ mainTable.tBodies[n].style.display="block";
               
       <tr>
         <td width="2%">&nbsp;<br/><br/><br/><br/><br/><br/></td>
-        <td width="51%" class="left_txt"><img src="/001-jiyiwang/Public/Admin/images/icon-mail2.gif" width="16" height="11"> 客户服务邮箱：1815450063@qq.com<br>
-              <img src="/001-jiyiwang/Public/Admin/images/icon-phone.gif" width="17" height="14"> 官方网站：http://www.yiyom.net</td>
+        <td width="51%" class="left_txt"> </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
       </tr>

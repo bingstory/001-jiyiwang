@@ -1,0 +1,357 @@
+<extend name="Base/common" />
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle">
+<div id="width_988">
+
+<div id="p_p_box1"><img src="__PUBLIC__/Home/images/p_p1_07.jpg" width="988" height="148" /></div>
+  
+  <div id="gao_p"></div>
+
+<div id="x_box2">
+
+<div class="x_b2_title">
+<p>位置：<a href="index.html">首页</a> ><a href="shop.html">艺术商城</a> > 商品订单</p>
+</div>
+</div>
+<div id="jy_box2">
+<div class="fl_l jy2_nav">
+<ul>
+<li><a href="#">所有订单</a></li>      
+<li><a href="#">待付款（0）</a></li> 
+<li><a href="#">待发货（0）</a></li> 
+<li><a href="#">待收货（5）</a></li> 
+<li><a href="#">待评价（2）</a></li>
+</ul>
+</div>
+<div class="fl_r jy2_tong"><span class="fl_l laji"><img src="__PUBLIC__/Home/images/jiaoyi1_03.jpg" width="16" height="16" /></span> <span class="fl_r hs">订单回收站</span></div>
+</div>
+  <div id="gao_p"></div>
+    
+  <div id="jy_box3">
+
+    <div class="jy_b3_title">
+    <div class="fl_l jy_b3_l"><h3>我的购物车</h3></div>
+        <div class="fl_r jy_b3_r">
+        <ul>
+        <li><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_07.jpg" /></a></li>
+        <li><a href="#">下一页 <img src="__PUBLIC__/Home/images/jiaoyi1_09.jpg" /></a></li>
+        </ul>
+        </div>
+     </div>
+  
+     <div class="x_b3_bottom">
+     <div class="jy_b3_text">
+     <div class="jy_b3_t4">
+     
+     <div class="t4_text">
+     <div class="fl_l t4_l">确认订单信息</div>
+     <div class="fl_r t4_r">
+     <ul>
+     <li>总价</li>
+     <li>数量</li>
+     <li>交易状态</li>
+      <li class="last">操作</li>
+     
+     </ul>
+     </div>
+     </div>
+     <!-- ************************orderlist******foreach*start******************************* -->
+     <foreach name="orderlist" item="v">
+     <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>{$v.artistname}个人店铺</span></span>
+     <span class="fl_r tong"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_14.jpg" /></a></span>
+     </p>
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"></div></div>
+     <div class="fl_l t4_p"><a href="{:U('/'.MODULE_NAME.'/gs2_'.$v['productid'])}"><img src="__ROOT__/{$v.thumb}" width="96" height="96" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>{$v.ordtitle}</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：{$v.artistname}</li>                            
+     <li>材质：{$v.material}</li> 
+     <li class="yf"><span>￥{$v.ordfee}</span><br>(含运费：{$v.expressfee}) </li>                
+     <li>尺寸：{$v.size} </li>                   
+     <li>上架时间：{$v.pubtime|date="Y-m-d",###}</li>
+     </ul>
+     </div>
+     </div>
+
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>
+    <if condition="ordstatus eq 0">等待买家付款
+    <elseif condition="(ordstatus eq 1)">
+     </p>
+     <p><span><a href="#">订单详情</a></span>
+     </p>
+     </div>
+     <div class="td-inner3">
+     <p><a href="pay.html"><img src="__PUBLIC__/Home/images/jiaoyi1_19.jpg" /></a></p>
+     <p><span><a href="#">取消订单</a></span></p>
+     </div>
+     </div>
+     </div>
+     </div>
+ </foreach>
+<!-- ************************orderlist*****foreach*end******************************** -->
+     <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>陈青山个人店铺</span></span>
+     <span class="fl_r tong"><a href=""><img src="__PUBLIC__/Home/images/jiaoyi1_14.jpg" /></a></span>
+     
+     </p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"></div></div>
+     
+     <div class="fl_l t4_p"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_29.jpg" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>作品名称作品名称作品名称作品名称</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：陈文苑</li>                            
+     <li>材质：纸本水墨</li> 
+     <li class="yf"><span>￥126.00</span><br>(含运费：0.00) </li>                
+              
+   
+<li>尺寸：41cm X 27.5cm </li>                   
+<li>上架时间：2014-06-06</li>
+ 
+     </ul>
+     </div>
+     
+     
+     </div>
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>买家已发货</p>
+     <p><a href="#">退款</a>/<a href="#">退货</a>
+     <p><a href="#">订单详情</a>
+     
+     </p>
+     </div>
+      <div class="td-inner3">
+      <p><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_25.jpg" /></a></p>
+      
+     </div>
+     </div>
+     </div>
+     
+      </div>
+     
+     <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>陈青山个人店铺</span></span>
+     <span class="fl_r tong"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_14.jpg" /></a></span>
+     
+     </p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"></div></div>
+     
+     <div class="fl_l t4_p"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_31.jpg" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>作品名称作品名称作品名称作品名称</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：陈文苑</li>                            
+     <li>材质：纸本水墨</li> 
+     <li class="yf"><span>￥126.00</span><br>(含运费：0.00) </li>                
+              
+   
+<li>尺寸：41cm X 27.5cm </li>                   
+<li>上架时间：2014-06-06</li>
+ 
+     </ul>
+     </div>
+     
+     
+     </div>
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>交易成功</p>
+     <p><a href="#">订单详情</a>
+     
+     </p>
+     </div>
+      <div class="td-inner3">
+      
+       <p class="blue"><a href="#">评价</a></p>
+     </div>
+     </div>
+     </div>
+      </div>
+     
+     <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>陈青山个人店铺</span></span>
+     <span class="fl_r tong"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_14.jpg" /></a></span>
+     
+     </p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"></div></div>
+     
+     <div class="fl_l t4_p"><a href="#"><img src="__PUBLIC__/Home/images/pp01.jpg" width="96" height="96" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>作品名称作品名称作品名称作品名称</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：陈文苑</li>                            
+     <li>材质：纸本水墨</li> 
+     <li class="yf"><span>￥126.00</span><br>(含运费：0.00) </li>                
+              
+   
+<li>尺寸：41cm X 27.5cm </li>                   
+<li>上架时间：2014-06-06</li>
+ 
+     </ul>
+     </div>
+     
+     
+     </div>
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>交易成功</p>
+     <p><a href="#">订单详情</a></p>
+      <p>生成评价</p>
+     </div>
+      <div class="td-inner3">
+      <p class="blue1"><a href="#">追加评论</a></p>
+      
+     </div>
+     </div>
+     </div>
+     
+       </div>
+       
+       
+      <div class="pro1">
+     <p><span class="fl_l dp">店铺 ：<span>陈青山个人店铺</span></span>
+     <span class="fl_r tong"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_14.jpg" /></a></span>
+     
+     </p>
+     
+     <div class="wupin">
+     <div class="wupin1">
+     <div class="td-inner"><div class="cart-checkbox "><input class="J_CheckBoxItem" id="J_CheckBox_83766958476" type="checkbox" name="items[]" value="83766958476"></div></div>
+     
+     <div class="fl_l t4_p"><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_17.jpg" /></a></div>
+     <div class="fl_l t4_t">
+     <h3>作品名称作品名称作品名称作品名称</h3>
+     <div class="t4_t_t1">
+     <ul>
+     <li>艺术家：陈文苑</li>                            
+     <li>材质：纸本水墨</li> 
+     <li class="yf"><span>￥126.00</span><br>(含运费：0.00) </li>                
+              
+   
+<li>尺寸：41cm X 27.5cm </li>                   
+<li>上架时间：2014-06-06</li>
+ 
+     </ul>
+     </div>
+     
+     
+     </div>
+     <div class="td-inner1"><div class="sz">1</div></div>
+     <div class="td-inner2">
+     <p>订单审核中</p>
+     <p><a href="#">订单详情</a>
+     </p>
+     </div>
+      <div class="td-inner3">
+      <p><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_25.jpg" /></a></p>
+       <p class="last"><span><a href="#">取消订单</a></span></p>
+     </div>
+     </div>
+     </div>
+     </div>
+     
+   <div class="jy2_b">
+    <span class="fl_l jy2_b1"><span></span>
+   <!--<span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_40.jpg" /></a> <a href="#">删除选中的商品</a></span>-->
+   <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_37.jpg" /></a> <a href="#">继续购物</a></span>
+   </span> 
+   <span class="fl_l jy2_b2"><div class="page_list">{$page}</span>
+   </div>
+     </div>
+     
+     
+  
+     </div>
+     
+     
+      </div>   
+      
+      
+      
+      
+      
+      
+      
+      
+ 
+ </div> 
+    
+    <div id="gao_p"></div>
+    
+    
+       
+         
+         
+           
+  </div>  
+
+</div>
+
+
+
+
+<div id="gao3"></div>
+</block>

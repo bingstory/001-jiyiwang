@@ -23,7 +23,7 @@
 
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 个人信息</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 个人信息</div>
 </div>
 
 <div class="right-title">
@@ -33,6 +33,7 @@
 <table class="table">
 <tr><td class="td-left">账号：</td><td class="td-right">{$artist.username}</td></tr>
 <tr><td class="td-left">中文名：</td><td class="td-right"><input type="text" name="chinesename" value="{$artist.chinesename}"></td></tr>
+<tr><td class="td-left">国籍：</td><td class="td-right"><input type="text" name="citizenship" value="{$artist.citizenship}"></td></tr>
 <tr><td class="td-left">所在地：</td><td class="td-right">
   <select name="area" id="">
   <foreach name="area" item="v">
@@ -43,6 +44,8 @@
 </td></tr>
 <tr><td class="td-left">籍贯：</td><td class="td-right"><input type="text" name="nativeplace" value="{$artist.nativeplace}"></td></tr>
 <tr><td class="td-left">职业：</td><td class="td-right"><input type="text" name="career" value="{$artist.career}"></td></tr>
+<tr><td class="td-left">职位：</td><td class="td-right"><input type="text" name="position" size="80" value="{$artist.position}"></td></tr>
+<tr><td class="td-left">名言：</td><td class="td-right"><input type="text" name="saying" size="80" value="{$artist.saying}"></td></tr>
 <tr><td class="td-left">头像：</td><td class="td-right"><div style='width:199px; height:128px;'>
                               <img id="img1" <if condition="!empty($artist['portrait'])">src="__ROOT__/{$artist['portrait']}"<else/>src="__PUBLIC__/Admin/images/empty_thumb.gif"</if> width="193" height="177" />
                                   </div><br><br><br>

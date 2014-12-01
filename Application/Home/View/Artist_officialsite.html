@@ -52,14 +52,14 @@ $(function (){
   });
 });
 </script>
+<script>
+var URL = "{:U(MODULE_NAME.'/Public/like','','')}";
+var URL2 = "{:U(MODULE_NAME.'/Public/concern','','')}";
+</script>
+<script src="__PUBLIC__/Home/js/like.js"></script>
 </block>
 <block name="banner">
-<div id="banner3">
-<div id="width_988">
-<div id="b3_bg">
-<img src="__PUBLIC__/Home/images/pee1_03.jpg" width="988" height="393" />
-</div>
-</div>
+{:W('Home/homepageBg')}
 </block>
 <block name="body">
 <div id="middle">
@@ -78,9 +78,9 @@ $(function (){
 <div class="p_b2_pic">
 <ul>
 <foreach name="shop5" item="v">
-<li <if condition="$key+1 eq 5">class="last"<else/></if>><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'].'_'.$artist['id'])}"><img src="__ROOT__/{$v.thumb2}" width="156" height="200" /></a>
+<li <if condition="$key+1 eq 5">class="last"<else/></if>><a href="{:U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$artist['id'])}"><img src="__ROOT__/{$v.thumb2}" width="156" height="200" /></a>
 <div class="jianjie">
- <p><a href="{:U('/'.MODULE_NAME.'/agoodsshow_'.$v['id'].'_'.$artist['id'])}">{$v.title|msubstr=0,11,0}</a></p>
+ <p><a href="{:U('/'.MODULE_NAME.'/gs_'.$v['id'].'_'.$artist['id'])}">{$v.title|msubstr=0,11,0}</a></p>
   <p><strong>￥{$v.price}</strong></p>
 <p>推荐指数：
 <if condition="$v.star eq 1"><span><img src="__PUBLIC__/Home/images/pee1_23.jpg" width="16" height="16" /></span>
@@ -137,9 +137,9 @@ $(function (){
 <li <eq name="mod" value="3">class="last"</eq>>
 <h1><a href="{:U('/'.MODULE_NAME.'/aworksshow_'.$v['id'].'_'.$artist['id'])}"><img src="__ROOT__/{$v.thumb}" width="206" height="185" /></a></h1>
 <div class="xushu">
-<h2>{$v.title|msubstr=0,12,0}</h2>
+<h2><a class="tored" href="{:U('/'.MODULE_NAME.'/aworksshow_'.$v['id'].'_'.$artist['id'])}">{$v.title|msubstr=0,12,0}</a></h2>
 <p><span class="fl_l time">{$v.createyear}年作</span>
-<span class="fl_r zan"><a href="{:U('/'.MODULE_NAME.'/aworksshow_'.$v['id'].'_'.$artist['id'])}"><img src="__PUBLIC__/Home/images/pic1_97.jpg" /></a> &nbsp;{$v.concern}&nbsp;&nbsp;<a href="#"><img src="__PUBLIC__/Home/images/pic1_94.jpg" /></a> &nbsp;{$v.favor}</span></p>
+    <span class="fl_r zan"><img class="cursor clickconcern" data="{$v.id}" src="__PUBLIC__/Home/images/pic1_97.jpg" /> &nbsp;<span id="concern{$v.id}">{$v.concern}</span>&nbsp;&nbsp;<img class="cursor clicklike" data="{$v.id}" src="__PUBLIC__/Home/images/pic1_94.jpg" /> &nbsp;<span id="like{$v.id}">{$v.favor}</span></span></p>
 </div>
 </li>
 </volist>

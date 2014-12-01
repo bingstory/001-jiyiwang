@@ -74,6 +74,21 @@ function MM_swapImage() { //v3.0
 		</script>
 		<script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.min.js"></script>
         <script type="text/javascript" src="/001-jiyiwang/Public/Home/js/jquery.jslides.js"></script>
+        <style>.nav ul li .navcurrent{ background:#e8413b; padding: 40px 15px 40px 15px; color:#fff;border-right:1px solid #e8413b;border-left:1px solid #e8413b}</style>
+        <script>
+           $(function(){
+           	var navtag = $('#navtag').attr('value');
+           	if(navtag == 'index'){$('#nav-index').addClass('navcurrent');}
+           	if(navtag == 'artist'){$('#nav-artist').addClass('navcurrent');}
+           	if(navtag == 'news'){$('#nav-news').addClass('navcurrent');}
+           	if(navtag == 'shop'){$('#nav-shop').addClass('navcurrent');}
+           	if(navtag == 'customize'){$('#nav-customize').addClass('navcurrent');}
+           	if(navtag == 'risingstar'){$('#nav-star').addClass('navcurrent');}
+           	if(navtag == 'publishing'){$('#nav-publishing').addClass('navcurrent');}
+           	if(navtag == 'enlighten'){$('#nav-enlighten').addClass('navcurrent');}
+           	if(navtag == 'aboutus'){$('#nav-aboutus').addClass('navcurrent');}
+           });
+        </script>
 		
 <link href="/001-jiyiwang/Public/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
@@ -128,8 +143,8 @@ $(function(){
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <?php if(empty($_SESSION['normalusername'])): ?><div class="fl_r top2">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="<?php echo U('/'.MODULE_NAME.'/User1/homepage');?>"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <?php if(empty($_SESSION['fusername'])): ?><div class="fl_r top2">
     <ul>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/login');?>">登录</a></li>
     <li><a href="<?php echo U('/'.MODULE_NAME.'/reg');?>">注册</a></li>
@@ -156,21 +171,21 @@ $(function(){
 </div>
 <div id="header_nav">
 <div id="width_988">
-<div class="fl_l logo"><img src="/001-jiyiwang/Public/Home/images/pic1_07.jpg" width="223" height="74" /></div>
+<div class="fl_l logo"><a href="/001-jiyiwang"><img src="/001-jiyiwang/Public/Home/images/pic1_07.jpg" width="223" height="74" /></a></div>
 
 <div class="fl_r nav nav1">
 <ul>
-<li><a href="/001-jiyiwang">首页</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/a');?>">艺术家</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/news');?>">集艺新闻</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/s');?>">艺术商城</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/c');?>">个性化定制</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/r');?>">明日之星</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/p');?>">出版中心</a></li>
-<li><a href="<?php echo U('/'.MODULE_NAME.'/e');?>">美育启蒙</a></li>
-<li class="last"><a href="<?php echo U('/'.MODULE_NAME.'/u');?>">关于我们</a></li>
+<li><a href="/001-jiyiwang" id="nav-index">首页</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/a');?>" id="nav-artist">艺术家</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/news');?>" id="nav-news">集艺新闻</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/s');?>" id="nav-shop">艺术商城</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/c');?>" id="nav-customize">个性化定制</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/r');?>" id="nav-star">明日之星</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/p');?>" id="nav-publishing">出版中心</a></li>
+<li><a href="<?php echo U('/'.MODULE_NAME.'/e');?>" id="nav-enlighten">美育启蒙</a></li>
+<li class="last"><a href="<?php echo U('/'.MODULE_NAME.'/u');?>" id="nav-aboutus">关于我们</a></li>
 </ul> 
- 
+<label id="navtag" value="<?php echo ($navtag); ?>"></label>
 
 </div> 
 </div>
@@ -216,15 +231,11 @@ to the official Micro message</p></div>
   <div id="gao"></div>
 <div id="star_box2">
     <div class="fl_l st_b2_left">
-        <div class="st_b2_title"><span class="fl_l st2_l"><span class="fl_l"><img src="/001-jiyiwang/Public/Home/images/cp1_19.jpg" width="27" height="27" /></span> &nbsp;&nbsp;<span class="fl_r"><strong><?php echo ($article["title"]); ?></strong></span></span><span class="fl_r c2_r">位置：<a href="about us.html">关于我们</a> > <?php echo ($article["title"]); ?></span></div>
+        <div class="st_b2_title"><span class="fl_l st2_l"><span class="fl_l"><img src="/001-jiyiwang/Public/Home/images/cp1_19.jpg" width="27" height="27" /></span> &nbsp;&nbsp;<span class="fl_r"><strong><?php echo ($article["title"]); ?></strong></span></span><span class="fl_r c2_r">位置：<a href="">关于我们</a> > <?php echo ($article["title"]); ?></span></div>
         <div id="gao"></div>
         <div class="ab_pic">
          <?php echo ($article["content"]); ?>
         </div>
- 
-
-    
-    
     </div>
     <div class="fl_r st_b2_right">
     <div style="width:224px;margin:0px auto 0 auto;">

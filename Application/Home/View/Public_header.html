@@ -3,8 +3,8 @@
 <div id="header_top">
 <div id="width_988">
 <div class="fl_l top_t1">
-<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="{:U('/'.MODULE_NAME.'/User1/homepage')}"><?php echo msubstr($_SESSION['normalusername'],0,11);?></a>！欢迎来到集艺网</h1></div>
-    <if condition="empty($_SESSION['normalusername'])">
+<div class="fl_l top1"><h1>您好,<a style="color:#fff;" href="{:U('/'.MODULE_NAME.'/User1/homepage')}"><?php echo msubstr($_SESSION['fusername'],0,3);?></a>！欢迎来到集艺网</h1></div>
+    <if condition="empty($_SESSION['fusername'])">
     <div class="fl_r top2">
     <ul>
     <li><a href="{:U('/'.MODULE_NAME.'/login')}">登录</a></li>
@@ -33,21 +33,21 @@
 </div>
 <div id="header_nav">
 <div id="width_988">
-<div class="fl_l logo"><img src="__PUBLIC__/Home/images/pic1_07.jpg" width="223" height="74" /></div>
+<div class="fl_l logo"><a href="__ROOT__"><img src="__PUBLIC__/Home/images/pic1_07.jpg" width="223" height="74" /></a></div>
 
 <div class="fl_r nav nav1">
 <ul>
-<li><a href="__ROOT__">首页</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/a')}">艺术家</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/news')}">集艺新闻</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/s')}">艺术商城</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/c')}">个性化定制</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/r')}">明日之星</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/p')}">出版中心</a></li>
-<li><a href="{:U('/'.MODULE_NAME.'/e')}">美育启蒙</a></li>
-<li class="last"><a href="{:U('/'.MODULE_NAME.'/u')}">关于我们</a></li>
+<li><a href="__ROOT__" id="nav-index">首页</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/a')}" id="nav-artist">艺术家</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/news')}" id="nav-news">集艺新闻</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/s')}" id="nav-shop">艺术商城</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/c')}" id="nav-customize">个性化定制</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/r')}" id="nav-star">明日之星</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/p')}" id="nav-publishing">出版中心</a></li>
+<li><a href="{:U('/'.MODULE_NAME.'/e')}" id="nav-enlighten">美育启蒙</a></li>
+<li class="last"><a href="{:U('/'.MODULE_NAME.'/u')}" id="nav-aboutus">关于我们</a></li>
 </ul> 
- 
+<label id="navtag" value="{$navtag}"></label>
 <block name="menu"></block>
 </div> 
 </div>

@@ -7,10 +7,9 @@
       <style>tr,td{text-align: center;}</style> 
       <script src="__PUBLIC__/Static/jquery-1.9.1.min.js"></script>
 </head>
-
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 个人信息</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 个人信息</div>
 </div>
 
 <div class="right-title">
@@ -19,10 +18,14 @@
 <table class="table">
 <tr><td class="td-left">账号：</td><td class="td-right">{$artist.username}</td></tr>
 <tr><td class="td-left">中文名：</td><td class="td-right"><if condition="empty($artist['chinesename'])">还没有填写...<else/>{$artist.chinesename}</if></td></tr>
+<tr><td class="td-left">国籍：</td><td class="td-right"><if condition="empty($artist['citizenship'])">还没有填写...<else/>{$artist.citizenship}</if></td></tr>
 <tr><td class="td-left">所在地：</td><td class="td-right"><if condition="empty($artist['area'])">还没有填写...<else/>{$artist.area}</if></td></tr>
 <tr><td class="td-left">籍贯：</td><td class="td-right"><if condition="empty($artist['nativeplace'])">还没有填写...<else/>{$artist.nativeplace}</if></td></tr>
 <tr><td class="td-left">职业：</td><td class="td-right"><if condition="empty($artist['career'])">还没有填写...<else/>{$artist.career}</if></td></tr>
+<tr><td class="td-left">职位：</td><td class="td-right"><if condition="empty($artist['position'])">还没有填写...<else/>{$artist.position}</if></td></tr>
+<tr><td class="td-left">名言：</td><td class="td-right"><if condition="empty($artist['saying'])">还没有填写...<else/>{$artist.saying}</if></td></tr>
 <tr><td class="td-left">头像：</td><td class="td-right"><if condition="empty($artist['portrait'])">还没有上传图片...<else/><img style="border:5px solid #efefef" src="__ROOT__/{$artist.portrait}" alt="{$artist.chinesename}"></if></td></tr>
+
 <tr><td class="td-left">个人简介：</td><td class="td-right"><if condition="empty($artist['summary'])">还没有填写...<else/>
 <div style="width:792px;">{$artist.summary}</div>
 </if></td></tr>

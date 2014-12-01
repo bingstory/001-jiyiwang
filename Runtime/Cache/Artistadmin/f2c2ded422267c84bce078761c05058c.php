@@ -47,6 +47,7 @@
         </table>
         <ul class="MM">
           <li><a href="<?php echo U(MODULE_NAME.'/Works/index',array('isshop'=>1));?>" target="main">商品管理</a></li>
+          <li><a href="<?php echo U(MODULE_NAME.'/Shop/orderlist');?>" target="main">订单管理</a></li>
         </ul>
       </div>
       
@@ -58,7 +59,7 @@
             </tr>
           </table>
         <ul class="MM">
-          <li><a href="http://www.mycodes.net" target="main">主页大图设置</a></li>
+          <li><a href="<?php echo U(MODULE_NAME.'/Homepage/setBg');?>" target="main">主页大图设置</a></li>
           <li><a href="<?php echo U(MODULE_NAME.'/Homepage/comment');?>" target="main">名家评价</a></li>
           <li><a href="<?php echo U(MODULE_NAME.'/Homepage/video');?>" target="main">视频</a></li>
           <li><a href="<?php echo U(MODULE_NAME.'/Homepage/yearslist');?>" target="main">年谱简表</a></li>

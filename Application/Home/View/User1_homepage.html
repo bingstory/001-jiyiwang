@@ -38,21 +38,21 @@
         <div class="vip_text">
         <div class="vip_r_t">
         <span class="fl_l qq">
-        <h2><?php echo session('normalusername'); ?>&nbsp;&nbsp;&nbsp;<span>欢迎进入集艺网</span></h2>
+        <h2><?php echo session('fusername'); ?>&nbsp;&nbsp;&nbsp;<span>欢迎进入集艺网</span></h2>
         <h5>常用操作</h5>
         </span>
           <span class="fl_r jf">
           <h4>可用积分</h4>
-          <h1>353</h1>
+          <h1>{$user.jifen}</h1>
           </span>
         </div>
         
         <div class="vip_r_b">
         <ul>
-        <li><p><a href="grzx1.html"><img src="__PUBLIC__/Home/images/hy1_07.jpg" width="84" height="84" /></a></p><p>个人信息</p></li>
-        <li><p><a href="ddxq.html"><img src="__PUBLIC__/Home/images/hy1_09.jpg" width="84" height="84" /></a></p><p>订单管理</p></li>
-        <li><p><a href="hy_lygl1.html"><img src="__PUBLIC__/Home/images/hy1_11.jpg" width="84" height="84" /></a></p><p>评价管理</p></li>
-        <li><p><a href="hy_shdz.html"><img src="__PUBLIC__/Home/images/hy1_13.jpg" width="84" height="84" /></a></p><p>收货地址</p></li>
+        <li><p><a href="{:U('/'.MODULE_NAME.'/User1/grzx')}"><img src="__PUBLIC__/Home/images/hy1_07.jpg" width="84" height="84" /></a></p><p>个人信息</p></li>
+        <li><p><a href="{:U('/'.MODULE_NAME.'/User1/jyjl')}"><img src="__PUBLIC__/Home/images/hy1_09.jpg" width="84" height="84" /></a></p><p>订单管理</p></li>
+        <li><p><a href="{:U('/'.MODULE_NAME.'/User1/leaveMessage')}"><img src="__PUBLIC__/Home/images/hy1_11.jpg" width="84" height="84" /></a></p><p>评价管理</p></li>
+        <li><p><a href="{:U('/'.MODULE_NAME.'/User1/shippingAddress')}"><img src="__PUBLIC__/Home/images/hy1_13.jpg" width="84" height="84" /></a></p><p>收货地址</p></li>
         </ul>
         </div>
         

@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 美育启蒙添加</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 美育启蒙添加</div>
 </div>
 
 <div class="right-title">
@@ -71,7 +71,7 @@
                               <select name="shopcate_id" id="">
                                     <option value="">请选择分类</option>
                                     <?php if(is_array($shopcategory)): foreach($shopcategory as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); echo ($v["name"]); ?></option><?php endforeach; endif; ?>
-                              </select>
+                              </select>(*需要推到商铺时选择)
                         </td>
                   </tr>
                   <tr>
@@ -91,7 +91,7 @@
                               <div style='width:120px; height:100px;'>
                                       <img id="img2" src="/001-jiyiwang/Public/Admin/images/empty_thumb.gif" width="156" height="200" />
                                   </div><br><br><br><br><br><br><br>
-                                  (图片大小：156px*200px)
+                                  (图片大小：260px*366px)
                                   <input type="file" name='thumb2' id="picurl2" />
                         </td>
                         <script type="text/javascript" src="/001-jiyiwang/Public/Static/thumb2.js"></script>
@@ -132,7 +132,7 @@
                               <input type="text" name="star" maxlength="125" size="5"/>星（*只填写数字，最高4颗星）
                         </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                         <td align="right">关注人数：</td>
                         <td>
                               <input type="text" name="concern" maxlength="125" size="5"/>（*只填写数字）
@@ -143,7 +143,7 @@
                         <td>
                               <input type="text" name="favor" maxlength="125" size="5"/>（*只填写数字）
                         </td>
-                  </tr>
+                  </tr> -->
                   <tr>
                         <td align="right">关键词：</td>
                         <td>

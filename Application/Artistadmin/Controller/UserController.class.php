@@ -70,7 +70,7 @@ class UserController extends CommonController{
     	$oldpwd = I('oldpwd','','md5');
     	$user = M('user')->find($uid);
     	if($oldpwd == $user['password']){
-			if(M('user')->save($data)){
+			if(M('user')->save($data) !== false){
 				$this->success('修改成功');
 			}else{
 				$this->error('修改失败！');

@@ -54,31 +54,24 @@ $(function(){
         </div>
         <div class="vip_right">
         <div class="vip_text">
-        <div class="vip_nav">
-        <ul>
-        <li><a href="hy_zppl.html">作品评论</a></li>
-         <li><a href="#">网站评论</a></li>
-         <li><a href="hy_plhf.html">收到的回复</a></li>
          
-        </ul>
-        </div>
         
         <div class="vip_right">
         <div class="vip_text">
         
         <div class="vip_nav" style=" margin-bottom:10px">
         <ul>
-        <li><a href="#">积分记录</a></li>
+         <li><a href="#">积分记录</a></li>
          <li><a href="#">下载明细</a></li>
         </ul>
         </div>
         <div class="vip_r_m">
         <span class="fl_r qq">
-       <h5><a href="#">充值</a></h5>
+       <a href="{:U(MODULE_NAME.'/User1/buyfor')}"><h5>充值</h5></a>
         </span>
           <span class="fl_l jf">
           <h4>可用积分</h4>
-          <h1>353</h1>
+          <h1>{$user['jifen']}</h1>
           </span>
         </div>
         

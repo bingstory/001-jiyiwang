@@ -1,0 +1,16 @@
+
+
+
+修改过的系统文件：
+ThinkPHP/Libriry/Page.class.php
+ThinkPHP/Libriry/Vender  下面放了一个类库  Alipay
+
+
+前台session名称
+用户id  userid
+用户姓名  fusername
+真实姓名  realname
+
+后台session名称
+用户id  uid
+用户姓名 username

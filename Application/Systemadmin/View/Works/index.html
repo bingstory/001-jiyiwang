@@ -23,7 +23,7 @@
 </head>
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > {$pos}管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > {$pos}管理</div>
 </div>
 
 <div class="right-title">
@@ -37,7 +37,7 @@
                   分类：<select name="cate_id">
                   <option value="">--请选择--</option>
                   <foreach name="category" item="v">
-                     <option value="{$v.id}">{$v.name}</option>
+                     <option value="{$v.id}">{$v.html}{$v.name}</option>
                   </foreach>
                   </select>
                   <input type="hidden" name="isshop" value="{$isshop}"> 
@@ -46,42 +46,41 @@
             </form>
             </tr>
             <tr>
+                    <td width="25">ID</td>
                     <td width="100">作品编号</td>
                     <td>标题</td>
                     <td width="100">封面</td>
-                    <td>个人分类</td>
-                    <td>商城分类</td>
+                    <!-- <td width="100">个人分类</td> -->
+                    <td width="100">商城分类</td>
                     <td width="100">艺术家姓名</td>
-                    <td>评论管理</td>
-                    <td>附件管理</td>
+                    <td>推荐属性</td>
                     <td width="30">排序</td>
-                    <td>平台审核状态</td>
-                    <td>操作</td>
+                    <td width="100">审核状态<br>(是否通过)</td>
+                    <td width="150">操作</td>
               </tr>
               
               <form method="post" action="{:U(MODULE_NAME.'/Works/sort')}">
               
             <foreach name="list" item="v">
               <tr>
+               <td>{$v.id}</td>
                <td>{$v.works_id}</td>
                <td>{$v.title}</td>
                <td><img src="__ROOT__/{$v.thumb}" alt="" width="100" height="90" style="border:3px solid #DCE2F3;"/></td>
-               <td>{$v.cate}</td>
+               <!-- <td>{$v.cate}</td> -->
                <td>{$v.shopcate}</td>
                <td>{$v.artistname}</td>
-               <td><a href="">[评论管理]</a></td>
-               <td><a href="{:U(MODULE_NAME.'/Works/attachment',array('works_id'=>$v['id'],'cate_id'=>$cate_id))}">[附件管理]</a></td>
+               <td><foreach name="v.attr" item="va">【{$va.name}】&nbsp;</foreach></td>
                <td>
-               <if condition="!empty($isshop)">
-              <input type="text" name="{$v.id}" value='{$v.shopsort}' size="5">
-              <else/>
-              <input type="text" name="{$v.id}" value='{$v.workssort}' size="5">
-              </if>
+              <input type="text" name="{$v.id}" value='{$v.systemsort}' size="5">
                </td>
-               
-               <td><if condition="$v.checkstatus eq 0"><span style="color:orange;">审核中</span><elseif condition="$v.checkstatus eq 1"/><span style="color:green;">通过</span><else/><span style="color:red;">不能通过</span></if></td>
                <td>
-                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[删除]</a></span>
+               <if condition="$v.checkstatus eq 1"><a style="color:green;" href="{:U(MODULE_NAME.'/Works/checkstatus',array('id'=>$v['id'],'checkstatus'=>2,'cate_id'=>$cate_id,'isshop'=>$isshop))}">是</a><else/>
+               <a style="color:red;" href="{:U(MODULE_NAME.'/Works/checkstatus',array('id'=>$v['id'],'checkstatus'=>1,'cate_id'=>$cate_id,'isshop'=>$isshop))}">否</a>
+               </if>
+               </td>
+               <td>
+                 <span class="modify"><a href="{:U(MODULE_NAME.'/Works/preview',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop))}">[查看]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U(MODULE_NAME.'/Works/edit',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>$isshop))}">[修改]</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="delete"><a onclick="return del()" href="{:U(MODULE_NAME.'/Works/delete',array('id'=>$v['id'],'cate_id'=>$cate_id,'isshop'=>1))}">[删除]</a></span>
                </td>
              </tr>
           </foreach>

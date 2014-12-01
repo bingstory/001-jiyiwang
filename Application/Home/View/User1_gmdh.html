@@ -1,0 +1,133 @@
+<extend name="Base/common" />
+<block name="style"><link href="__PUBLIC__/Home/css/vipstyle.css" rel="stylesheet" type="text/css" /></block>
+    <block name="head">
+<link href="__PUBLIC__/Home/css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+    if(thisObj.className == "active")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+    {
+    if (i == Num)
+    {
+    thisObj.className = "active";
+    document.getElementById(tabObj+"_Content"+i).style.display = "block";
+    }else{
+    tabList[i].className = "normal";
+    document.getElementById(tabObj+"_Content"+i).style.display = "none";
+    }
+    }
+    }
+    </script>
+ 
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script>
+$(function(){
+  //菜单隐藏展开
+  var tabs_i=0
+  $('.vtitle').click(function(){
+    var _self = $(this);
+    var j = $('.vtitle').index(_self);
+    if( tabs_i == j ) return false; tabs_i = j;
+    $('.vtitle em').each(function(e){
+      if(e==tabs_i){
+        $('em',_self).removeClass('v01').addClass('v02');
+      }else{
+        $(this).removeClass('v02').addClass('v01');
+      }
+    });
+    $('.vcon').slideUp().eq(tabs_i).slideDown();
+  });
+})
+</script>
+</block>
+<block name="banner"></block>
+<block name="body">
+<div id="middle" style="background:url(__PUBLIC__/Home/images/vip_bj.jpg) repeat-x; float:left">
+<div id="width_988">
+  <div class="vip_h">
+        <div class="vip_left">
+          <ul>
+              <include file="Public/userleftnav" />
+            </ul>
+        </div>
+        <div class="vip_right">
+        <div class="vip_text">
+        <div class="vip_nav">
+        <ul>
+        <li><a href="grzx1.html">购买积分</a></li>
+         <li style="float:right;color: #747474;">可用的积分：<span style="color:#F00">353&nbsp;&nbsp;</span></li>
+        </ul>
+        </div>
+        
+        <div class="vip_bottom">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="130" align="left" valign="top"><img src="images/HY-mgdh.jpg" width="111" height="130" /></td>
+              <td valign="top"><table style="font-size:12px" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="68%" align="left"><label for="textfield"></label>
+                    <input type="text" name="textfield" style="width:370px; padding:0 4px; height:30px; line-height:30px" id="textfield" /></td>
+                  <td width="32%" align="left"><input type="submit" name="button" id="button" value="确定" style="padding:10px 20px; color:#FFF; background:#e8413b; border:0" /></td>
+                </tr>
+                <tr>
+                  <td height="55" colspan="2" align="left">
+                      <div>
+                          <ul class="buyjifen">
+                              <li>10元</li>
+                                <li>20元</li>
+                                <li>50元</li>
+                                <li>100元</li>
+                                <li class="buyjifen_HOVER">200元</li>
+                                <li>500元</li>
+                                <li class="gmdh_hy"><input type="text" size="6" />元</li>
+                          </ul>
+                        </div>
+                  </td>
+                  </tr>
+                <tr>
+                  <td height="30" align="left"><strong>5000积分</strong></td>
+                  <td align="left">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="30" colspan="2" align="left"><table style="margin-left:80px" width="50%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img src="images/BUYxy.jpg" width="127" height="39" /></td>
+                      <td>充值有问题y请联系客服</td>
+                    </tr>
+                  </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          <table style="margin-top:150px; " width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left"><strong>关于账户充值后生效问题</strong><br />
+1.1元人民币兑换1个积分；<br />
+2.网银在线、支付宝、财付通、手机充值卡支付：程序自动处理，立刻生效的 ；<br />
+3.其他的支付方式：请在付款后联系我们。我们确认后，管理员手动给你处理，几分钟后即可生效；<br />
+4.请您仔细核实被充值用户，防止出错带来的经济损失，一旦交费成功，系统将无法进行回退；<br />
+5.到账时间：充值后一般1~10分钟左右快速到账，如遇系统繁忙时，可能会导致到账延时；<br />
+6.若银行卡已扣款但积分未到账，请勿重复充值，避免重复扣款。如超24小时账户任未增加，可咨询网站“客服”；<br />
+7.因浏览器原因可能造成跳转银行缴费页面失败，请更换浏览器重新尝试。</td>
+            </tr>
+          </table>
+        </div>
+        
+        </div>
+        
+        
+        </div>
+    </div>
+    
+    
+</div></div>
+
+
+<div id="gao1"></div>
+<div id="gao1"></div>
+</block>
+<block name="footer">
+    <include file="Public/userfooter" />
+</block>

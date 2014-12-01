@@ -11,7 +11,7 @@
 
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 用户管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 用户管理</div>
 </div>
 
 <div class="right-title">
@@ -36,8 +36,8 @@
       <td>{$v.username}</td>
       <td>{$v.logintime|date='y-m-d H:i',###}</td>
       <td>{$v.loginip}</td>
-      
-      <td><foreach name="v.attr" item="va">[{$va.name}]&nbsp;</foreach></td>
+       
+      <td><foreach name="v.attr" item="va">【{$va.name}】<br>&nbsp;</foreach></td>
       <td><input type="text" name="{$v.id}" value='{$v.sort}' size="5"></td>
       <td>
       <a href="{:U(MODULE_NAME.'/User/edit',array('id'=>$v['id'],'usertype'=>$v['usertype']))}">[修改]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

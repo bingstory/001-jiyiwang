@@ -4,15 +4,6 @@
 	<link rel="stylesheet" href="__PUBLIC__/Admin/css/common.css"> 
 	<script type="text/javascript" src="__PUBLIC__/Static/jquery-1.9.1.min.js" ></script>
 	<script>
-        $(document).ready(function(){
-        	//鼠标经过行颜色发生变化
-        	$('tr').hover(function(){
-        		$(this).addClass('bing-bgcolor2');
-        	},function(){
-        		$(this).removeClass('bing-bgcolor2');
-        	}); 
-        	//删除确认框 
-        });
         function p_del() { 
 			var msg = "您真的要删除该分类吗？\n删除后无法恢复\n请确认！"; 
 			if (confirm(msg)==true){ 
@@ -23,12 +14,12 @@
 			} 
 	</script>
 	<style>
-		.bing-bgcolor2{background: #ebeded;}
+	    tr:hover{background: #fae8e8;}
 	</style>
 </head>
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 栏目列表</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 栏目列表</div>
 </div>
 
 <div class="right-title">
@@ -46,8 +37,8 @@
 					<td>操作</td>
 				</tr>
 			<foreach name='cate' item='v'>
-				<tr>
-					<td align="center" width="20px;">{$v.id}</td>
+				<tr <if condition="$v['level'] eq 1">class="bb1"<elseif condition="$v['level'] eq 2"/>class="bb2"<elseif condition="$v['level'] eq 3"/> <elseif condition="$v['level'] eq 4"/>style="background:#8c8a8a;"<else/>style="background:#8c8a8a;"</if>>
+					<td align="center" width="40px;">{$v.id}</td>
 					<td  width="200px;">{$v.html}{$v.name}</td>
 					<td align="center"><if condition="$v['level'] eq 1">一级栏目<elseif condition="$v['level'] eq 2"/>二级栏目<elseif condition="$v['level'] eq 3"/>三级栏目<elseif condition="$v['level'] eq 4"/>四级栏目<else/>五级栏目</if></td>
 					<td align="center">

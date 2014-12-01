@@ -39,6 +39,21 @@ $(function(){
     });
     $('.vcon').slideUp().eq(tabs_i).slideDown();
   });
+  $('#lsubmit').click(function(){
+    if($('input[name=title]').val() == ''){
+            alert('留言标题不能为空！');
+            return false;
+        }
+    if($('input[name=phone]').val() == ''){
+            alert('联系电话不能为空！');
+            return false;
+        }
+    if($('textarea[name=content]').val() == ''){
+            alert('留言内容不能为空！');
+            return false;
+        }
+    $('form[name=lform]').submit();
+  });
 })
 </script>
 </block>
@@ -57,44 +72,40 @@ $(function(){
         <div class="vip_nav">
         <ul>
         <li><a href="hy_zppl.html">作品评论</a></li>
-         <li><a href="#">网站评论</a></li>
+         <li><a href="#" class="messagehover">网站评论</a></li>
          <li><a href="hy_plhf.html">收到的回复</a></li>
          
         </ul>
         </div>
-        
+        <form name="lform" action="{:U(MODULE_NAME.'/User1/doLeaveMessage')}" method="post">
         <div class="vip_bottom">
         
-          <p class="input">留言标题： <span><input name="" type="text"  style="width:500px"/></span></p>
+          <p class="input">留言标题： <span><input name="title" type="text"  style="width:500px"/></span></p>
           
-                 <p class="input">联系电话： <span><input name="" type="text" style="width:500px"/></span></p>
+                 <p class="input">联系电话： <span><input name="phone" type="text" style="width:500px"/></span></p>
            
                      <p>留言内容：</p>
-                     <p class="input" style=" margin-top:-30px"> <span><textarea name="" cols="" rows=""></textarea></span></p>
-                    <p class="fl_r"><a href="#"><img src="__PUBLIC__/Home/images/tj2.jpg" /></a></p> 
+                     <p class="input" style=" margin-top:-30px"> <span><textarea name="content" cols="" rows=""></textarea></span></p>
+                    <p class="fl_r"><img id="lsubmit" class="cursor" src="__PUBLIC__/Home/images/tj2.jpg" /></p> 
 
         </div>
-        
+      </form>
         <div class="l_text">
         <ul>
+        <foreach name="message" item="v">
         <li>
-        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
-        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
-        <p><img src="__PUBLIC__/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
+        <span class="fl_l l_l"><h3>{$v.title}</h3></span>
+        <span class="fl_r l_r"><h3>留言时间：<span>【{$v.pubtime|date="Y-m-d",###}】</span></h3></span>
+        <p><img src="__PUBLIC__/Home/images/wx.jpg" /> {$v.content}</p>
         </li>
-        
-        <li>
-        <span class="fl_l l_l"><h3>网站做得很好，做的很给力！</h3></span>
-        <span class="fl_r l_r"><h3>留言时间：<span>【2014-10-25】</span></h3></span>
-        <p><img src="__PUBLIC__/Home/images/wx.jpg" /> 发大水将地方卡拉胶顺口溜打飞机啊水井坊加深对附近阿斯利康大卷发三季度啥地方将暗访了空间阿什顿开房间范德萨发生的发生的发送到发生大发阿斯蒂芬阿什顿发生大发阿斯蒂芬</p>
-        </li>
+      </foreach>
+      
         
         </ul>
         
         </div>
         <div class="fl_r page">
-        <div class="page_list"><a href="#"><img src="__PUBLIC__/Home/images/art1_59.jpg" width="8" height="8"></a><a href="#" class="status">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">...</a><a href="#">11</a><a href="#"><img src="__PUBLIC__/Home/images/art1_61.jpg" width="8" height="8"></a></div>
-        <span><a href="#"><img src="__PUBLIC__/Home/images/jiaoyi1_34.jpg"></a></span>
+        <div class="page_list">{$page}</span>
         </div>
         
         </div>

@@ -11,7 +11,7 @@
 
 <body> 
 <div class="right-nav">
-      <a class="home" href="" title=""></a><div class="con"><span style="color:#33ccff;">首页</span> > 用户管理</div>
+      <a class="home" href="" title=""></a><div class="con"><span style="color:#000;">首页</span> > 用户管理</div>
 </div>
 
 <div class="right-title">
@@ -35,8 +35,8 @@
       <td><?php echo ($v["username"]); ?></td>
       <td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
       <td><?php echo ($v["loginip"]); ?></td>
-      
-      <td><?php if(is_array($v["attr"])): foreach($v["attr"] as $key=>$va): ?>[<?php echo ($va["name"]); ?>]&nbsp;<?php endforeach; endif; ?></td>
+       
+      <td><?php if(is_array($v["attr"])): foreach($v["attr"] as $key=>$va): ?>【<?php echo ($va["name"]); ?>】<br>&nbsp;<?php endforeach; endif; ?></td>
       <td><input type="text" name="<?php echo ($v["id"]); ?>" value='<?php echo ($v["sort"]); ?>' size="5"></td>
       <td>
       <a href="<?php echo U(MODULE_NAME.'/User/edit',array('id'=>$v['id'],'usertype'=>$v['usertype']));?>">[修改]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
